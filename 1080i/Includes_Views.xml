@@ -79,7 +79,7 @@
             <visible>!Integer.IsEqual(Container.NumItems,0)</visible>
 
             <control type="group">
-                <visible>$EXP[Exp_View_HasHeader]</visible>
+                <visible>false</visible>
                 <include>Furniture_Top_Left</include>
                 <control type="group">
                     <include content="Info_Viewline">
@@ -360,7 +360,7 @@
                     <param name="include_customwidth">$PARAM[include_customwidth]</param>
                     <hitrect x="0" y="0" w="0" h="0" />
                     <onclick>SetProperty(DialogSelectType,Menu,Home)</onclick>
-                    <onclick condition="![String.IsEqual(Container.FolderName,Skin Variables) + !String.IsEmpty(Window.Property(MediaFilter.BaseDir.Name))]">SendClick(4)</onclick>
+                    <onclick condition="![String.IsEqual(Window.Property(MediaFilter.SortHow),desc) + String.IsEqual(Container.FolderName,Skin Variables) + !String.IsEmpty(Window.Property(MediaFilter.BaseDir.Name))]">SendClick(4)</onclick>
 
                     <onclick condition="!String.IsEqual(Window.Property(MediaFilter.SortHow),desc) + String.IsEqual(Container.FolderName,Skin Variables) + !String.IsEmpty(Window.Property(MediaFilter.BaseDir.Name))">SetProperty(MediaFilter.SortHow,desc)</onclick>
                     <onclick condition="String.IsEqual(Window.Property(MediaFilter.SortHow),desc) + String.IsEqual(Container.FolderName,Skin Variables) + !String.IsEmpty(Window.Property(MediaFilter.BaseDir.Name))">ClearProperty(MediaFilter.SortHow)</onclick>
