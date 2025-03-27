@@ -1316,7 +1316,7 @@
         <param name="tween">quadratic</param>
         <param name="scrolltime">400</param>
         <param name="viewtype">list</param>
-        <param name="offset_x">view_offx</param>
+        <param name="offset_x">20</param>
         <param name="offset_y">80</param>
         <param name="itemlayout_w" />
         <param name="itemlayout_h" />
