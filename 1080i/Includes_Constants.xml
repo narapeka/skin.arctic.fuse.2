@@ -91,14 +91,16 @@
     <constant name="view_icon_movement">8</constant>
 
     <!-- View ItemLayouts -->
-    <constant name="view_poster_itemlayout_h">350</constant>
-    <constant name="-view_poster_itemlayout_h">-350</constant>
-    <constant name="view_poster_item_h">310</constant>
-    <constant name="-view_poster_item_h">-310</constant>
-    <constant name="view_poster_itemlayout_w">257.14</constant>
-    <constant name="-view_poster_itemlayout_w">-257.14</constant>
-    <constant name="view_poster_item_w">217.14</constant>
-    <constant name="-view_poster_item_w">-217.14</constant>
+    <constant name="view_poster_itemlayout_h">338</constant>  <!-- Poster (276) + 13px title gap + 25px title + 5px bottom gap + padding -->
+    <constant name="-view_poster_itemlayout_h">-338</constant>
+    <constant name="view_poster_item_h">276</constant>
+    <constant name="-view_poster_item_h">-276</constant>
+    <constant name="view_poster_item_with_title_h">322</constant>  <!-- Poster height (276) + title gap (10) + title height (35) -->
+    <constant name="-view_poster_item_with_title_h">-322</constant>
+    <constant name="view_poster_itemlayout_w">229</constant>
+    <constant name="-view_poster_itemlayout_w">-229</constant>
+    <constant name="view_poster_item_w">193</constant>
+    <constant name="-view_poster_item_w">-193</constant>
     <constant name="view_poster_movement">6</constant>
 
     <constant name="view_square_itemlayout_w">336</constant>

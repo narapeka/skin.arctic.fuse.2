@@ -2134,7 +2134,9 @@
                 <width>$PARAM[item_w]</width>
                 <height>$PARAM[item_h]</height>
 
+                <!-- The actual poster container - keeps same height (276px) -->
                 <control type="group">
+                    <height>276</height>
                     <include content="Object_ItemBack">
                         <param name="selected">$PARAM[selected]</param>
                         <param name="shadow_colordiffuse">$PARAM[shadow_colordiffuse]</param>
@@ -2163,7 +2165,44 @@
                         <param name="aspectratio">scale</param>
                         <param name="selected">$PARAM[selected]</param>
                     </include>
+                
+                    <control type="group">
+                        <include content="Object_ContentBanner" condition="$PARAM[indicator]">
+                            <param name="listitem">$PARAM[listitem]</param>
+                        </include>
+                        <include content="Object_RatingCircle" condition="$PARAM[indicator] + Skin.HasSetting(Indicator.RatingsCircle)">
+                            <param name="listitem">$PARAM[listitem]</param>
+                        </include>
+                        <include content="Object_ProgressPercent" condition="$PARAM[indicator] + Skin.HasSetting(Indicator.ProgressPercent)">
+                            <param name="affix">$PARAM[affix]</param>
+                            <param name="listitem">$PARAM[listitem]</param>
+                        </include>
+                        <include condition="!$PARAM[selected] + $PARAM[indicator]" content="Object_Indicator">
+                            <param name="affix">$PARAM[affix]</param>
+                            <param name="listitem">$PARAM[listitem]</param>
+                        </include>
+                        <include content="Object_SelectBox" condition="$PARAM[selected]">
+                            <param name="affix">$PARAM[affix]</param>
+                            <param name="listitem">$PARAM[listitem]</param>
+                            <param name="indicator">$PARAM[indicator]</param>
+                            <param name="focusbounce">true</param>
+                        </include>
+                    </control>
                 </control>
+                
+                <!-- Movie title (13px below poster, 5px gap to next row) -->
+                <control type="label">
+                    <top>289</top> <!-- 276px (poster) + 13px gap -->
+                    <height>25</height>
+                    <width>$PARAM[item_w]</width>
+                    <font>font_mini</font>
+                    <align>center</align>
+                    <textcolor>main_fg_100</textcolor>
+                    <label>$INFO[$PARAM[listitem].Label]</label>
+                    <scroll>true</scroll>
+                    <scrollspeed>30</scrollspeed>
+                </control>
+
                 <control type="group">
                     <visible>String.IsEqual($PARAM[listitem].DBType,actor) | String.IsEqual($PARAM[listitem].DBType,video) | $PARAM[detailed]</visible>
                     <include content="Layout_Labels">
@@ -2179,31 +2218,7 @@
                         <param name="use_label2">$PARAM[use_label2]</param>
                     </include>
                 </control>
-                <control type="group">
-                    <include content="Object_ContentBanner" condition="$PARAM[indicator]">
-                        <param name="listitem">$PARAM[listitem]</param>
-                    </include>
-                    <include content="Object_RatingCircle" condition="$PARAM[indicator] + [Skin.HasSetting(Indicator.RatingsCircle) | Skin.HasSetting(Indicator.TraktWatchlist) | Skin.HasSetting(Indicator.TraktFavourites)]">
-                        <param name="listitem">$PARAM[listitem]</param>
-                    </include>
-                    <include content="Object_ProgressPercent" condition="$PARAM[indicator] + Skin.HasSetting(Indicator.ProgressPercent)">
-                        <param name="affix">$PARAM[affix]</param>
-                        <param name="listitem">$PARAM[listitem]</param>
-                    </include>
-                    <include condition="!$PARAM[selected] + $PARAM[indicator]" content="Object_Indicator">
-                        <param name="affix">$PARAM[affix]</param>
-                        <param name="listitem">$PARAM[listitem]</param>
-                    </include>
-                    <include content="Object_SelectBox" condition="$PARAM[selected]">
-                        <param name="affix">$PARAM[affix]</param>
-                        <param name="listitem">$PARAM[listitem]</param>
-                        <param name="indicator">$PARAM[indicator]</param>
-                        <param name="focusbounce">true</param>
-                    </include>
-                </control>
-
             </control>
-
         </definition>
     </include>
 
