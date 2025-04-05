@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog" id="1189">
+<window type="dialog" id="1159">
     <defaultcontrol always="true">6009</defaultcontrol>
     <controls>
         <control type="group">
