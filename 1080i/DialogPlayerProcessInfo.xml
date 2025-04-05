@@ -466,6 +466,19 @@
                     <font>font_tiny</font>
                     <textcolor>dialog_fg_90</textcolor>
                 </control>
+                <control type="group">
+                    <top>135</top>
+                    <left>305</left>
+                    <width>190</width>
+                    <control type="progress">
+                        <description>BAR</description>
+                        <centertop>50%</centertop>
+                        <info>Player.CacheLevel</info>
+                        <include>DefSettingsButton</include>
+                        <texturebg colordiffuse="panel_fg_12" border="6">progress/progress-bg.png</texturebg>
+                        <midtexture colordiffuse="dialog_fg_90" border="6">progress/progress-bg.png</midtexture>
+                    </control>
+                </control>
 				
                 <!-- Video queue -->
                 <control type="label">
@@ -480,6 +493,19 @@
                     <label>$INFO[Player.Process(video.queue.level)]%</label>
                     <font>font_tiny</font>
                     <textcolor>dialog_fg_90</textcolor>
+                </control>
+                <control type="group">
+                    <top>165</top>
+                    <left>305</left>
+                    <width>190</width>
+                    <control type="progress">
+                        <description>BAR</description>
+                        <centertop>50%</centertop>
+                        <info>Player.Process(video.queue.level)</info>
+                        <include>DefSettingsButton</include>
+                        <texturebg colordiffuse="panel_fg_12" border="6">progress/progress-bg.png</texturebg>
+                        <midtexture colordiffuse="dialog_fg_90" border="6">progress/progress-bg.png</midtexture>
+                    </control>
                 </control>
 				
                 <!-- Video queue data -->
@@ -496,6 +522,19 @@
                     <font>font_tiny</font>
                     <textcolor>dialog_fg_90</textcolor>
                 </control>
+                <control type="group">
+                    <top>195</top>
+                    <left>305</left>
+                    <width>190</width>
+                    <control type="progress">
+                        <description>BAR</description>
+                        <centertop>50%</centertop>
+                        <info>Player.Process(video.queue.data.level)</info>
+                        <include>DefSettingsButton</include>
+                        <texturebg colordiffuse="panel_fg_12" border="6">progress/progress-bg.png</texturebg>
+                        <midtexture colordiffuse="dialog_fg_90" border="6">progress/progress-bg.png</midtexture>
+                    </control>
+                </control>
 				
                 <!-- Audio queue -->
                 <control type="label">
@@ -511,6 +550,19 @@
                     <font>font_tiny</font>
                     <textcolor>dialog_fg_90</textcolor>
                 </control>
+                <control type="group">
+                    <top>225</top>
+                    <left>305</left>
+                    <width>190</width>
+                    <control type="progress">
+                        <description>BAR</description>
+                        <centertop>50%</centertop>
+                        <info>Player.Process(audio.queue.level)</info>
+                        <include>DefSettingsButton</include>
+                        <texturebg colordiffuse="panel_fg_12" border="6">progress/progress-bg.png</texturebg>
+                        <midtexture colordiffuse="dialog_fg_90" border="6">progress/progress-bg.png</midtexture>
+                    </control>
+                </control>
 				
                 <!-- Audio queue data -->
                 <control type="label">
@@ -525,6 +577,19 @@
                     <label>$INFO[Player.Process(audio.queue.data.level)]%</label>
                     <font>font_tiny</font>
                     <textcolor>dialog_fg_90</textcolor>
+                </control>
+                <control type="group">
+                    <top>255</top>
+                    <left>305</left>
+                    <width>190</width>
+                    <control type="progress">
+                        <description>BAR</description>
+                        <centertop>50%</centertop>
+                        <info>Player.Process(audio.queue.data.level)</info>
+                        <include>DefSettingsButton</include>
+                        <texturebg colordiffuse="panel_fg_12" border="6">progress/progress-bg.png</texturebg>
+                        <midtexture colordiffuse="dialog_fg_90" border="6">progress/progress-bg.png</midtexture>
+                    </control>
                 </control>
             </control>
 
