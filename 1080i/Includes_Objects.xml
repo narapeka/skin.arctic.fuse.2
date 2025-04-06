@@ -1491,6 +1491,47 @@
             </control>
         </definition>
     </include>
+	
+    <include name="Object_MenuHeader_VS10">
+        <param name="icon">special://skin/extras/icons/kodi.png</param>
+        <param name="bordersize">icon_home_bordersize</param>
+        <param name="label">$LOCALIZE[33063]</param>
+        <param name="has_icon">true</param>
+        <param name="colordiffuse">$VAR[ColorHighlight]</param>
+        <param name="textcolor">dialog_fg</param>
+        <param name="font">font_midi_bold</param>
+        <param name="height">120</param>
+        <definition>
+            <control type="group" id="$PARAM[id]">
+                <height>$PARAM[height]</height>
+                <control type="label">
+                    <label>$PARAM[label]</label>
+                    <textoffsetx>40</textoffsetx>
+                    <font>$PARAM[font]</font>
+                    <aligny>center</aligny>
+                    <textcolor>$PARAM[textcolor]_90</textcolor>
+                </control>
+                <include content="Object_Control" condition="$PARAM[has_icon]">
+                    <param name="control">group</param>
+                    <right>40</right>
+                    <centertop>50%</centertop>
+                    <height>40</height>
+                    <width>40</width>
+                    <control type="image">
+                        <bordersize>$PARAM[bordersize]</bordersize>
+                        <texture colordiffuse="$PARAM[textcolor]_90">$PARAM[icon]</texture>
+                    </control>
+                </include>
+                <control type="image">
+                    <bottom>15</bottom>
+                    <height>1</height>
+                    <left>40</left>
+                    <right>40</right>
+                    <texture colordiffuse="$VAR[Color_DialogBorder]">common/white.png</texture>
+                </control>
+            </control>
+        </definition>
+    </include>
 
     <include name="Object_Keyboard_Mini_Button">
         <param name="control">button</param>
