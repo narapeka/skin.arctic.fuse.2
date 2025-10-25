@@ -3167,3 +3167,7 @@ msgstr "Drehende Disk"
 msgctxt "#32085"
 msgid "Decoding"
 msgstr "Dekodierung"
+
+msgctxt "#32086"
+msgid "System"
+msgstr "System"
