@@ -6,7 +6,15 @@
     "fanart": {"infolabels": ["Art(fanart)", "Art(season.fanart)", "Art(tvshow.fanart)", "Art(artist.fanart)", "Property(fanart)"]},
     "thumb": {"infolabels": ["Art(thumb)", "Thumb", "Icon"]},
     "clearlogo": {"infolabels": ["Art(clearlogo)", "Art(season.clearlogo)", "Art(tvshow.clearlogo)", "Art(artist.clearlogo)"]},
-    "isfolder": {"infolabels": ["isfolder"], "function": "boolean"}
+    "videoresolution": {"infolabels": ["videoresolution"]},
+    "hdrtype": {"infolabels": ["hdrtype"]},
+    "audiocodec": {"infolabels": ["audiocodec"]},
+    "audiochannels": {"infolabels": ["audiochannels"]},
+    "hasvideoversions": {"infolabels": ["hasvideoversions"], "function": "boolean"},
+    "iscollection": {"infolabels": ["iscollection"], "function": "boolean"},
+    "isfolder": {"infolabels": ["isfolder"], "function": "boolean"},
+    "custominfo01": {"infolabels": ["property(custominfo01)"]},
+    "custominfo02": {"infolabels": ["property(custominfo02)"]}
 }
 
 
