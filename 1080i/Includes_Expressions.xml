@@ -162,7 +162,10 @@
 
     <expression name="Exp_BackgroundArtwork_IsSimple">[$EXP[Exp_PlainBackgroundWindows] | [Window.IsMedia + [[Window.IsVisible(DialogBusy.xml) + Integer.IsEqual(Container.NumItems,0)] | [Container.Content() + !$EXP[Exp_PVRWindows]]]]]</expression>
 
-    <expression name="Exp_Notification_IsActive">[Window.IsActive(DialogExtendedProgressBar.xml) | Window.IsActive(DialogNotification.xml) | Skin.HasSetting(Furniture.EnableClock) | [Skin.HasSetting(Furniture.EnableNowPlaying) + Player.HasMedia]]</expression>
+    <expression name="Exp_FurnitureBusy_AnimationCond_DialogExtendedProgressBar">[Window.IsActive(DialogNotification.xml) | Window.IsActive(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml)]</expression>
+    <expression name="Exp_FurnitureBusy_AnimationCond_DialogNotification">[Window.IsActive(DialogExtendedProgressBar.xml) | Window.IsActive(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml)]</expression>
+    <expression name="Exp_FurnitureBusy_AnimationCond_DialogBusy">[Window.IsActive(DialogExtendedProgressBar.xml) | Window.IsActive(DialogNotification.xml) | Window.IsActive(DialogVolumeBar.xml)]</expression>
+    <expression name="Exp_FurnitureBusy_AnimationCond_DialogVolumeBar">[Window.IsActive(DialogExtendedProgressBar.xml) | Window.IsActive(DialogNotification.xml) | Window.IsActive(DialogBusy.xml)]</expression>
 
     <!-- ================= -->
     <!-- Windows / Dialogs -->
@@ -179,13 +182,13 @@
     <expression name="Exp_SettingsSwitcherWindows_Next">[Window.Next(SettingsCategory.xml) | Window.Next(SkinSettings.xml) | Window.Next(SettingsProfile.xml) | Window.Next(SettingsSystemInfo.xml)]</expression>
     <expression name="Exp_SettingsSwitcherWindows_Prev">[Window.Previous(SettingsCategory.xml) | Window.Previous(SkinSettings.xml) | Window.Previous(SettingsProfile.xml) | Window.Previous(SettingsSystemInfo.xml)]</expression>
 
-    <expression name="Exp_FullPanelWindows_Next">[Window.Next(1105) | Window.Next(1185) | [[[$EXP[Exp_HomeHub_IsNext] + Skin.HasSetting(Hub.Home.DisableSubmenu)] | Window.Next(1115)] + $EXP[Exp_HomeMenu_IsExpanded]]]</expression>
-    <expression name="Exp_FullPanelWindows_Prev">[Window.Previous(1105) | Window.Previous(1185) | [[[$EXP[Exp_HomeHub_IsPrevious] + Skin.HasSetting(Hub.Home.DisableSubmenu)] | Window.Previous(1115)] + $EXP[Exp_HomeMenu_IsExpanded]]]</expression>
-    <expression name="Exp_FullPanelWindows">[Window.IsVisible(1105) | Window.IsVisible(1185) | [[[$EXP[Exp_HomeHub_IsVisible]] | Window.IsVisible(1115)] + $EXP[Exp_HomeMenu_IsExpanded]]]</expression>
+    <expression name="Exp_FullPanelWindows_Next">[[[[$EXP[Exp_HomeHub_IsNext] + Skin.HasSetting(Hub.Home.DisableSubmenu)]] + $EXP[Exp_HomeMenu_IsExpanded]]]</expression>
+    <expression name="Exp_FullPanelWindows_Prev">[[[[$EXP[Exp_HomeHub_IsPrevious] + Skin.HasSetting(Hub.Home.DisableSubmenu)]] + $EXP[Exp_HomeMenu_IsExpanded]]]</expression>
+    <expression name="Exp_FullPanelWindows">[[[[$EXP[Exp_HomeHub_IsVisible]]] + $EXP[Exp_HomeMenu_IsExpanded]]]</expression>
 
-    <expression name="Exp_MiniPanelWindows_Next">[[[[$EXP[Exp_HomeHub_IsNext] + Skin.HasSetting(Hub.Home.DisableSubmenu)] | Window.IsVisible(1115)] + !$EXP[Exp_HomeMenu_IsExpanded]] | $EXP[Exp_SettingsSwitcherWindows_Next]]</expression>
-    <expression name="Exp_MiniPanelWindows_Prev">[[[[$EXP[Exp_HomeHub_IsPrevious] + Skin.HasSetting(Hub.Home.DisableSubmenu)] | Window.Previous(1115)] + !$EXP[Exp_HomeMenu_IsExpanded]] | $EXP[Exp_SettingsSwitcherWindows_Prev]]</expression>
-    <expression name="Exp_MiniPanelWindows">[[[[$EXP[Exp_HomeHub_IsVisible]] | Window.IsVisible(1115)] + !$EXP[Exp_HomeMenu_IsExpanded]] | $EXP[Exp_SettingsSwitcherWindows]]</expression>
+    <expression name="Exp_MiniPanelWindows_Next">[[[[$EXP[Exp_HomeHub_IsNext] + Skin.HasSetting(Hub.Home.DisableSubmenu)]] + !$EXP[Exp_HomeMenu_IsExpanded]] | $EXP[Exp_SettingsSwitcherWindows_Next]]</expression>
+    <expression name="Exp_MiniPanelWindows_Prev">[[[[$EXP[Exp_HomeHub_IsPrevious] + Skin.HasSetting(Hub.Home.DisableSubmenu)]] + !$EXP[Exp_HomeMenu_IsExpanded]] | $EXP[Exp_SettingsSwitcherWindows_Prev]]</expression>
+    <expression name="Exp_MiniPanelWindows">[[[[$EXP[Exp_HomeHub_IsVisible]]] + !$EXP[Exp_HomeMenu_IsExpanded]] | $EXP[Exp_SettingsSwitcherWindows]]</expression>
 
     <expression name="Exp_NonePanelWindows_Next">[!$EXP[Exp_MiniPanelWindows_Next] + !$EXP[Exp_FullPanelWindows_Next]]</expression>
     <expression name="Exp_NonePanelWindows_Prev">[!$EXP[Exp_MiniPanelWindows_Prev] + !$EXP[Exp_FullPanelWindows_Prev]]</expression>
@@ -194,6 +197,7 @@
 
     <expression name="Exp_WindowProperty_IsFolder">[String.IsEqual(Window.Property(dbtype),tvshow) | String.IsEqual(Window.Property(dbtype),season) | String.IsEqual(Window.Property(dbtype),set) | String.IsEqual(Window.Property(dbtype),artist)]</expression>
 
+    <expression name="Exp_HasActiveDialog">[Window.IsActive(DialogPVRInfo.xml) | Window.IsActive(DialogAddonInfo.xml) | Window.IsActive(DialogAddonSettings.xml) | Window.IsActive(DialogButtonMenu.xml) | Window.IsActive(DialogColorPicker.xml) | Window.IsActive(DialogContextMenu.xml) | Window.IsActive(DialogGameControllers.xml) | Window.IsActive(DialogMediaSource.xml) | Window.IsActive(DialogPictureInfo.xml) | Window.IsActive(DialogPVRGroupManager.xml) | Window.IsActive(DialogChannelManager.xml) | Window.IsActive(DialogPVRGuideSearch.xml) | Window.IsActive(DialogSelect.xml) | Window.IsActive(DialogSettings.xml) | Window.IsActive(DialogSubtitles.xml) | Window.IsActive(DialogTextViewer.xml) | Window.IsActive(DialogVideoManager.xml) | Window.IsActive(FileBrowser.xml) | Window.IsActive(script-wikipedia.xml) | Window.IsActive(SmartPlaylistEditor.xml) | Window.IsActive(1111) | Window.IsActive(1112) | Window.IsActive(1113) | Window.IsActive(1114) | Window.IsActive(1116) | Window.IsActive(1117) | Window.IsActive(1118) | Window.IsActive(1119) | Window.IsActive(1120) | Window.IsActive(1122) | Window.IsActive(1123) | Window.IsActive(1124) | Window.IsActive(1160) | Window.IsActive(1161) | Window.IsActive(1162) | Window.IsActive(1163) | Window.IsActive(1170) | [$EXP[Exp_InfoDialogs] + Integer.IsEqual(System.CurrentControlID,61)] | Window.IsActive(DialogKeyboard.xml) | Window.IsActive(DialogNumeric.xml) | Window.IsActive(DialogConfirm.xml)]</expression>
 
     <!-- =============== -->
     <!-- ListItem Status -->
@@ -225,6 +229,7 @@
     <expression name="Exp_OSD_HideControls">[Window.IsActive(1140) | Window.IsActive(1141) | Window.IsActive(1142) | Window.IsActive(videobookmarks) | Window.IsActive(pvrosdguide) | Window.IsActive(pvrosdchannels) | Window.IsActive(script-upnext-stillwatching.xml) | Window.IsActive(script-upnext-upnext.xml)]</expression>
 
     <expression name="Exp_OSD_ActiveSlides">[[Window.IsActive(VideoFullScreen.xml) | Window.IsActive(MusicVisualisation.xml)] + !$EXP[Exp_InfoDialogs] + !Window.IsActive(1193)]</expression>
+    <expression name="Exp_OSD_VisibleSlides">[[Window.IsVisible(VideoFullScreen.xml) | Window.IsVisible(MusicVisualisation.xml)] + !$EXP[Exp_InfoDialogs] + !Window.IsVisible(1193)]</expression>
 
 
     <!-- ==== -->

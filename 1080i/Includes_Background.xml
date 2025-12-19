@@ -17,32 +17,6 @@
         </control>
     </include>
 
-    <include name="Background_Notification_Overlay">
-        <param name="colordiffuse">main_bg_70</param>
-        <definition>
-            <control type="image" id="$PARAM[id]">
-                <right>0</right>
-                <top>0</top>
-                <height>50%</height>
-                <width>100%</width>
-                <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="$PARAM[colordiffuse]">shadows/cornerspot.png</texture>
-                <visible>$EXP[Exp_Notification_IsActive]</visible>
-                <include content="Animation_Fade_In">
-                    <param name="type">Visible</param>
-                    <param name="delay">150</param>
-                    <param name="time">300</param>
-                    <param name="reversible">true</param>
-                </include>
-                <include content="Animation_Fade_Out">
-                    <param name="type">Hidden</param>
-                    <param name="reversible">true</param>
-                    <param name="time">300</param>
-                </include>
-            </control>
-        </definition>
-    </include>
-
     <include name="Background_FlixArt">
         <param name="flixart_size_w">flixart_size_w</param>
         <param name="flixart_size_h">flixart_size_h</param>
@@ -84,14 +58,14 @@
     <include name="Background_Artwork">
         <param name="fadetime">background_fadetime</param>
         <definition>
-            <include content="Background_FlixArt" condition="!Skin.String(Background.ArtworkStyle,Fanart) + !Skin.String(Background.ArtworkStyle,Simple)">
+            <include content="Background_FlixArt" condition="Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.String(Background.ArtworkStyle,Simple)">
                 <param name="fadetime">$PARAM[fadetime]</param>
             </include>
             <include content="Background_FlixArt" condition="Skin.String(Background.ArtworkStyle,Simple)">
                 <param name="fadetime">$PARAM[fadetime]</param>
                 <param name="diffuse">diffuse/flixart/flixart_new.png</param>
             </include>
-            <include content="Background_Fanart" condition="Skin.String(Background.ArtworkStyle,Fanart)">
+            <include content="Background_Fanart" condition="!Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.String(Background.ArtworkStyle,Simple)">
                 <param name="fadetime">$PARAM[fadetime]</param>
             </include>
         </definition>
@@ -140,20 +114,6 @@
         </control>
     </include>
 
-    <include name="Background_Blur_Cheater">
-        <control type="group">
-            <centertop>50%</centertop>
-            <height>108000</height>
-            <control type="image">
-                <fadetime>$PARAM[fadetime]</fadetime>
-                <width>192000</width>
-                <height>108000</height>
-                <centertop>64%</centertop>
-                <texture background="true">$VAR[Image_Background]</texture>
-            </control>
-        </control>
-    </include>
-
     <include name="Background_Blur">
         <param name="flixart_size_w">flixart_size_w</param>
         <param name="flixart_size_h">flixart_size_h</param>
@@ -161,15 +121,12 @@
         <definition>
             <control type="group">
                 <include>Background_NotVideo</include>
-                <include content="Background_Blur_Quadrants" condition="Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.String(Background.ArtworkStyle,Fanart)">
+                <include content="Background_Blur_Quadrants" condition="Skin.HasSetting(TMDbHelper.EnableBlur)">
                     <param name="flixart_size_w">$PARAM[flixart_size_w]</param>
                     <param name="flixart_size_h">$PARAM[flixart_size_h]</param>
                     <param name="fadetime">$PARAM[fadetime]</param>
                 </include>
-                <include content="Background_Blur_Cheater" condition="!Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.String(Background.ArtworkStyle,Fanart)">
-                    <param name="fadetime">$PARAM[fadetime]</param>
-                </include>
-                <include content="Background_Image" condition="Skin.String(Background.ArtworkStyle,Fanart)">
+                <include content="Background_Image" condition="!Skin.HasSetting(TMDbHelper.EnableBlur)">
                     <param name="fadetime">$PARAM[fadetime]</param>
                 </include>
             </control>
@@ -290,7 +247,6 @@
         <control type="image">
             <texture colordiffuse="$VAR[ColorBackground]">background/combined_flixart.png</texture>
         </control>
-        <!-- <include>Background_Notification_Overlay</include> -->
         <control type="image">
             <texture colordiffuse="$VAR[ColorBackground]">background/combined_overlay.png</texture>
 
@@ -299,15 +255,9 @@
             <include content="Animation_Fade_In">
                 <param name="type">Visible</param>
             </include>
-            <!-- <include content="Animation_Fade_In">
-                <param name="type">WindowOpen</param>
-            </include> -->
             <include content="Animation_Fade_Out">
                 <param name="type">Hidden</param>
             </include>
-            <!-- <include content="Animation_Fade_Out">
-                <param name="type">WindowClose</param>
-            </include> -->
         </control>
     </include>
 
