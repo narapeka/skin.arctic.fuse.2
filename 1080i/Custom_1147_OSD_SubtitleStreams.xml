@@ -26,6 +26,7 @@
                     <param name="enabled">VideoPlayer.SubtitlesEnabled</param>
                     <param name="toggle">true</param>
                     <param name="icon">special://skin/extras/icons/quote.png</param>
+                    <param name="use_glass">true</param>
                 </include>
             </control>
 
