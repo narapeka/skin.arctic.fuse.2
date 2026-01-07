@@ -85,6 +85,9 @@
             </include>
             <include content="$PARAM[include]">
                 <param name="id">$PARAM[id]</param>
+                <param name="offset_x">7</param>
+                <left>view_pad</left>
+                <right>view_pad</right>
                 <param name="icon">$PARAM[icon]</param>
                 <param name="detailed">$PARAM[detailed]</param>
                 <param name="item_h">$PARAM[item_h]</param>
