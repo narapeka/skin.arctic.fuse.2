@@ -142,20 +142,15 @@
                 <param name="hidden_button">List_ButtonMenu_Row_HiddenButton_ERow</param>
                 <param name="hidden_button_enabled">True</param>
                 <param name="control">list</param>
-                <onback>SetProperty(TMDbHelper.WidgetContainer,$INFO[ListItem.Property(widget_id)])</onback>
                 <onback>5098</onback>
-                <onleft>SetProperty(TMDbHelper.WidgetContainer,$INFO[ListItem.Property(widget_id)])</onleft>
                 <onleft>5098</onleft>
-                <onright>SetProperty(TMDbHelper.WidgetContainer,$INFO[ListItem.Property(widget_id)])</onright>
                 <onright condition="Integer.IsEqual(Container(5000).NumItems,0)">SetFocus(5098)</onright>
                 <onright condition="!Integer.IsEqual(Container(5000).NumItems,0)">SetFocus(5000)</onright>
-                <onclick>SetProperty(TMDbHelper.WidgetContainer,$INFO[ListItem.Property(widget_id)])</onclick>
                 <onclick>SetFocus(5098)</onclick>
                 <include content="Animation_ConditionalFade">
                     <param name="condition">!Control.HasFocus(5099)</param>
                 </include>
 
-                <onup>SetProperty(TMDbHelper.WidgetContainer,$INFO[ListItem.Property(widget_id)])</onup>
                 <onup>5098</onup>
                 <ondown>noop</ondown>
                 <left>60</left>
@@ -204,7 +199,7 @@
                     <include content="_Widget_Row">
                         <param name="id">5001</param>
                         <param name="groupid">5101</param>
-                        <param name="label">$INFO[window(home).property(tmdbhelper.userdiscover.folderpath.name)]$INFO[Control.GetLabel(9099).index(1), [COLOR=main_fg_30]&gt;[/COLOR] [CAPITALIZE],[/CAPITALIZE]]</param>
+                        <param name="label">$INFO[Control.GetLabel(9099).index(1),[CAPITALIZE],[/CAPITALIZE]]</param>
                         <param name="include">List_Poster_Row</param>
                         <param name="visible">True</param>
                         <param name="detailed">String.IsEqual(ListItem.Label,$LOCALIZE[31046])</param>
@@ -240,7 +235,6 @@
                             <param name="onback">[Integer.IsEqual(Container(5001).CurrentItem,1)]</param>
                         </include> -->
 
-                        <onfocus>SetProperty(TMDbHelper.WidgetContainer,5001)</onfocus>
                         <onfocus>ClearProperty(Background.ShowOverlay,Home)</onfocus>
 
                         <!-- <content>
@@ -251,7 +245,7 @@
                             </item>
                         </content> -->
 
-                        <content browse="$VAR[Defs_BrowseLimitedLists]" target="videos">$INFO[window(home).property(tmdbhelper.userdiscover.folderpath)]$INFO[Container(99098).ListItem.Label,&amp;with_text_query=,]</content>
+                        <content browse="$VAR[Defs_BrowseLimitedLists]" target="videos"></content>
 
                     </include>
 

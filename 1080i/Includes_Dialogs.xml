@@ -39,7 +39,6 @@
     </include>
 
     <variable name="Dialog_Background_Blur_Adaptive_Artwork">
-        <value condition="!Skin.HasSetting(TMDbHelper.EnableBlur)">special://skin/extras/backgrounds/dialogs/classic_blur.png</value>
         <value>$VAR[Image_Background]</value>
     </variable>
 

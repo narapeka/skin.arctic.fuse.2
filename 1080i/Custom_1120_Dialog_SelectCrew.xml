@@ -2,7 +2,6 @@
 <window type="dialog" id="1120">
 
     <defaultcontrol always="true">8000</defaultcontrol>
-    <onload>SetProperty(TMDbHelper.ContextMenu,True)</onload>
     <onunload>ClearProperty(type)</onunload>
     <controls>
 
@@ -47,13 +46,7 @@
                             <oninfo>Close</oninfo>
                             <right>-20</right>
                             <!-- <onclick>Dialog.Close(1120)</onclick> -->
-                            <include content="DialogInfo_Details_Action">
-                                <param name="header">$INFO[Container.ListItem.Label]</param>
-                                <param name="poster">$INFO[Container.ListItem.Icon]</param>
-                                <param name="path">plugin://plugin.video.themoviedb.helper/?info=details&amp;tmdb_type=$INFO[Container.ListItem.Property(tmdb_type)]&amp;tmdb_id=$INFO[Container.ListItem.Property(tmdb_id)]</param>
-                                <param name="tmdb_id">$INFO[Container.ListItem.Property(tmdb_id)]</param>
-                                <param name="tmdb_type">$INFO[Container.ListItem.Property(tmdb_type)]</param>
-                            </include>
+                            <onclick>Close</onclick>
                             <content>
                                 <!-- Writer / Composer -->
                                 <include content="DialogInfo_CrewItems" condition="String.IsEqual(Window.Property(type),Writer)">

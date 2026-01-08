@@ -134,7 +134,6 @@
                         <pagecontrol>66</pagecontrol>
                         <visible>$PARAM[visible]</visible>
                         <viewtype label="$PARAM[viewtype_label]">wrap</viewtype>
-                        <onfocus>ClearProperty(TMDbHelper.WidgetContainer)</onfocus>
                         <onfocus>SetProperty(Background.ShowOverlay,True,Home)</onfocus>
                     </include>
 
@@ -156,7 +155,6 @@
                         <pagecontrol>60</pagecontrol>
                         <visible>$PARAM[visible]</visible>
                         <viewtype label="$PARAM[viewtype_label]">wrap</viewtype>
-                        <onfocus>ClearProperty(TMDbHelper.WidgetContainer)</onfocus>
                         <onfocus>SetProperty(Background.ShowOverlay,True,Home)</onfocus>
                     </include>
                 </control>

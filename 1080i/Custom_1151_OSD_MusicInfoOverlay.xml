@@ -42,7 +42,7 @@
                             <param name="top_logo">$VAR[Image_OSD_Clearlogo]</param>
                             <param name="top_label">$INFO[MusicPlayer.Artist]</param>
                             <param name="sub_label">$INFO[MusicPlayer.TrackNumber,,. ]$INFO[MusicPlayer.Title]</param>
-                            <param name="top_logo_visible">[!String.IsEmpty(Window(Home).Property(TMDbHelper.Player.CropImage)) | !String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(artist.clearlogo))]</param>
+                            <param name="top_logo_visible">[!String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(artist.clearlogo))]</param>
                             <param name="top_logo_width">460</param>
                         </include>
                     </control>
@@ -58,7 +58,7 @@
                             <param name="top_logo">$VAR[Image_OSD_Clearlogo]</param>
                             <param name="top_label">$INFO[MusicPlayer.Artist]</param>
                             <param name="sub_label">$INFO[MusicPlayer.TrackNumber,,. ]$INFO[MusicPlayer.Title]</param>
-                            <param name="top_logo_visible">[!String.IsEmpty(Window(Home).Property(TMDbHelper.Player.CropImage)) | !String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(artist.clearlogo))]</param>
+                            <param name="top_logo_visible">[!String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(artist.clearlogo))]</param>
                             <param name="top_logo_width">460</param>
                         </include>
                     </control>

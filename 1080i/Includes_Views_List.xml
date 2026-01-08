@@ -381,7 +381,6 @@
                         <pagecontrol>$PARAM[scrollbar_id]</pagecontrol>
                         <visible>$PARAM[visible]</visible>
                         <viewtype label="$PARAM[viewtype_label]">list</viewtype>
-                        <onfocus>ClearProperty(TMDbHelper.WidgetContainer)</onfocus>
                         <onfocus condition="![$PARAM[overlay]]">ClearProperty(Background.ShowOverlay,Home)</onfocus>
                         <onfocus condition="$PARAM[overlay]">SetProperty(Background.ShowOverlay,True,Home)</onfocus>
                     </include>
@@ -480,7 +479,6 @@
 
                         <visible>$PARAM[visible]</visible>
                         <viewtype label="$PARAM[viewtype_label]">list</viewtype>
-                        <onfocus>ClearProperty(TMDbHelper.WidgetContainer)</onfocus>
                         <onfocus>SetProperty(Background.ShowOverlay,True,Home)</onfocus>
                     </include>
                 </control>
@@ -527,7 +525,6 @@
                             <movement>1</movement>
                             <pagecontrol>66</pagecontrol>
 
-                            <onfocus>ClearProperty(TMDbHelper.WidgetContainer)</onfocus>
                             <onfocus>SetProperty(Background.ShowOverlay,True,Home)</onfocus>
                         </include>
 

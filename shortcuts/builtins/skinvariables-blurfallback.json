@@ -17,6 +17,6 @@
         ]
     },
     "actions": [
-        "SetProperty(TMDbHelper.Blur.Fallback,{blur_image},Home)"
+        "SetProperty(Blur.Fallback,{blur_image},Home)"
     ]
 }

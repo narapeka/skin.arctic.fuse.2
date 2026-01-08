@@ -39,8 +39,6 @@
         <param name="onback">[Integer.IsEqual(Container({widget_id}).CurrentItem,1)]</param>
     </include> -->
 
-    <onfocus>SetProperty(TMDbHelper.WidgetContainer,{widget_id})</onfocus>
-
     <include content="Object_ContentDynamic">
         <param name="sortby">{widget_sortby}</param>
         <param name="sortorder">{widget_sortorder}</param>

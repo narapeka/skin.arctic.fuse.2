@@ -1395,10 +1395,6 @@ msgid "Played"
 msgstr "Просмотрено"
 
 #: /1080i/Includes_Labels.xml
-msgctxt "#31284"
-msgid "Discover movies and tvshows on TMDb."
-msgstr "Поиск фильмов и сериалов в TMDb."
-
 msgctxt "#31285"
 msgid "Classification (MPAA)"
 msgstr "Рейтинг (MPAA)"
@@ -2133,11 +2129,6 @@ msgstr "Дополнительные теги"
 msgctxt "#31434"
 msgid "Video OSD"
 msgstr "Видео OSD"
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31435"
-msgid "TMDbHelper lookups"
-msgstr "Загрузить TMDbHelper"
 
 #: /1080i/SkinSettings.xml
 #, fuzzy

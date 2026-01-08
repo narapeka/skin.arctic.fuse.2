@@ -1346,10 +1346,6 @@ msgid "Played"
 msgstr "Katsottu"
 
 #: /1080i/Includes_Labels.xml
-msgctxt "#31284"
-msgid "Discover movies and tvshows on TMDb."
-msgstr "Löydä elokuvia ja sarjoja TMDb:stä."
-
 msgctxt "#31285"
 msgid "Classification (MPAA)"
 msgstr "Ikäraja (MPAA)"
@@ -2055,11 +2051,6 @@ msgstr "Lisämerkinnät"
 msgctxt "#31434"
 msgid "Video OSD"
 msgstr "Videon kuvaruutuvalikko"
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31435"
-msgid "TMDbHelper lookups"
-msgstr "TMDbHelper-lisätiedot"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31436"

@@ -2,7 +2,6 @@
 <window type="dialog" id="1193">
     <include>Action_Blur_Onload</include>
     <onload>ClearProperty(Background.HideArtwork,Home)</onload>
-    <onload>SetProperty(TMDbHelper.WidgetContainer,50)</onload>
     <defaultcontrol always="true">9001</defaultcontrol>
     <onload>SetFocus(9001)</onload>
     <zorder>3</zorder>
@@ -26,13 +25,6 @@
         </control>
 
         <include>Defs_Background_Loader</include>
-
-        <include content="Object_Hidden_List">
-            <param name="id">50</param>
-            <content limit="1">$VAR[Path_VideoOSD_TMDbType,plugin://plugin.video.themoviedb.helper/?info=details&amp;tmdb_type=,]$VAR[Path_VideoOSD_TMDbQuery]</content>
-            <onfocus>Action(Info)</onfocus>
-            <onfocus>Dialog.Close(1193,force)</onfocus>
-        </include>
 
         <include>OSD_VideoBackground_Dialog</include>
 

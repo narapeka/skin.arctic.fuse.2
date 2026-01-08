@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-    <variable name="Dialog_ContextMenu_SideButtons_WikiTitle">
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.base_tvshowtitle))">$ESCINFO[Window(Home).Property(TMDbHelper.ListItem.base_tvshowtitle)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.base_title))">$ESCINFO[Window(Home).Property(TMDbHelper.ListItem.base_title)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.base_label))">$ESCINFO[Window(Home).Property(TMDbHelper.ListItem.base_label)]</value>
-    </variable>
-
-    <variable name="Dialog_ContextMenu_SideButtons_WikiType">
-        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),tvshow) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),season) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),episode)"> tv series</value>
-        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),movie)"> film</value>
-    </variable>
-
-
-
     <include name="Dialog_ContextMenu_BodyContent">
         <definition>
             <control type="group">
@@ -22,35 +9,7 @@
                 <control type="group">
                     <include>Dimension_Dialog_Body_Group</include>
 
-
-                    <include content="Object_Control" condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.base_fanart))">
-                        <param name="control">group</param>
-
-                        <include content="Dialog_Outline_Box">
-                            <height>120</height>
-                            <control type="image">
-                                <texture diffuse="diffuse/banner_w560_h100.png" colordiffuse="main_logo" background="true">$VAR[Image_ContextFanart]</texture>
-                                <aspectratio scalediffuse="false">scale</aspectratio>
-                            </control>
-                            <control type="group">
-                                <include content="Dimension_Padding">
-                                    <param name="pad">20</param>
-                                </include>
-                                <control type="image">
-                                    <texture background="true">$VAR[Image_ContextClearlogo]</texture>
-                                    <aspectratio>keep</aspectratio>
-                                    <left>20</left>
-                                    <right>20</right>
-                                </control>
-                            </control>
-                        </include>
-                    </include>
-
                     <control type="group">
-
-                        <include content="Object_Top" condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.base_fanart))">
-                            <param name="top">160</param>
-                        </include>
 
                         <control type="image">
                             <top>-20</top>

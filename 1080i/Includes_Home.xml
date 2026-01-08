@@ -80,8 +80,6 @@
                     <onfocus>ClearProperty(SideMenu.CurrentItem)</onfocus>
                     <onfocus>SetProperty(Focus.ControlID,$NUMBER[300],Home)</onfocus>
 
-                    <onfocus condition="$EXP[Exp_HomeHub_IsVisible] + !String.IsEmpty(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock.OnFocus))">SetProperty(TMDbHelper.WidgetContainer.UpdateLock,$INFO[ListItem.CurrentItem],1198)</onfocus>
-                    <onfocus condition="$EXP[Exp_HomeHub_IsVisible] + String.IsEmpty(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock.OnFocus))">SetProperty(TMDbHelper.WidgetContainer.UpdateLock.OnFocus,True,1198)</onfocus>
 
                     <onfocus condition="!String.IsEmpty(Window.Property(List.ViewContainer.Prev))">SetProperty(List.ViewContainer,$INFO[Window.Property(List.ViewContainer.Prev)])</onfocus>
                     <onfocus condition="!String.IsEmpty(Window.Property(List.ViewContainer.Prev))">ClearProperty(List.ViewContainer.Prev)</onfocus>
@@ -114,16 +112,13 @@
             <visible allowhiddenfocus="true">false</visible>
             <animation effect="fade" start="0" end="0" time="50" reversible="false">Focus</animation>
 
-            <onfocus condition="$EXP[Exp_HomeHub_IsVisible] + !Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">SetProperty(TMDbHelper.WidgetContainer.UpdateLock,$INFO[ListItem.CurrentItem],1198)</onfocus>
+            <onfocus condition="$EXP[Exp_HomeHub_IsVisible] + !String.IsEmpty(ListItem.Property(use_as_widget))">SetFocus($INFO[ListItem.Property(widgets_first_id)])</onfocus>
+            <onfocus condition="$EXP[Exp_HomeHub_IsVisible] + !String.IsEmpty(ListItem.Property(use_as_widget))">SetFocus(300)</onfocus>
 
-            <onfocus condition="$EXP[Exp_HomeHub_IsVisible] + !Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">SetFocus($INFO[ListItem.Property(widgets_first_id)])</onfocus>
-            <onfocus condition="$EXP[Exp_HomeHub_IsVisible] + !Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">SetFocus(300)</onfocus>
-
-            <onfocus condition="$EXP[Exp_HomeHub_IsVisible] + !Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">SetProperty(TMDbHelper.WidgetContainer,$INFO[ListItem.Property(widgets_first_id)],Home)</onfocus>
-            <onfocus condition="$EXP[Exp_HomeHub_IsVisible] + !Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">SetProperty(Slide.WidgetContainer,$INFO[ListItem.Property(widgets_first_id)],Home)</onfocus>
-            <onfocus condition="$EXP[Exp_HomeHub_IsVisible] + !Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">ClearProperty(List.ViewContainer,Home)</onfocus>
-            <onfocus condition="$EXP[Exp_HomeHub_IsVisible] + !Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">ClearProperty(List.ViewContainer.Prev,Home)</onfocus>
-            <onfocus condition="$EXP[Exp_HomeHub_IsVisible] + !Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">SetProperty(SideMenu.CurrentName,$INFO[ListItem.Label],Home)</onfocus>
+            <onfocus condition="$EXP[Exp_HomeHub_IsVisible]">SetProperty(Slide.WidgetContainer,$INFO[ListItem.Property(widgets_first_id)],Home)</onfocus>
+            <onfocus condition="$EXP[Exp_HomeHub_IsVisible]">ClearProperty(List.ViewContainer,Home)</onfocus>
+            <onfocus condition="$EXP[Exp_HomeHub_IsVisible]">ClearProperty(List.ViewContainer.Prev,Home)</onfocus>
+            <onfocus condition="$EXP[Exp_HomeHub_IsVisible]">SetProperty(SideMenu.CurrentName,$INFO[ListItem.Label],Home)</onfocus>
 
         </control>
     </include>
@@ -241,8 +236,6 @@
                 <onfocus condition="$EXP[Exp_HomeMenu_IsExpanded] + Skin.String(Home.MenuStyle,Ribbon)">SetProperty(Background.ShowOverlay,True,Home)</onfocus>
                 <onfocus condition="![$EXP[Exp_HomeMenu_IsExpanded] + Skin.String(Home.MenuStyle,Ribbon)]">ClearProperty(Background.ShowOverlay,Home)</onfocus>
 
-                <onfocus>ClearProperty(TMDbHelper.WidgetContainer.UpdateLock.OnFocus,1198)</onfocus>
-
                 <include>Home_Menu_List_OnBackInfo</include>
                 <onclick>$VAR[Action_ActivateSearchDiscover]</onclick>
 
@@ -284,8 +277,6 @@
 
                 <onfocus condition="$EXP[Exp_HomeMenu_IsExpanded] + Skin.String(Home.MenuStyle,Ribbon)">SetProperty(Background.ShowOverlay,True,Home)</onfocus>
                 <onfocus condition="![$EXP[Exp_HomeMenu_IsExpanded] + Skin.String(Home.MenuStyle,Ribbon)]">ClearProperty(Background.ShowOverlay,Home)</onfocus>
-
-                <onfocus>ClearProperty(TMDbHelper.WidgetContainer.UpdateLock.OnFocus,1198)</onfocus>
 
                 <include>Home_Menu_List_OnBackInfo</include>
                 <include content="Action_HomeMenu_OnRightLeft">

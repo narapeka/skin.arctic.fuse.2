@@ -58,14 +58,11 @@
     <include name="Background_Artwork">
         <param name="fadetime">background_fadetime</param>
         <definition>
-            <include content="Background_FlixArt" condition="Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.String(Background.ArtworkStyle,Simple)">
-                <param name="fadetime">$PARAM[fadetime]</param>
-            </include>
             <include content="Background_FlixArt" condition="Skin.String(Background.ArtworkStyle,Simple)">
                 <param name="fadetime">$PARAM[fadetime]</param>
                 <param name="diffuse">diffuse/flixart/flixart_new.png</param>
             </include>
-            <include content="Background_Fanart" condition="!Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.String(Background.ArtworkStyle,Simple)">
+            <include content="Background_Fanart" condition="!Skin.String(Background.ArtworkStyle,Simple)">
                 <param name="fadetime">$PARAM[fadetime]</param>
             </include>
         </definition>
@@ -121,12 +118,7 @@
         <definition>
             <control type="group">
                 <include>Background_NotVideo</include>
-                <include content="Background_Blur_Quadrants" condition="Skin.HasSetting(TMDbHelper.EnableBlur)">
-                    <param name="flixart_size_w">$PARAM[flixart_size_w]</param>
-                    <param name="flixart_size_h">$PARAM[flixart_size_h]</param>
-                    <param name="fadetime">$PARAM[fadetime]</param>
-                </include>
-                <include content="Background_Image" condition="!Skin.HasSetting(TMDbHelper.EnableBlur)">
+                <include content="Background_Image">
                     <param name="fadetime">$PARAM[fadetime]</param>
                 </include>
             </control>

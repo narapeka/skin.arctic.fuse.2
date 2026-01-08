@@ -1012,11 +1012,10 @@
             <include content="Action_Widgets_ResetPosition_OnFocus">
                 <param name="condition">Container(400).HasPrevious | !String.IsEmpty(Window.Property(Widgets.ResetPosition))</param>
             </include>
-            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">SetProperty(TMDbHelper.WidgetContainer.UpdateLock,$INFO[$PARAM[container]ListItem.CurrentItem],1198)</onfocus>
-            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem) + !String.IsEmpty(ListItem.Property(use_as_widget))">SetFocus(3002)</onfocus>
-            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem) + String.IsEmpty(ListItem.Property(use_as_widget)) + ![Container(400).HasPrevious | !String.IsEmpty(Window.Property(Widgets.ResetPosition))]">SetFocus(400)</onfocus>
-            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem) + String.IsEmpty(ListItem.Property(use_as_widget)) + [Container(400).HasPrevious | !String.IsEmpty(Window.Property(Widgets.ResetPosition))]">SetFocus($INFO[$PARAM[container]ListItem.Property(item)]601)</onfocus>
-            <onfocus condition="!Integer.IsEqual(Window(1198).Property(TMDbHelper.WidgetContainer.UpdateLock),ListItem.CurrentItem)">SetFocus(300)</onfocus>
+            <onfocus condition="!String.IsEmpty(ListItem.Property(use_as_widget))">SetFocus(3002)</onfocus>
+            <onfocus condition="String.IsEmpty(ListItem.Property(use_as_widget)) + ![Container(400).HasPrevious | !String.IsEmpty(Window.Property(Widgets.ResetPosition))]">SetFocus(400)</onfocus>
+            <onfocus condition="String.IsEmpty(ListItem.Property(use_as_widget)) + [Container(400).HasPrevious | !String.IsEmpty(Window.Property(Widgets.ResetPosition))]">SetFocus($INFO[$PARAM[container]ListItem.Property(item)]601)</onfocus>
+            <onfocus>SetFocus(300)</onfocus>
         </control>
     </include>
 
@@ -1044,7 +1043,6 @@
         <param name="condition">true</param>
         <param name="prefix" />
         <definition>
-            <onfocus condition="$PARAM[condition]">SetProperty(TMDbHelper.WidgetContainer,$INFO[$PARAM[container]ListItem.Property(widget_id)])</onfocus>
             <onfocus condition="$PARAM[condition] + !String.IsEmpty($PARAM[container]ListItem.Property(hide_artwork)) + !Skin.HasSetting(Widgets.DontHideArtworkOnClassic)">SetProperty(Background.HideArtwork,True)</onfocus>
             <onfocus condition="$PARAM[condition] + !String.IsEmpty($PARAM[container]ListItem.Property(unhide_artwork))">ClearProperty(Background.HideArtwork)</onfocus>
         </definition>

@@ -23,17 +23,9 @@
                         "String.IsEmpty(Window.Property(ReloadDone))",
                         "!Skin.HasSetting(DefaultConfig.InitDone)"],
                     "value": [
-                        "Skin.SetBool(TMDbHelper.EnableCrop)",
-                        "Skin.SetBool(TMDbHelper.EnableBlur)",
                         "Skin.SetBool(DefaultConfig.InitDone)"
                     ]
                 }],
-                "Skin.SetBool(TMDbHelper.Service)",
-                "Skin.SetBool(TMDbHelper.UseLocalWidgetContainer)",
-                "Skin.SetBool(TMDbHelper.DisableExtendedProperties)",
-                "Skin.SetBool(TMDbHelper.DirectCallAuto)",
-                "Skin.Reset(TMDbHelper.MonitorContainer)",
-                "Skin.Reset(TMDbHelper.DisableArtwork)",
 
                 "Skin.SetString(SkinConstant.Numeric.00,$NUMBER[0])",
                 "Skin.SetString(SkinConstant.Numeric.01,$NUMBER[1])",
@@ -134,7 +126,6 @@
 
                 "SetProperty(InitStatus,Generating Textures)",
                 "Skin.Reset(TextureMaker.Built)",
-                "RunScript(plugin.video.themoviedb.helper,blur_image={var_image_simplebackground},prefix=SimpleBackground)",
                 "Skin.SetString(SkinVariables.SkinUser.ExecuteBuiltIn,\"RunScript(script.skinvariables,special://skin/shortcuts/skinvariables-build-colortemplates.json,use_rules=True,get_values=true,reload=Home)\")",
                 "route=run_executebuiltin=special://skin/shortcuts/skinvariables-build-colortemplates.json&use_rules=True&get_values=true"
             ]

@@ -1758,10 +1758,6 @@ msgid "Video OSD"
 msgstr "Відео OSD"
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31435"
-msgid "TMDbHelper lookups"
-msgstr "Запити TMDbHelper"
-
 msgctxt "#31437"
 msgid "Choose spotlight"
 msgstr "Обрати сцену"

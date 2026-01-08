@@ -116,7 +116,6 @@
                         <pagecontrol>60</pagecontrol>
                         <visible>$PARAM[visible]</visible>
                         <viewtype label="$PARAM[viewtype_label]">wrap</viewtype>
-                        <onfocus>ClearProperty(TMDbHelper.WidgetContainer)</onfocus>
                         <onfocus>ClearProperty(Background.ShowOverlay,Home)</onfocus>
 
                         <include content="Object_HitRect">

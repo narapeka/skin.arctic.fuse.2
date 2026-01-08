@@ -5,10 +5,10 @@
         <include content="Object_Hidden_List">
             <param name="id">99971</param>
             <include content="Defs_AutoScroll">
-                <param name="condition">[Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),301) + ![!Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating]]</param>
+                <param name="condition">[![!Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating]]</param>
             </include>
             <content sortby="random">$VAR[Path_Spotlight_SlideShow_Content]</content>
-            <visible>[Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),301) + !$EXP[Exp_Hubs_Spotlight_HasItems]]</visible>
+            <visible>[!$EXP[Exp_Hubs_Spotlight_HasItems]]</visible>
         </include>
     </include>
 
@@ -23,7 +23,7 @@
                 <param name="plotlabel">$VAR[Label_Plot_C301]</param>
                 <param name="container">Container(301).</param>
                 <param name="grouplistid">99952</param>
-                <param name="visible">Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),301)</param>
+                <param name="visible">true</param>
                 <param name="align">bottom</param>
                 <param name="titleautoheight">true</param>
                 <param name="adapative">true</param>
@@ -36,7 +36,6 @@
         <definition>
             <control type="wraplist" id="301">
                 <preloaditems>2</preloaditems>
-                <onfocus>SetProperty(TMDbHelper.WidgetContainer,301,$PARAM[property_window_id])</onfocus>
                 <onfocus>ClearProperty(Background.ShowOverlay,Home)</onfocus>
 
                 <onfocus condition="Integer.IsEqual(Container(301).NumItems,0)">SetFocus(300)</onfocus>
@@ -51,7 +50,7 @@
                 <left>-1920</left>
 
                 <include content="Defs_AutoScroll">
-                    <param name="condition">[[!ControlGroup(310).HasFocus() | System.IdleTime(3)] + ![Skin.TimerIsRunning(idle_spotlight_trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer)) + !String.IsEqual(Window(Home).Property(PlayTrailer),Window(Home).Property(TMDbHelper.ListItem.Trailer))] + ![Player.HasVideo + String.IsEqual(Window(Home).Property(PlayTrailer),Player.FileNameAndPath)]]</param>
+                    <param name="condition">[[!ControlGroup(310).HasFocus() | System.IdleTime(3)] + ![Player.HasVideo + String.IsEqual(Window(Home).Property(PlayTrailer),Player.FileNameAndPath)]]</param>
                 </include>
 
                 <itemlayout />
@@ -82,7 +81,6 @@
     </variable>
 
     <include name="Spotlight_Main_Button_Standard">
-        <onfocus>SetProperty(TMDbHelper.WidgetContainer,301,$PARAM[property_window_id])</onfocus>
         <onfocus>ClearProperty(Background.ShowOverlay,Home)</onfocus>
         <onfocus>ClearProperty(Slide.WidgetContainer,$PARAM[property_window_id])</onfocus>
 
