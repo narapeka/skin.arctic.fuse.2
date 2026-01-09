@@ -121,32 +121,5 @@
         "spotlight_path": "special://skin/extras/playlists/RandomArtists.xsp",
         "spotlight_icon": "DefaultMusicArtists.png",
         "spotlight_target": "music"
-    },
-    {
-        "label": "$LOCALIZE[31085]",
-        "icon": "special://skin/extras/icons/livetv.png",
-        "path": "ActivateWindow(TVGuide)",
-        "target": "",
-        "widgets": [
-            {
-                "label": "$LOCALIZE[568]",
-                "path": "pvr://channels/tv/*",
-                "widget_style": "Square",
-                "target": "tvguide",
-                "guid": "guid-27538532"
-            },
-            {
-                "label": "$LOCALIZE[19017]",
-                "path": "pvr://recordings/tv/active?view=flat",
-                "widget_style": "Square",
-                "target": "tvguide",
-                "guid": "guid-1db27e6d"
-            }
-        ],
-        "guid": "guid-e79824eb",
-        "spotlight_label": "Last Played Channels",
-        "spotlight_path": "pvr://channels/tv/*?view=lastplayed",
-        "spotlight_icon": "DefaultAddonPVRClient.png",
-        "spotlight_target": ""
     }
 ]

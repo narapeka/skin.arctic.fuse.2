@@ -82,31 +82,5 @@
             }
         ],
         "guid": "guid-75c9ec27"
-    },
-    {
-        "label": "$LOCALIZE[31085]",
-        "icon": "special://skin/extras/icons/livetv.png",
-        "path": "ActivateWindow(TVGuide)",
-        "expression": "livetv",
-        "target": "",
-        "widgets": [
-            {
-                "label": "$LOCALIZE[568]",
-                "path": "pvr://channels/tv/*",
-                "widget_style": "Landscape",
-                "target": "tvguide",
-                "guid": "guid-661f7d35",
-                "widget_sortby": "lastplayed",
-                "widget_sortorder": "True"
-            },
-            {
-                "label": "$LOCALIZE[19017]",
-                "path": "pvr://recordings/tv/active?view=flat",
-                "widget_style": "Landscape",
-                "target": "tvguide",
-                "guid": "guid-9ae1ecef"
-            }
-        ],
-        "guid": "guid-4da6c044"
     }
 ]
