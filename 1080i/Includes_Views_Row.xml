@@ -2,96 +2,66 @@
 <includes>
 
     <!-- Square Row -->
-    <include name="View_050_Square_Row">
+    <include name="View_500_Square_Row">
         <include content="View_Row_Include">
-            <param name="id">50</param>
+            <param name="id">500</param>
             <param name="include">List_Square_Row</param>
             <param name="viewtype_label">$LOCALIZE[31113]</param>
-            <param name="visible">$EXP[Exp_View_50]</param>
+            <param name="visible">$EXP[Exp_View_500]</param>
         </include>
     </include>
 
     <!-- Landscape Row -->
-    <include name="View_051_Landscape_Row">
+    <include name="View_501_Landscape_Row">
         <include content="View_Row_Include">
-            <param name="id">51</param>
+            <param name="id">501</param>
             <param name="include">List_Landscape_Row</param>
             <param name="viewtype_label">$LOCALIZE[31112]</param>
-            <param name="visible">$EXP[Exp_View_51]</param>
+            <param name="visible">$EXP[Exp_View_501]</param>
         </include>
     </include>
 
     <!-- Poster Row -->
-    <include name="View_052_Poster_Row">
+    <include name="View_502_Poster_Row">
         <include content="View_Row_Include">
-            <param name="id">52</param>
+            <param name="id">502</param>
             <param name="include">List_Poster_Row</param>
             <param name="viewtype_label">$LOCALIZE[31111]</param>
-            <param name="visible">$EXP[Exp_View_52]</param>
+            <param name="visible">$EXP[Exp_View_502]</param>
         </include>
     </include>
 
     <!-- Circle Row -->
-    <include name="View_053_Circle_Row">
+    <include name="View_503_Circle_Row">
         <include content="View_Row_Include">
-            <param name="id">53</param>
+            <param name="id">503</param>
             <param name="include">List_Circle_Row</param>
             <param name="viewtype_label">$LOCALIZE[31418]</param>
-            <param name="visible">$EXP[Exp_View_53]</param>
-        </include>
-    </include>
-
-    <!-- Card Row -->
-    <include name="View_054_Card_Row">
-        <include content="View_Row_Include" condition="!Skin.HasSetting(View.UseTextBasedCard)">
-            <param name="id">54</param>
-            <param name="include">List_Card_Row</param>
-            <param name="viewtype_label">$LOCALIZE[31563]</param>
-            <param name="visible">$EXP[Exp_View_54]</param>
-        </include>
-        <include content="View_Row_Include" condition="Skin.HasSetting(View.UseTextBasedCard)">
-            <param name="id">54</param>
-            <param name="include">List_Corflute_Row</param>
-            <param name="viewtype_label">$LOCALIZE[31563]</param>
-            <param name="visible">$EXP[Exp_View_54]</param>
+            <param name="visible">$EXP[Exp_View_503]</param>
         </include>
     </include>
 
     <!-- Board Row -->
-    <include name="View_057_Board_Row">
-        <include content="View_Row_Include" condition="!Skin.HasSetting(View.UseTextBasedBoard)">
-            <param name="id">57</param>
+    <include name="View_504_Board_Row">
+        <include content="View_Row_Include">
+            <param name="id">504</param>
             <param name="include">List_Board_Row</param>
             <param name="viewtype_label">$LOCALIZE[31100]</param>
-            <param name="visible">$EXP[Exp_View_57]</param>
-        </include>
-        <include content="View_Row_Include" condition="Skin.HasSetting(View.UseTextBasedBoard)">
-            <param name="id">57</param>
-            <param name="include">List_Placard_Row</param>
-            <param name="viewtype_label">$LOCALIZE[31100]</param>
-            <param name="visible">$EXP[Exp_View_57]</param>
+            <param name="visible">$EXP[Exp_View_504]</param>
         </include>
     </include>
 
-    <!-- Quad Row -->
-    <include name="View_058_Quad_Row">
+    <!-- Card Row -->
+    <include name="View_505_Card_Row">
         <include content="View_Row_Include">
-            <param name="id">58</param>
-            <param name="include">List_Quad_Row</param>
-            <param name="viewtype_label">$LOCALIZE[31326]</param>
-            <param name="visible">$EXP[Exp_View_58]</param>
+            <param name="id">505</param>
+            <param name="include">List_Card_Row</param>
+            <param name="viewtype_label">$LOCALIZE[31563]</param>
+            <param name="visible">$EXP[Exp_View_505]</param>
         </include>
     </include>
 
-    <!-- Disc Row -->
-    <include name="View_059_Disc_Row">
-        <include content="View_Row_Include">
-            <param name="id">59</param>
-            <param name="include">List_Disc_Row</param>
-            <param name="viewtype_label">$LOCALIZE[31342]</param>
-            <param name="visible">$EXP[Exp_View_59]</param>
-        </include>
-    </include>
+
 
     <!-- Row Template View -->
     <include name="View_Row_Include">
@@ -106,7 +76,7 @@
                         <include content="Action_View_Movement_OnUp">
                             <param name="id">$PARAM[id]</param>
                         </include>
-                        <include content="Action_View_Movement_OnLeftRight">
+                        <include content="Action_View_Movement_OnBack">
                             <param name="id">$PARAM[id]</param>
                             <param name="onback">[Integer.IsEqual(Container($PARAM[id]).CurrentItem,1)]</param>
                         </include>
@@ -118,6 +88,7 @@
                         <viewtype label="$PARAM[viewtype_label]">wrap</viewtype>
                         <onfocus>ClearProperty(TMDbHelper.WidgetContainer)</onfocus>
                         <onfocus>ClearProperty(Background.ShowOverlay,Home)</onfocus>
+                        <onfocus>ClearProperty(InfoPanel.FullSwitch,Home)</onfocus>
 
                         <include content="Object_HitRect">
                             <param name="x">view_pad</param>

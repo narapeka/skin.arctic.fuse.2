@@ -305,19 +305,11 @@
         </control>
     </include>
 
-    <include name="OSD_Dialog_Background_Blur">
-        <include content="Dialog_Background_Blur">
+    <include name="OSD_Part_Background_Blur">
+        <include content="Part_Background_Blur">
             <param name="diffuse">$PARAM[diffuse]</param>
             <param name="transparency">true</param>
         </include>
-    </include>
-
-    <include name="OSD_Dialog_Background_Glass">
-        <control type="group">
-            <include>Dialog_Background_Transparency</include>
-            <include>Dialog_Background_Glass</include>
-            <include>Dialog_Background_Glass_Border</include>
-        </control>
     </include>
 
     <include name="OSD_Stream_Selector_Divider">
@@ -329,17 +321,15 @@
             <right>40</right>
             <height>1</height>
             <centerbottom>40</centerbottom>
-            <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+            <texture colordiffuse="$VAR[Color_DialogBorder]">common/white.png</texture>
         </control>
     </include>
 
     <include name="OSD_Stream_Selector_BackgroundResizer">
         <param name="diffuse_w">640</param>
-        <param name="use_glass">false</param>
         <definition>
             <control type="group">
-                <include condition="$PARAM[use_glass]">OSD_Dialog_Background_Glass</include>
-                <include condition="!$PARAM[use_glass]" content="OSD_Dialog_Background_Blur">
+                <include content="OSD_Part_Background_Blur">
                     <param name="diffuse">diffuse/dialog_w$PARAM[diffuse_w]_h760.png</param>
                 </include>
                 <include>OSD_Stream_Selector_Divider</include>
@@ -347,8 +337,7 @@
                 <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,6)</visible>
             </control>
             <control type="group">
-                <include condition="$PARAM[use_glass]">OSD_Dialog_Background_Glass</include>
-                <include condition="!$PARAM[use_glass]" content="OSD_Dialog_Background_Blur">
+                <include content="OSD_Part_Background_Blur">
                     <param name="diffuse">diffuse/dialog_w$PARAM[diffuse_w]_h680.png</param>
                 </include>
                 <include>OSD_Stream_Selector_Divider</include>
@@ -356,8 +345,7 @@
                 <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,6)</visible>
             </control>
             <control type="group">
-                <include condition="$PARAM[use_glass]">OSD_Dialog_Background_Glass</include>
-                <include condition="!$PARAM[use_glass]" content="OSD_Dialog_Background_Blur">
+                <include content="OSD_Part_Background_Blur">
                     <param name="diffuse">diffuse/dialog_w$PARAM[diffuse_w]_h600.png</param>
                 </include>
                 <include>OSD_Stream_Selector_Divider</include>
@@ -365,8 +353,7 @@
                 <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,5)</visible>
             </control>
             <control type="group">
-                <include condition="$PARAM[use_glass]">OSD_Dialog_Background_Glass</include>
-                <include condition="!$PARAM[use_glass]" content="OSD_Dialog_Background_Blur">
+                <include content="OSD_Part_Background_Blur">
                     <param name="diffuse">diffuse/dialog_w$PARAM[diffuse_w]_h520.png</param>
                 </include>
                 <include>OSD_Stream_Selector_Divider</include>
@@ -374,8 +361,7 @@
                 <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,4)</visible>
             </control>
             <control type="group">
-                <include condition="$PARAM[use_glass]">OSD_Dialog_Background_Glass</include>
-                <include condition="!$PARAM[use_glass]" content="OSD_Dialog_Background_Blur">
+                <include content="OSD_Part_Background_Blur">
                     <param name="diffuse">diffuse/dialog_w$PARAM[diffuse_w]_h440.png</param>
                 </include>
                 <include>OSD_Stream_Selector_Divider</include>
@@ -383,8 +369,7 @@
                 <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,3)</visible>
             </control>
             <control type="group">
-                <include condition="$PARAM[use_glass]">OSD_Dialog_Background_Glass</include>
-                <include condition="!$PARAM[use_glass]" content="OSD_Dialog_Background_Blur">
+                <include content="OSD_Part_Background_Blur">
                     <param name="diffuse">diffuse/dialog_w$PARAM[diffuse_w]_h360.png</param>
                 </include>
                 <include>OSD_Stream_Selector_Divider</include>
@@ -392,8 +377,7 @@
                 <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,2)</visible>
             </control>
             <control type="group">
-                <include condition="$PARAM[use_glass]">OSD_Dialog_Background_Glass</include>
-                <include condition="!$PARAM[use_glass]" content="OSD_Dialog_Background_Blur">
+                <include content="OSD_Part_Background_Blur">
                     <param name="diffuse">diffuse/dialog_w$PARAM[diffuse_w]_h280.png</param>
                 </include>
                 <include>OSD_Stream_Selector_Divider</include>
@@ -407,7 +391,6 @@
         <param name="width">960</param>
         <param name="enabled">true</param>
         <param name="toggle">false</param>
-        <param name="use_glass">false</param>
         <definition>
             <control type="group">
 
@@ -431,7 +414,6 @@
                     <include content="OSD_Stream_Selector_BackgroundResizer">
                         <param name="id">$PARAM[id]</param>
                         <param name="diffuse_w">$PARAM[width]</param>
-                        <param name="use_glass">$PARAM[use_glass]</param>
                     </include>
                     <include content="Object_MenuHeader">
                         <param name="label">$PARAM[header]</param>
@@ -465,7 +447,7 @@
                     </control>
                 </control>
 
-                <include content="Dialog_Scrollbar">
+                <include content="Part_Scrollbar_Max">
                     <param name="id">$PARAM[scrollbarid]</param>
                     <top>120</top>
                     <bottom>40</bottom>
@@ -514,92 +496,6 @@
         </definition>
     </include>
 
-    <include name="OSD_Info_Line">
-        <control type="grouplist">
-            <centertop>37.5</centertop>
-            <hitrect x="0" y="0" w="0" h="0" />
-            <height>80</height>
-            <orientation>horizontal</orientation>
-            <itemgap>10</itemgap>
-
-            <include content="Info_Line_VideoQuality">
-                <param name="textcolor">panel_fg_90</param>
-                <param name="listitem_videoresolution">VideoPlayer.VideoResolution</param>
-                <param name="listitem_audiochannels">VideoPlayer.AudioChannels</param>
-                <param name="listitem_hdrtype">VideoPlayer.HdrType</param>
-                <param name="visible">$PARAM[visible]</param>
-            </include>
-
-            <control type="grouplist">
-                <hitrect x="0" y="0" w="0" h="0" />
-                <orientation>horizontal</orientation>
-                <height>80</height>
-                <itemgap>10</itemgap>
-
-                <!-- PVR Channel Name -->
-                <include content="Info_Line_Item">
-                    <param name="label">$INFO[VideoPlayer.ChannelName]</param>
-                    <param name="visible">!String.IsEmpty(VideoPlayer.ChannelName)</param>
-                    <param name="textcolor">panel_fg_70</param>
-                </include>
-
-                <!-- Studio Name for Youtube -->
-                <include content="Info_Line_Item">
-                    <param name="label">$INFO[VideoPlayer.Studio]</param>
-                    <param name="visible">VideoPlayer.Content(files) + !String.IsEmpty(VideoPlayer.Studio)</param>
-                    <param name="textcolor">panel_fg_70</param>
-                </include>
-
-                <!-- Year / Premiered -->
-                <include content="Info_Line_Item">
-                    <param name="label">$INFO[VideoPlayer.Year]</param>
-                    <param name="visible">!String.IsEmpty(VideoPlayer.Year) + String.IsEmpty(VideoPlayer.Premiered)</param>
-                    <param name="textcolor">panel_fg_70</param>
-                </include>
-                <include content="Info_Line_Item">
-                    <param name="label">$INFO[VideoPlayer.Premiered]</param>
-                    <param name="visible">!String.IsEmpty(VideoPlayer.Premiered)</param>
-                    <param name="textcolor">panel_fg_70</param>
-                </include>
-
-                <!-- Episode Number -->
-                <include content="Info_Line_Item">
-                    <param name="label">$VAR[Label_OSD_Plot_Episode_Number]</param>
-                    <param name="visible">!String.IsEmpty(VideoPlayer.Episode)</param>
-                    <param name="textcolor">panel_fg_70</param>
-                </include>
-
-                <!-- MPAA -->
-                <include content="Info_Line_Item">
-                    <param name="label">$INFO[VideoPlayer.MPAA]</param>
-                    <param name="visible">!String.IsEmpty(VideoPlayer.MPAA)</param>
-                    <param name="textcolor">panel_fg_70</param>
-                </include>
-
-                <!-- Genres -->
-                <include content="Info_Line_Item">
-                    <param name="label">$INFO[Window(Home).Property(TMDbHelper.Player.Genre.1.Name)]</param>
-                    <param name="visible">String.IsEmpty(VideoPlayer.Property(Genre.1.Name)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.Genre.1.Name))</param>
-                    <param name="textcolor">panel_fg_70</param>
-                </include>
-
-                <!-- Ends (Video) -->
-                <include content="Info_Line_Item">
-                    <param name="label">$INFO[Player.FinishTime,$LOCALIZE[31184] ,]$INFO[System.Time, ($LOCALIZE[19030] ,)]</param>
-                    <param name="visible">!String.IsEmpty(Player.FinishTime) + !Pvr.IsPlayingTv</param>
-                    <param name="textcolor">panel_fg_70</param>
-                </include>
-
-                <!-- Ends (PVR) -->
-                <include content="Info_Line_Item">
-                    <param name="label">$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31184] ,]$INFO[System.Time, ($LOCALIZE[19030] ,)]</param>
-                    <param name="visible">!String.IsEmpty(PVR.EpgEventFinishTime) + Pvr.IsPlayingTv</param>
-                    <param name="textcolor">panel_fg_70</param>
-                </include>
-            </control>
-        </control>
-    </include>
-
     <include name="OSD_Progress_Details_Grouplist_Def">
         <align>bottom</align>
         <left>0</left>
@@ -621,9 +517,10 @@
             <control type="grouplist">
                 <bottom>40</bottom>
                 <align>$PARAM[align]</align>
+                <left>40</left>
                 <include>OSD_Progress_Details_Grouplist_Def</include>
                 <control type="group">
-                    <left>view_pad</left>
+                    <left>40</left>
                     <height>view_landscape_item_h</height>
                     <width>view_landscape_item_w</width>
                     <control type="group">
@@ -662,48 +559,40 @@
                     <param name="mainlogo_visible">[!String.IsEmpty(Window(Home).Property(TMDbHelper.Player.CropImage))]</param>
                     <param name="mainlogo_texture">$INFO[Window(Home).Property(TMDbHelper.Player.CropImage)]</param>
                     <param name="autoheight">true</param>
-                    <param name="left">view_pad</param>
                 </include>
 
-                <control type="group">
-                    <left>view_pad</left>
-                    <height>50</height>
-                    <include>OSD_Info_Line</include>
-                </control>
-
-                <include content="Info_Panel_Textbox" condition="$PARAM[plot_visible]">
-                    <param name="plotlabel">$VAR[Label_Player_Plot]</param>
-                    <param name="plotwidth">info_panel_w</param>
-                    <param name="plotheight">160</param>
-                    <param name="check_ratings">false</param>
+                <include content="Info_Line">
+                    <param name="is_player">true</param>
                     <param name="colordiffuse">panel_fg</param>
-                    <param name="left">view_pad</param>
-                    <param name="visible">!String.IsEmpty(VideoPlayer.Plot)</param>
-                    <param name="adapative">true</param>
+                    <param name="infolabel_rating">VideoPlayer.Rating</param>
+                    <param name="infolabel_userrating">VideoPlayer.UserRating</param>
+                    <param name="infolabel_videoresolution">VideoPlayer.VideoResolution</param>
+                    <param name="infolabel_hdrtype">VideoPlayer.HdrType</param>
+                    <param name="infolabel_audiochannels">VideoPlayer.AudioChannels</param>
+                    <param name="infolabel_premiered">VideoPlayer.Premiered</param>
+                    <param name="infolabel_mpaa">VideoPlayer.MPAA</param>
                 </include>
 
-                <include content="Object_Control" condition="$PARAM[plot_visible]">
-                    <param name="control">group</param>
-                    <top>12</top>
-                    <height>40</height>
-                    <visible allowhiddenfocus="true">!Integer.IsEqual(Container(99981).NumItems,0)</visible>
-                    <!-- <visible>!VideoPlayer.Content(livetv)</visible> -->
-                    <visible>!String.IsEmpty(VideoPlayer.Plot)</visible>
-                    <include content="Info_RatingsLine">
-                        <param name="id">99981</param>
-                        <param name="is_player">true</param>
-                        <top>0</top>
-                        <left>view_pad</left>
-                    </include>
+                <include content="Info_Plot" condition="$PARAM[plot_visible]">
+                    <param name="is_player">true</param>
+                    <param name="colordiffuse">panel_fg</param>
+                    <param name="listitem">VideoPlayer</param>
+                    <param name="width">info_panel_w</param>
+                    <param name="height">auto</param>
                 </include>
 
-                <control type="group">
-                    <height>8</height>
-                    <visible>![$PARAM[plot_visible] + !String.IsEmpty(VideoPlayer.Plot)]</visible>
+                <include content="Info_Meta" condition="$PARAM[plot_visible]">
+                    <param name="is_player">true</param>
+                    <param name="colordiffuse">panel_fg</param>
+                    <param name="infolabel_endtime">Player.FinishTime</param>
+                </include>
+                <control type="group" description="Avoid grouplist chop with spacer">
+                    <height>20</height>
+                    <visible>![$PARAM[plot_visible]]</visible>
                 </control>
-
                 <control type="group" description="Avoid grouplist chop with spacer">
                     <height>40</height>
+                    <visible>$PARAM[plot_visible]</visible>
                 </control>
             </control>
         </definition>
@@ -765,20 +654,6 @@
             <visible>Player.HasMedia + !Pvr.IsPlayingTv</visible>
             <texturebg colordiffuse="00ffffff" border="12,0,12,0">progress/progress-nib.png</texturebg>
         </control>
-        <control type="progress">
-            <description>Progressbar</description>
-            <width>100%</width>
-            <height>12</height>
-            <info>Player.Progress</info>
-
-            <texturebg colordiffuse="00ffffff" border="12,0,12,0">progress/progress-bg.png</texturebg>
-            <midtexture colordiffuse="$VAR[ColorGradient]" border="12,0,12,0" diffuse="progress/diffuse.png">progress/progress-bg.png</midtexture>
-
-            <include content="Defs_Progress_Colorfade">
-                <param name="id">499</param>
-            </include>
-            <visible>Player.HasMedia + !Pvr.IsPlayingTv</visible>
-        </control>
 
         <!-- Progress Bar LiveTV -->
         <control type="progress" id="498">
@@ -788,19 +663,6 @@
             <visible>Pvr.IsPlayingTv</visible>
             <texturebg colordiffuse="00ffffff" border="12,0,12,0">progress/progress-nib.png</texturebg>
         </control>
-        <control type="progress">
-            <description>Progressbar</description>
-            <width>100%</width>
-            <height>12</height>
-            <info>PVR.EpgEventProgress</info>
-            <texturebg colordiffuse="00ffffff" border="12,0,12,0">progress/progress-bg.png</texturebg>
-            <midtexture colordiffuse="$VAR[ColorGradient]" border="12,0,12,0" diffuse="progress/diffuse.png">progress/progress-bg.png</midtexture>
-            <include content="Defs_Progress_Colorfade">
-                <param name="id">498</param>
-            </include>
-            <visible>Pvr.IsPlayingTv</visible>
-        </control>
-
         <!-- CutList and Chapters Range -->
         <control type="ranges">
             <width>100%</width>
@@ -870,18 +732,32 @@
         <param name="include_fps">true</param>
         <param name="textcolor_sub">panel_fg_70</param>
         <param name="textcolor_top">panel_fg_90</param>
+        <param name="itemgap">15</param>
+        <param name="align">center</param>
         <definition>
             <control type="group">
                 <centertop>50%</centertop>
                 <height>80</height>
-                <include content="Object_InfoCircle">
+
+                <include content="Furniture_Codecs">
+                    <param name="colordiffuse">$PARAM[textcolor_top]</param>
+                    <param name="infolabel_videoresolution">VideoPlayer.VideoResolution</param>
+                    <param name="infolabel_videoaspect">VideoPlayer.VideoAspect</param>
+                    <param name="infolabel_videocodec">VideoPlayer.VideoCodec</param>
+                    <param name="infolabel_audiocodec">VideoPlayer.AudioCodec</param>
+                    <param name="infolabel_audiochannels">VideoPlayer.AudioChannels</param>
+                    <param name="itemgap">$PARAM[itemgap]</param>
+                    <param name="align">$PARAM[align]</param>
+                </include>
+
+                <!-- <include content="Object_InfoCircle">
                     <param name="name">[UPPERCASE]$INFO[VideoPlayer.VideoResolution]$INFO[VideoPlayer.VideoCodec, • ,]$INFO[VideoPlayer.VideoAspect, • ,:1]$INFO[VideoPlayer.AudioCodec, • ,]$VAR[Label_VideoPlayer_AudioChannels, • ,][/UPPERCASE]</param>
                     <param name="role">$INFO[VideoPlayer.VideoVersionName]</param>
                     <param name="icon">special://skin/extras/icons/photo-film.png</param>
                     <param name="fallback_role">$LOCALIZE[31207]</param>
                     <param name="textcolor_top">$PARAM[textcolor_top]</param>
                     <param name="textcolor_sub">$PARAM[textcolor_sub]</param>
-                </include>
+                </include> -->
             </control>
         </definition>
     </include>
@@ -1120,24 +996,16 @@
         <control type="grouplist">
             <orientation>vertical</orientation>
             <align>bottom</align>
-            <control type="group">
-                <height>120</height>
-                <visible>$PARAM[top_logo_visible] + Skin.HasSetting(TMDbHelper.EnableCrop)</visible>
-                <control type="image">
-                    <height>132</height>
-                    <aspectratio align="left" aligny="center">keep</aspectratio>
-                    <fadetime>200</fadetime>
-                    <texture background="true">$PARAM[top_logo]</texture>
-                    <width>$PARAM[top_logo_width]</width>
-                </control>
-            </control>
-            <control type="label">
-                <height>80</height>
-                <label>$PARAM[top_label]</label>
-                <textcolor>panel_fg_100</textcolor>
-                <font>font_title_midi</font>
-                <visible>[!$PARAM[top_logo_visible] | !Skin.HasSetting(TMDbHelper.EnableCrop)]</visible>
-            </control>
+            <include content="Info_Title">
+                <param name="colordiffuse">panel_fg</param>
+                <param name="container" />
+                <param name="label">$VAR[Label_OSD_Title]</param>
+                <param name="mainlogo_visible">[!String.IsEmpty(Window(Home).Property(TMDbHelper.Player.CropImage))]</param>
+                <param name="mainlogo_texture">$INFO[Window(Home).Property(TMDbHelper.Player.CropImage)]</param>
+                <param name="autoheight">true</param>
+                <param name="left">0</param>
+                <param name="width">$PARAM[top_logo_width]</param>
+            </include>
             <control type="group">
                 <top>-10</top>
                 <height>50</height>
@@ -1160,9 +1028,7 @@
             <bottom>0</bottom>
             <height>240</height>
             <texture colordiffuse="panel_bg_70" border="4,0,4,0">common/gradient-v.png</texture>
-            <include>Animation_OSD_Fullscreen_Change</include>
             <visible>Window.IsActive(DialogSeekBar.xml) | Window.IsVisible(1152)</visible>
-            <visible>![Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(1140) | Window.IsActive(1141) | Window.IsActive(1142) | Window.IsActive(1143) | Window.IsActive(1144) | Window.IsActive(1145) | Window.IsActive(1146) | Window.IsActive(1147) | Window.IsActive(1148) | Window.IsActive(1149) | Window.IsVisible(videobookmarks) | Window.IsVisible(pvrosdguide) | Window.IsVisible(pvrosdchannels) | Window.IsVisible(1152) | Window.IsActive(script-upnext-stillwatching.xml) | Window.IsActive(script-upnext-upnext.xml)]</visible>
         </control>
 
         <control type="image" id="1">

@@ -23,7 +23,6 @@
                     <param name="nibpos">300</param>
                     <param name="method">set_player_audiostream</param>
                     <param name="icon">special://skin/extras/icons/volume.png</param>
-                    <param name="use_glass">true</param>
                 </include>
             </control>
 

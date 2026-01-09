@@ -8,8 +8,6 @@
     <onload>SetProperty(Background.HideArtwork,True)</onload>
     <controls>
 
-        <include>View_Bumper</include>
-        <include>Defs_Background_Loader</include>
         <include>Background</include>
 
         <control type="group">
@@ -41,7 +39,6 @@
                 <include>View_MediaListOverview_Artwork</include>
             </include>
         </control>
-        <include>View_Furniture_Edges</include>
-        <include>View_Dialog_Plot</include>
+
     </controls>
 </window>

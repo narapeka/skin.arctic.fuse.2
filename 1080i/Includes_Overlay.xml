@@ -40,19 +40,6 @@
         <value>False</value>
     </variable>
 
-    <variable name="Overlay_InfoLabel_WidgetContainer">
-        <value condition="Window.IsVisible(musicinformation)"> -musicinformation- $INFO[Window(musicinformation).Property(Widgets.ResetPosition), -reset: ,] $INFO[Window(musicinformation).Property(TMDBHelper.WidgetContainer), -tmdb: ]$INFO[Window(musicinformation).Property(Slide.WidgetContainer), -slide: ,]$INFO[Window(musicinformation).Property(List.ViewContainer), -list: ,]$INFO[Window(musicinformation).Property(Focus.ControlID), -focus.controlID: ,]</value>
-        <value condition="Window.IsVisible(movieinformation)"> -movieinformation- $INFO[Window(movieinformation).Property(Widgets.ResetPosition), -reset: ,] $INFO[Window(movieinformation).Property(TMDBHelper.WidgetContainer), -tmdb: ]$INFO[Window(movieinformation).Property(Slide.WidgetContainer), -slide: ,]$INFO[Window(movieinformation).Property(List.ViewContainer), -list: ,]$INFO[Window(movieinformation).Property(Focus.ControlID), -focus.controlID: ,]</value>
-        <value condition="Window.IsVisible(Home)"> -Home- $INFO[Window(Home).Property(Widgets.ResetPosition), -reset: ,] $INFO[Window(Home).Property(TMDBHelper.WidgetContainer), -tmdb: ]$INFO[Window(Home).Property(Slide.WidgetContainer), -slide: ,]$INFO[Window(Home).Property(List.ViewContainer), -list: ,]$INFO[Window(Home).Property(Focus.ControlID), -focus.controlID: ,]</value>
-        <value condition="Window.IsVisible(1101)"> -1101- $INFO[Window(1101).Property(Widgets.ResetPosition), -reset: ,] $INFO[Window(1101).Property(TMDBHelper.WidgetContainer), -tmdb: ]$INFO[Window(1101).Property(Slide.WidgetContainer), -slide: ,]$INFO[Window(1101).Property(List.ViewContainer), -list: ,]$INFO[Window(1101).Property(Focus.ControlID), -focus.controlID: ,]</value>
-        <value condition="Window.IsVisible(1102)"> -1102- $INFO[Window(1102).Property(Widgets.ResetPosition), -reset: ,] $INFO[Window(1102).Property(TMDBHelper.WidgetContainer), -tmdb: ]$INFO[Window(1102).Property(Slide.WidgetContainer), -slide: ,]$INFO[Window(1102).Property(List.ViewContainer), -list: ,]$INFO[Window(1102).Property(Focus.ControlID), -focus.controlID: ,]</value>
-        <value condition="Window.IsVisible(1103)"> -1103- $INFO[Window(1103).Property(Widgets.ResetPosition), -reset: ,] $INFO[Window(1103).Property(TMDBHelper.WidgetContainer), -tmdb: ]$INFO[Window(1103).Property(Slide.WidgetContainer), -slide: ,]$INFO[Window(1103).Property(List.ViewContainer), -list: ,]$INFO[Window(1103).Property(Focus.ControlID), -focus.controlID: ,]</value>
-        <value condition="Window.IsVisible(1104)"> -1104- $INFO[Window(1104).Property(Widgets.ResetPosition), -reset: ,] $INFO[Window(1104).Property(TMDBHelper.WidgetContainer), -tmdb: ]$INFO[Window(1104).Property(Slide.WidgetContainer), -slide: ,]$INFO[Window(1104).Property(List.ViewContainer), -list: ,]$INFO[Window(1104).Property(Focus.ControlID), -focus.controlID: ,]</value>
-        <value condition="Window.IsVisible(1105)"> -1105- $INFO[Window(1105).Property(Widgets.ResetPosition), -reset: ,] $INFO[Window(1105).Property(TMDBHelper.WidgetContainer), -tmdb: ]$INFO[Window(1105).Property(Slide.WidgetContainer), -slide: ,]$INFO[Window(1105).Property(List.ViewContainer), -list: ,]$INFO[Window(1105).Property(Focus.ControlID), -focus.controlID: ,]</value>
-        <value condition="Window.IsVisible(videos)"> -videos- $INFO[Window(videos).Property(Widgets.ResetPosition), -reset: ,] $INFO[Window(videos).Property(TMDBHelper.WidgetContainer), -tmdb: ]$INFO[Window(videos).Property(Slide.WidgetContainer), -slide: ,]$INFO[Window(videos).Property(List.ViewContainer), -list: ,]$INFO[Window(videos).Property(Focus.ControlID), -focus.controlID: ,]</value>
-        <value condition="Window.IsVisible(music)"> -music- $INFO[Window(music).Property(Widgets.ResetPosition), -reset: ,] $INFO[Window(music).Property(TMDBHelper.WidgetContainer), -tmdb: ]$INFO[Window(music).Property(Slide.WidgetContainer), -slide: ,]$INFO[Window(music).Property(List.ViewContainer), -list: ,]$INFO[Window(music).Property(Focus.ControlID), -focus.controlID: ,]</value>
-    </variable>
-
     <variable name="Overlay_IsUpdating">
         <value condition="!String.IsEmpty(Window(Home).Property(TMDBHelper.IsUpdating)) | !String.IsEmpty(Window(Home).Property(TMDBHelper.IsUpdatingRatings)) | !String.IsEmpty(Window(Home).Property(TMDBHelper.IsUpdatingDetails))">$VAR[_Overlay_IsUpdating]</value>
         <value>DONE</value>
@@ -318,22 +305,8 @@
                     <textcolor>yellowgreen</textcolor>
                 </include>
                 <include content="Overlay_InfoLabel">
-                    <label> -tmdbhelper.isupdating: $VAR[Overlay_InfoLabel_WidgetContainer,widget: , ]$INFO[Window(Home).Property(TMDBHelper.CurrentWindow),window: , ]$VAR[Overlay_IsUpdating,service: , ]</label>
+                    <label> -tmdbhelper.isupdating: $INFO[Window(Home).Property(TMDBHelper.CurrentWindow),window: , ]$VAR[Overlay_IsUpdating,service: , ]</label>
                     <textcolor>yellowgreen</textcolor>
-                </include>
-                <include content="Overlay_InfoLabel" condition="Skin.HasSetting(debuginfo.timers)">
-                    <height>160</height>
-                    <label> -timeridle: $INFO[Skin.TimerElapsedSecs(idle_spotlight_trailer)][CR] -timerplay: $INFO[Skin.TimerElapsedSecs(play_spotlight_trailer)][CR]AT_Title: $INFO[Window(Home).Property(AutoTrailerTitle)][CR]PT_Title: $INFO[Window(Home).Property(PlayTrailerTitle)]</label>
-                    <textcolor>yellowgreen</textcolor>
-                    <visible>!Skin.TimerIsRunning(idle_spotlight_trailer)</visible>
-                    <visible>Skin.HasSetting(Trailers.EnableAutoPlayback)</visible>
-                </include>
-                <include content="Overlay_InfoLabel" condition="Skin.HasSetting(debuginfo.timers)">
-                    <height>160</height>
-                    <label> -timeridle: $INFO[Skin.TimerElapsedSecs(idle_spotlight_trailer)][CR] -timerplay: $INFO[Skin.TimerElapsedSecs(play_spotlight_trailer)][CR]AT_Title: $INFO[Window(Home).Property(AutoTrailerTitle)][CR]PT_Title: $INFO[Window(Home).Property(PlayTrailerTitle)]</label>
-                    <textcolor>magenta</textcolor>
-                    <visible>Skin.TimerIsRunning(idle_spotlight_trailer)</visible>
-                    <visible>Skin.HasSetting(Trailers.EnableAutoPlayback)</visible>
                 </include>
             </control>
             <control type="grouplist">
@@ -648,5 +621,9 @@
 
             </control>
         </definition>
+    </include>
+
+    <include name="Action_BuildViews">
+        <description>Is set in script-skinviewtypes-includes.xml to rebuild viewtypes on update and then not again because it will then overwrite the file. Includes file set to not track in github so that it always is blank with just the include to trigger refresh.</description>
     </include>
 </includes>

@@ -2,6 +2,6 @@
 <window>
 
     <controls>
-        <include>Dialog_Confirm_Side</include>
+        <include>DialogConfirm</include>
     </controls>
 </window>

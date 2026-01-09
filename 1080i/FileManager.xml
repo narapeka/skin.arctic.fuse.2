@@ -4,7 +4,7 @@
     <include>Action_Blur_Onload</include>
     <include>Action_BlurImage_SimpleBackground_Onload</include>
     <controls>
-        <include>Defs_Background_Loader</include>
+
         <include>Background</include>
 
         <include content="Settings_Dialog">
@@ -60,13 +60,16 @@
                                     <width>scrollbar_w</width>
 
                                     <control type="image">
-                                        <texture colordiffuse="main_fg_12" border="4">scrollbar/scrollv_line.png</texture>
+                                        <width>1</width>
+                                        <centerleft>50%</centerleft>
+                                        <texture colordiffuse="main_fg_12">common/white.png</texture>
                                     </control>
 
                                     <control type="scrollbar" id="60">
                                         <orientation>vertical</orientation>
-                                        <texturesliderbar colordiffuse="main_logo" border="4">scrollbar/scrollv.png</texturesliderbar>
                                         <showonepage>false</showonepage>
+                                        <texturesliderbackground />
+                                        <texturesliderbar colordiffuse="main_logo" border="4">scrollbar/scrollv_line.png</texturesliderbar>
                                         <include>Texture_Scrollbar_V</include>
                                         <onleft>20</onleft>
                                         <onright>21</onright>
@@ -114,21 +117,16 @@
                                     </include>
                                 </include>
                                 <control type="group">
-                                    <centerright>-20</centerright>
+                                    <centerright>0</centerright>
                                     <bottom>20</bottom>
                                     <top>20</top>
                                     <width>scrollbar_w</width>
-
-                                    <!-- <control type="image">
-                                        <texture colordiffuse="main_fg_12" border="4">scrollbar/scrollv_line.png</texture>
-                                    </control> -->
-
                                     <control type="scrollbar" id="61">
                                         <orientation>vertical</orientation>
-                                        <texturesliderbackground colordiffuse="main_fg_12" border="4">scrollbar/scrollv_line.png</texturesliderbackground>
-                                        <texturesliderbar colordiffuse="main_logo" border="4">scrollbar/scrollv.png</texturesliderbar>
-                                        <showonepage>false</showonepage>
+                                        <texturesliderbackground />
+                                        <texturesliderbar colordiffuse="main_logo" border="4">scrollbar/scrollv_line.png</texturesliderbar>
                                         <include>Texture_Scrollbar_V</include>
+                                        <showonepage>false</showonepage>
                                         <onleft>21</onleft>
                                     </control>
                                 </control>

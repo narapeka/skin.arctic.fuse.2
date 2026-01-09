@@ -7,7 +7,7 @@
     </include>
     <controls>
 
-        <include>Dialog_Dim_Overlay</include>
+        <include>Part_Dim_Overlay</include>
 
         <control type="group">
             <include>Animation_SlideIn_Dialog</include>
@@ -16,7 +16,7 @@
             <width>960</width>
             <centerleft>50%</centerleft>
             <control type="group">
-                <include>OSD_Dialog_Background_Glass</include>
+                <include>OSD_Part_Background_Blur</include>
                 <control type="image">
                     <texture colordiffuse="panel_fg_12" border="20">common/dialog.png</texture>
                 </control>

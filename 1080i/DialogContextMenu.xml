@@ -7,7 +7,6 @@
     </coordinates>
     <onload>AlarmClock(Refocus,SetFocus(1001),00:00,silent)</onload>
     <controls>
-
-        <include>Dialog_ContextMenu</include>
+        <include>DialogContextMenu</include>
     </controls>
 </window>

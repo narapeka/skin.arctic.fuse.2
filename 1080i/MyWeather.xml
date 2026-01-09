@@ -7,13 +7,9 @@
         <param name="sourceimage">Art(fanart)|Property(fanart)|Icon</param>
     </include>
     <controls>
-
-        <include>Defs_Background_Loader</include>
         <include>Background</include>
-
         <control type="group">
             <include>Animation_View_WindowChange</include>
-
             <control type="list" id="8000">
                 <orientation>vertical</orientation>
                 <autoscroll delay="0" time="20000" repeat="0">true</autoscroll>
@@ -22,16 +18,17 @@
                 <onright>ActivateWindow(1161)</onright>
                 <itemlayout />
                 <focusedlayout />
-                <include>Items_Weather_Screenshots</include>
+                <content sortby="random" target="images">resource://resource.images.weatherfanart.multi/$INFO[Weather.FanartCode]/</content>
             </control>
 
             <control type="group">
                 <include>Dimension_Info</include>
                 <control type="group">
+                    <top>0</top>
                     <right>-40</right>
                     <control type="group">
                         <left>0%</left>
-                        <height>viewlist_poster_h</height>
+                        <height>760</height>
                         <centertop>50%</centertop>
                         <width>20%</width>
                         <control type="group">
@@ -44,7 +41,7 @@
                     </control>
                     <control type="group">
                         <left>20%</left>
-                        <height>viewlist_poster_h</height>
+                        <height>760</height>
                         <centertop>50%</centertop>
                         <width>20%</width>
                         <control type="group">
@@ -57,7 +54,7 @@
                     </control>
                     <control type="group">
                         <left>40%</left>
-                        <height>viewlist_poster_h</height>
+                        <height>760</height>
                         <centertop>50%</centertop>
                         <width>20%</width>
                         <control type="group">
@@ -70,7 +67,7 @@
                     </control>
                     <control type="group">
                         <left>60%</left>
-                        <height>viewlist_poster_h</height>
+                        <height>760</height>
                         <centertop>50%</centertop>
                         <width>20%</width>
                         <control type="group">
@@ -83,7 +80,7 @@
                     </control>
                     <control type="group">
                         <left>80%</left>
-                        <height>viewlist_poster_h</height>
+                        <height>760</height>
                         <centertop>50%</centertop>
                         <width>20%</width>
                         <control type="group">
@@ -97,22 +94,20 @@
                 </control>
             </control>
 
-            <control type="group">
-                <include>Dimension_Bottombar</include>
-                <control type="group">
-                    <include>Dimension_Furniture_Gutters</include>
-                    <include content="View_Furniture_Bottom_ViewLine">
-                        <param name="label">$INFO[Weather.Location]$INFO[Window(weather).Property(WeatherProvider), | ,]</param>
-                        <param name="align">left</param>
-                    </include>
-                </control>
-            </control>
+
 
         </control>
 
+        <control type="group">
+            <include>Dimension_Bottombar</include>
+            <include content="View_Furniture_Footer_ViewLine">
+                <param name="label">$INFO[Weather.Location]$INFO[Window(weather).Property(WeatherProvider), | ,]</param>
+                <param name="align">left</param>
+            </include>
+        </control>
 
-        <include>Furniture_Bottom_Right</include>
-        <include>Furniture_Top</include>
+        <include>Furniture_Footer_Right</include>
+        <include>Furniture_Header</include>
 
         <include content="Furniture_Busy">
             <param name="hasspinner">true</param>

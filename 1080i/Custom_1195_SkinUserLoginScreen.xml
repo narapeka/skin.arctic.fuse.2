@@ -4,7 +4,6 @@
     <onload>SetFocus(52,0,absolute)</onload>
     <onload>ClearProperty(SkinVariables.SkinUserLogin,Home)</onload>
     <onload>ClearProperty(SkinVariables.SkinUser.LoggingIn,Home)</onload>
-    <onload>Skin.SetString(SkinVariables.SkinUser.ExecuteBuiltIn,"RunScript($VAR[Action_Var_BuildTextures],get_values=true,reload=Home)")</onload>
     <onload condition="!String.IsEmpty(Window(Home).Property(SkinVariables.SkinUserLogin))">ReplaceWindow(home)</onload>
     <controls>
 
@@ -189,7 +188,7 @@
                                 </control>
                             </control>
                         </focusedlayout>
-                        <content>plugin://script.skinvariables/?info=get_skin_user&amp;skinid=skin.arctic.fuse.2&amp;folder=1080i&amp;allow_new=true&amp;reload=$INFO[Window(Home).Property(SkinVariables.ShortcutsNode.Reload)]</content>
+                        <content>plugin://script.skinvariables/?info=get_skin_user&amp;skinid=skin.arctic.fuse.3&amp;folder=1080i&amp;allow_new=true&amp;reload=$INFO[Window(Home).Property(SkinVariables.ShortcutsNode.Reload)]</content>
                     </control>
                 </control>
 

@@ -5,10 +5,10 @@
         <param name="include_heading">true</param>
         <param name="label">$VAR[Label_Header_Main]</param>
         <definition>
+            <include content="Furniture_Header">
+                <param name="label">$PARAM[label]</param>
+            </include>
             <control type="group">
-                <include content="Furniture_Top_Left">
-                    <param name="label">$PARAM[label]</param>
-                </include>
                 <nested />
             </control>
         </definition>
@@ -74,7 +74,6 @@
         <control type="image">
             <texture border="20" colordiffuse="main_fg_12">common/dialog.png</texture>
         </control>
-        <include>Object_ItemBack_Outline</include>
     </include>
 
     <include name="Settings_Right_Group">
@@ -107,8 +106,8 @@
             <control type="group">
                 <include>Animation_View_WindowChange</include>
                 <nested />
-                <include>Furniture_Bottom_Left</include>
-                <include>Furniture_Bottom_Right</include>
+                <include>Furniture_Footer_Left</include>
+                <include>Furniture_Footer_Right</include>
             </control>
         </definition>
     </include>
@@ -301,16 +300,17 @@
         <param name="control">button</param>
         <param name="dialog">false</param>
         <definition>
-            <include content="Settings_Button">
+            <include content="Button_Dialog">
                 <param name="id">$PARAM[id]</param>
+                <param name="groupid">$PARAM[groupid]</param>
                 <param name="control">$PARAM[control]</param>
                 <param name="dialog">$PARAM[dialog]</param>
-                <nested />
-            </include>
-            <include content="Settings_Image">
-                <param name="id">$PARAM[groupid]</param>
-                <param name="buttonid">$PARAM[id]</param>
                 <param name="icon">$PARAM[icon]</param>
+                <param name="font">font_main</param>
+                <param name="top">-80</param>
+                <param name="left">30</param>
+                <texturenofocus />
+                <nested />
             </include>
         </definition>
     </include>
@@ -328,32 +328,6 @@
                 <nested />
             </include>
         </definition>
-    </include>
-
-
-    <include name="Settings_Image">
-        <control type="group" id="$PARAM[id]">
-            <nested />
-            <top>-80</top>
-            <height>80</height>
-            <visible>Control.IsVisible($PARAM[buttonid])</visible>
-            <control type="group">
-                <centertop>50%</centertop>
-                <right>40</right>
-                <width>40</width>
-                <height>40</height>
-                <control type="image">
-                    <bordersize>icon_home_bordersize</bordersize>
-                    <texture colordiffuse="dialog_fg_70">$PARAM[icon]</texture>
-                    <visible>!Control.HasFocus($PARAM[buttonid])</visible>
-                </control>
-                <control type="image">
-                    <bordersize>icon_home_bordersize</bordersize>
-                    <texture colordiffuse="$VAR[ColorSelected]">$PARAM[icon]</texture>
-                    <visible>Control.HasFocus($PARAM[buttonid])</visible>
-                </control>
-            </control>
-        </control>
     </include>
 
     <include name="Settings_Divider_Label">
@@ -386,20 +360,6 @@
                     <texture colordiffuse="$PARAM[color]_12">common/white.png</texture>
                 </control>
             </control>
-        </definition>
-    </include>
-
-    <include name="Settings_InfoText">
-        <definition>
-            <include content="Dialog_InfoText">
-                <param name="label">$VAR[Label_Settings_InfoText]</param>
-                <param name="fallback">$INFO[System.BuildVersion,Kodi ,]$INFO[System.AddonVersion(skin.arctic.fuse.2), • AF2 v,]</param>
-                <param name="colordiffuse">main_fg_30</param>
-                <param name="centerbottom">100</param>
-                <param name="left">500</param>
-                <param name="id">$PARAM[id]</param>
-                <param name="include_hintlabel">false</param>
-            </include>
         </definition>
     </include>
 

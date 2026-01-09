@@ -169,14 +169,6 @@
                                                     <texturebg colordiffuse="dialog_bg_12" border="12,0,12,0">progress/progress-nib.png</texturebg>
                                                     <midtexture colordiffuse="$VAR[ColorHighlight]" border="12,0,12,0">progress/progress-nib.png</midtexture>
                                                 </control>
-                                                <control type="progress">
-                                                    <info>system.memory(used)</info>
-                                                    <texturebg colordiffuse="00ffffff" border="12,0,12,0">progress/progress-bg.png</texturebg>
-                                                    <midtexture colordiffuse="$VAR[ColorGradient]" border="12,0,12,0" diffuse="progress/diffuse.png">progress/progress-bg.png</midtexture>
-                                                    <include content="Defs_Progress_Colorfade">
-                                                        <param name="id">9201</param>
-                                                    </include>
-                                                </control>
                                             </control>
                                         </control>
                                     </control>
@@ -197,14 +189,6 @@
                                                     <info>System.CPUUsage</info>
                                                     <texturebg colordiffuse="dialog_bg_12" border="12,0,12,0">progress/progress-nib.png</texturebg>
                                                     <midtexture colordiffuse="$VAR[ColorHighlight]" border="12,0,12,0">progress/progress-nib.png</midtexture>
-                                                </control>
-                                                <control type="progress">
-                                                    <info>System.CPUUsage</info>
-                                                    <texturebg colordiffuse="00ffffff" border="12,0,12,0">progress/progress-bg.png</texturebg>
-                                                    <midtexture colordiffuse="$VAR[ColorGradient]" border="12,0,12,0" diffuse="progress/diffuse.png">progress/progress-bg.png</midtexture>
-                                                    <include content="Defs_Progress_Colorfade">
-                                                        <param name="id">9202</param>
-                                                    </include>
                                                 </control>
                                             </control>
                                         </control>
@@ -313,61 +297,47 @@
                                         <visible>System.AddonIsEnabled(screensaver.arctic.mirage)</visible>
                                     </item>
                                     <item>
-                                        <label>[CAPITALIZE]$LOCALIZE[31449][/CAPITALIZE]</label>
-                                        <label2>skin.arctic.fuse.2</label2>
-                                        <icon>special://skin/extras/icons/hat-wizard.png</icon>
-                                        <onclick>ActivateWindow(1180)</onclick>
-                                    </item>
-                                    <item>
                                         <label>[CAPITALIZE]$LOCALIZE[31496][/CAPITALIZE]</label>
-                                        <label2>skin.arctic.fuse.2</label2>
+                                        <label2>skin.arctic.fuse.3</label2>
                                         <icon>special://skin/extras/icons/screwdriver-wrench.png</icon>
                                         <onclick>ActivateWindow(1115)</onclick>
                                     </item>
                                     <item>
                                         <label>[CAPITALIZE]$LOCALIZE[31275][/CAPITALIZE]</label>
-                                        <label2>skin.arctic.fuse.2</label2>
+                                        <label2>skin.arctic.fuse.3</label2>
                                         <icon>special://skin/extras/icons/search.png</icon>
-                                        <onclick>SetProperty(Shortcuts.EditMenu,menu=searchmenu,Home)</onclick>
+                                        <onclick>SetProperty(Shortcuts.EditMenu,menu=searchwidgets,Home)</onclick>
                                         <onclick>ClearProperty(Shortcuts.EditMode,Home)</onclick>
                                         <onclick>ClearProperty(Shortcuts.EditGUID,Home)</onclick>
                                         <onclick>ActivateWindow(1116)</onclick>
                                     </item>
                                     <item>
-                                        <label>[CAPITALIZE]$LOCALIZE[31086][/CAPITALIZE]</label>
-                                        <label2>skin.arctic.fuse.2</label2>
-                                        <icon>special://skin/extras/icons/bars.png</icon>
-                                        <onclick>SetProperty(CustomDialogSettingsTitle,[CAPITALIZE]$LOCALIZE[31086][/CAPITALIZE],Home)</onclick>
-                                        <onclick>SetProperty(CustomDialogSettingsItems,Items_Settings_PowerMenuConfigure,Home)</onclick>
-                                        <onclick>ActivateWindow(1118)</onclick>
-                                    </item>
-                                    <item>
                                         <label>$LOCALIZE[31203] $LOCALIZE[31434]</label>
-                                        <label2>skin.arctic.fuse.2</label2>
+                                        <label2>skin.arctic.fuse.3</label2>
                                         <icon>special://skin/extras/icons/gauge.png</icon>
-                                        <onclick>SetProperty(CustomDialogSettingsItems,Items_Settings_VideoOSD,Home)</onclick>
-                                        <onclick>SetProperty(CustomDialogSettingsTitle,$LOCALIZE[31430]: $LOCALIZE[31434],Home)</onclick>
+                                        <onclick>SetProperty(CustomDialogSettingsItems,DialogCustom_VideoOSD_Items,Home)</onclick>
+                                        <onclick>SetProperty(CustomDialogSettingsTitle,$LOCALIZE[31434],Home)</onclick>
                                         <onclick>ActivateWindow(1118)</onclick>
                                     </item>
                                     <item>
                                         <label>[CAPITALIZE]$LOCALIZE[31203] $LOCALIZE[12003][/CAPITALIZE]</label>
-                                        <label2>skin.arctic.fuse.2</label2>
+                                        <label2>skin.arctic.fuse.3</label2>
                                         <icon>special://skin/extras/icons/circle-info.png</icon>
-                                        <onclick>SetProperty(CustomDialogSettingsItems,Items_Settings_VideoInfo,Home)</onclick>
-                                        <onclick>SetProperty(CustomDialogSettingsTitle,$LOCALIZE[31430]: $LOCALIZE[12003],Home)</onclick>
+                                        <onclick>SetProperty(CustomDialogSettingsItems,DialogCustom_VideoInfo_Items,Home)</onclick>
+                                        <onclick>SetProperty(CustomDialogSettingsTitle,$LOCALIZE[12003],Home)</onclick>
                                         <onclick>ActivateWindow(1118)</onclick>
                                     </item>
                                     <item>
                                         <label>[CAPITALIZE]$LOCALIZE[31321][/CAPITALIZE]</label>
-                                        <label2>skin.arctic.fuse.2</label2>
+                                        <label2>skin.arctic.fuse.3</label2>
                                         <icon>special://skin/extras/icons/table.png</icon>
                                         <onclick>runscript(script.skinvariables,action=buildviews,configure)</onclick>
                                     </item>
                                     <item>
                                         <label>[CAPITALIZE]$LOCALIZE[31234][/CAPITALIZE]</label>
-                                        <label2>skin.arctic.fuse.2</label2>
+                                        <label2>skin.arctic.fuse.3</label2>
                                         <icon>special://skin/extras/icons/cube.png</icon>
-                                        <onclick>SetProperty(CustomDialogSettingsItems,Items_Settings_Indicators,Home)</onclick>
+                                        <onclick>SetProperty(CustomDialogSettingsItems,DialogCustom_Settings_Items_Indicators,Home)</onclick>
                                         <onclick>SetProperty(CustomDialogSettingsTitle,$LOCALIZE[31235],Home)</onclick>
                                         <onclick>ActivateWindow(1118)</onclick>
                                     </item>

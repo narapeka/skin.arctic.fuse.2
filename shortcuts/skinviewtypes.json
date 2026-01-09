@@ -1,298 +1,281 @@
 {
     "prefix": "Exp_View",
     "viewtypes": {
-        "50":   "31320",
-        "51":   "31045",
-        "52":   "20021",
-        "53":   "31431",
-        "54":   "31423",
-        "57":   "31424",
-        "58":   "31333",
-        "59":   "427",
-        "500":  "31556",
-        "510":  "31555",
-        "520":  "31554",
-        "530":  "31557",
-        "540":  "31561",
-        "560":  "31058",
-        "570":  "31101",
-        "580":  "31339",
-        "590":  "31343",
-        "502":  "31152",
-        "512":  "31153",
-        "522":  "31155",
-        "532":  "31318",
-        "542":  "31323",
-        "572":  "31325",
-        "582":  "31341",
-        "592":  "31344",
-        "554":  "31580",
-        "550":  "31559",
-        "551":  "31480",
-        "552":  "31479",
-        "553":  "31120",
-        "557":  "31581",
-        "558":  "31582",
-        "561":  "31462"
+        "500":  "31113",
+        "501":  "31112",
+        "502":  "31111",
+        "503":  "31418",
+        "504":  "31100",
+        "505":  "31563",
+
+        "506":  "31120",
+        "507":  "31479",
+        "508":  "31581",
+        "509":  "31480",
+
+        "510":  "31556",
+        "511":  "31555",
+        "512":  "31554",
+        "513":  "31557",
+        "514":  "31101",
+
+        "520":  "31002",
+        "521":  "31003",
+        "522":  "31004",
+        "523":  "31005",
+        "524":  "31006",
+        "526":  "31580",
+        "528":  "31021"
     },
     "icons": {
-        "50":   "special://skin/extras/viewtypes/square.jpg",
-        "51":   "special://skin/extras/viewtypes/landscape.jpg",
-        "52":   "special://skin/extras/viewtypes/poster.jpg",
-        "53":   "special://skin/extras/viewtypes/circle.jpg",
-        "54":   "special://skin/extras/viewtypes/card.jpg",
-        "57":   "special://skin/extras/viewtypes/board.jpg",
-        "58":   "special://skin/extras/viewtypes/quad.jpg",
-        "59":   "special://skin/extras/viewtypes/disc.jpg",
-        "500":  "special://skin/extras/viewtypes/wall-square.jpg",
-        "510":  "special://skin/extras/viewtypes/wall-landscape.jpg",
-        "520":  "special://skin/extras/viewtypes/wall-poster.jpg",
-        "530":  "special://skin/extras/viewtypes/wall-circle.jpg",
-        "540":  "special://skin/extras/viewtypes/wall-overview.jpg",
-        "560":  "special://skin/extras/viewtypes/wall-ring.jpg",
-        "570":  "special://skin/extras/viewtypes/wall-board.jpg",
-        "580":  "special://skin/extras/viewtypes/wall-quad.jpg",
-        "590":  "special://skin/extras/viewtypes/wall-disc.jpg",
-        "502":  "special://skin/extras/viewtypes/combined-square.jpg",
-        "512":  "special://skin/extras/viewtypes/combined-landscape.jpg",
-        "522":  "special://skin/extras/viewtypes/combined-poster.jpg",
-        "532":  "special://skin/extras/viewtypes/combined-circle.jpg",
-        "542":  "special://skin/extras/viewtypes/combined-card.jpg",
-        "572":  "special://skin/extras/viewtypes/combined-board.jpg",
-        "582":  "special://skin/extras/viewtypes/combined-quad.jpg",
-        "592":  "special://skin/extras/viewtypes/combined-disc.jpg",
-        "554":  "special://skin/extras/viewtypes/combined-list.jpg",
-        "550":  "special://skin/extras/viewtypes/list-detailed.jpg",
-        "551":  "special://skin/extras/viewtypes/list-flixart.jpg",
-        "552":  "special://skin/extras/viewtypes/list-media.jpg",
-        "553":  "special://skin/extras/viewtypes/list-basic.jpg",
-        "557":  "special://skin/extras/viewtypes/list-expanded.jpg",
-        "558":  "special://skin/extras/viewtypes/list-information.jpg",
-        "561":  "special://skin/extras/viewtypes/wall-banner.jpg"
+        "500":   "special://skin/extras/viewtypes/row-square.jpg",
+        "501":   "special://skin/extras/viewtypes/row-landscape.jpg",
+        "502":   "special://skin/extras/viewtypes/row-poster.jpg",
+        "503":   "special://skin/extras/viewtypes/row-circle.jpg",
+        "504":   "special://skin/extras/viewtypes/row-board.jpg",
+        "505":   "special://skin/extras/viewtypes/row-card.jpg",
+
+        "506":   "special://skin/extras/viewtypes/list-basic.jpg",
+        "507":   "special://skin/extras/viewtypes/list-media.jpg",
+        "508":   "special://skin/extras/viewtypes/list-expanded.jpg",
+        "509":   "special://skin/extras/viewtypes/list-flixart.jpg",
+
+        "510":   "special://skin/extras/viewtypes/wall-square.jpg",
+        "511":   "special://skin/extras/viewtypes/wall-landscape.jpg",
+        "512":   "special://skin/extras/viewtypes/wall-poster.jpg",
+        "513":   "special://skin/extras/viewtypes/wall-circle.jpg",
+        "514":   "special://skin/extras/viewtypes/wall-board.jpg",
+
+        "520":   "special://skin/extras/viewtypes/combined-square.jpg",
+        "521":   "special://skin/extras/viewtypes/combined-landscape.jpg",
+        "522":   "special://skin/extras/viewtypes/combined-poster.jpg",
+        "523":   "special://skin/extras/viewtypes/combined-circle.jpg",
+        "524":   "special://skin/extras/viewtypes/combined-board.jpg",
+        "526":   "special://skin/extras/viewtypes/combined-list.jpg",
+        "528":   "special://skin/extras/viewtypes/combined-expanded.jpg"
     },
     "rules": {
         "images": {
             "rule": "Container.Content(images)",
-            "viewtypes": ["50", "58", "51", "52", "57", "500", "580", "510", "561", "520", "570", "553"],
-            "library": "51",
-            "plugins": "51"
+            "viewtypes": ["500", "501", "510", "511", "506"],
+            "library": "501",
+            "plugins": "501"
         },
         "videos": {
             "rule": "Container.Content(videos)",
-            "viewtypes": ["51", "57", "510", "561", "551", "570", "553"],
-            "library": "51",
-            "plugins": "51"
+            "viewtypes": ["501", "510", "506"],
+            "library": "501",
+            "plugins": "501"
         },
         "movies": {
             "rule": "Container.Content(movies)",
-            "viewtypes": ["51", "52", "53", "59", "54", "57", "510", "561", "520", "530", "590", "540", "560", "570", "551", "550", "552", "557", "558", "553"],
-            "library": "52",
-            "plugins": "52"
+            "viewtypes": ["501", "502", "503", "504", "505", "511", "512", "513", "514", "506", "507", "508", "509"],
+            "library": "502",
+            "plugins": "502"
         },
         "sets": {
             "rule": "Container.Content(sets)",
-            "viewtypes": ["51", "52", "53", "59", "54", "57", "510", "561", "520", "530", "590", "540", "560", "570", "512", "522", "532", "592", "554", "542", "572", "551", "550", "552", "557", "558", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["501", "502", "503", "504", "505", "511", "512", "513", "514", "521", "522", "523", "524", "526", "528", "506", "507", "508", "509"],
+            "library": "502",
+            "plugins": "502"
         },
         "tvshows": {
             "rule": "!String.IsEqual(Container.Property(param.info),episode_groups) + Container.Content(tvshows)",
-            "viewtypes": ["51", "52", "53", "59", "54", "57", "510", "561", "520", "530", "590", "540", "560", "570", "512", "522", "532", "592", "554", "542", "572", "551", "550", "552", "557", "558", "553"],
-            "library": "52",
-            "plugins": "52"
+            "viewtypes": ["501", "502", "503", "504", "505", "511", "512", "513", "514", "521", "522", "524", "526", "528", "506", "507", "508", "509"],
+            "library": "502",
+            "plugins": "502"
         },
         "episode-groups-tvshows": {
             "rule": "String.IsEqual(Container.Property(param.info),episode_groups) + Container.Content(tvshows)",
-            "viewtypes": ["51", "52", "53", "59", "57", "510", "561", "520", "530", "590", "540", "560", "570", "512", "522", "532", "592", "554", "542", "572", "551", "550", "552", "557", "558", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["501", "502", "503", "504", "505", "511", "512", "513", "514", "521", "522", "524", "526", "528", "506", "507", "508", "509"],
+            "library": "502",
+            "plugins": "502"
         },
         "seasons": {
             "rule": "!String.IsEqual(Container.Property(param.info),episode_group_seasons) + Container.Content(seasons)",
-            "viewtypes": ["51", "52", "53", "59", "57", "510", "561", "520", "530", "590", "540", "560", "512", "522", "532", "592", "554", "542", "572", "551", "550", "552", "557", "558", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["501", "502", "504", "511", "512", "514", "521", "524", "526", "528", "506", "507", "508", "509"],
+            "library": "521",
+            "plugins": "521"
         },
         "episode-groups-seasons": {
             "rule": "String.IsEqual(Container.Property(param.info),episode_group_seasons) + Container.Content(seasons)",
-            "viewtypes": ["51", "52", "53", "59", "57", "510", "561", "520", "530", "590", "540", "560", "570", "512", "522", "532", "592", "554", "542", "572", "551", "550", "552", "557", "558", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["501", "502", "504", "511", "512", "514", "521", "524", "526", "528", "506", "507", "508", "509"],
+            "library": "521",
+            "plugins": "521"
         },
         "episodes": {
             "rule": "Container.Content(episodes)",
-            "viewtypes": ["51", "57", "510", "561", "530", "590", "540", "560", "570", "551", "550", "552", "557", "558", "553"],
-            "library": "51",
-            "plugins": "51"
+            "viewtypes": ["501", "504", "511", "514", "506", "507", "508", "509"],
+            "library": "501",
+            "plugins": "501"
         },
         "videoversions": {
             "rule": "Container.Content(videoversions)",
-            "viewtypes": ["51", "52", "53", "59", "54", "57", "510", "561", "520", "530", "590", "540", "560", "570", "551", "550", "552", "557", "558", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["501", "502", "503", "504", "505", "511", "512", "513", "514", "521", "522", "523", "524", "526", "528", "506", "507", "508", "509"],
+            "library": "521",
+            "plugins": "521"
         },
         "genres": {
             "rule": "!Window.IsVisible(MyMusicNav.xml) + Container.Content(genres)",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "560", "512", "522", "532", "592", "542", "572", "554", "552", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["500", "503", "510", "513", "521", "522", "523", "524", "526", "528", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "genres-music": {
             "rule": "Window.IsVisible(MyMusicNav.xml) + Container.Content(genres)",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "560", "510", "561", "512", "522", "532", "592", "554", "542", "572", "552", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["500", "503", "510", "513", "520", "521", "523", "524", "526", "528", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "years": {
             "rule": "!Window.IsVisible(MyMusicNav.xml) + Container.Content(years)",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "560", "512", "522", "532", "592", "542", "572", "554", "552", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["500", "503", "510", "513", "521", "522", "523", "524", "526", "528", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "years-music": {
             "rule": "Window.IsVisible(MyMusicNav.xml) + Container.Content(years)",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "560", "502", "582", "512", "522", "532", "592", "554", "542", "572", "552", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["500", "503", "510", "513", "520", "521", "523", "524", "526", "528", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "studios": {
             "rule": "Container.Content(studios)",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "560", "512", "522", "532", "592", "542", "572", "554", "552", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["500", "503", "510", "513", "521", "522", "523", "524", "526", "528", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "directors": {
             "rule": "Container.Content(directors)",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "560", "512", "522", "532", "592", "542", "572", "554", "552", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["500", "503", "510", "513", "521", "522", "523", "524", "526", "528", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "countries": {
             "rule": "Container.Content(countries)",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "560", "512", "522", "532", "592", "542", "572", "554", "552", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["500", "503", "510", "513", "521", "522", "523", "524", "526", "528", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "tags": {
             "rule": "Container.Content(tags)",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "560", "512", "522", "532", "592", "542", "572", "554", "552", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["500", "503", "510", "513", "521", "522", "523", "524", "526", "528", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "roles": {
             "rule": "Container.Content(roles)",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "560", "502", "582", "512", "522", "532", "592", "542", "572", "554", "552", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["500", "503", "510", "513", "520", "521", "523", "524", "526", "528", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "actors": {
             "rule": "Container.Content(actors)",
-            "viewtypes": ["52", "53", "59", "520", "530", "590", "560", "502", "582", "512", "522", "532", "592", "542", "572", "554", "552", "553"],
-            "library": "512",
-            "plugins": "512"
+            "viewtypes": ["502", "512", "521", "522", "523", "524", "526", "528", "506"],
+            "library": "502",
+            "plugins": "502"
         },
         "playlists": {
             "rule": "Container.Content(playlists)",
-            "viewtypes": ["50", "58", "500", "580", "560", "552", "553"],
-            "library": "50",
-            "plugins": "50"
+            "viewtypes": ["500", "503", "510", "513", "521", "522", "523", "524", "526", "528", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "musicvideos": {
             "rule": "Container.Content(musicvideos)",
-            "viewtypes": ["50", "58", "51", "52", "53", "59", "57", "500", "580", "510", "561", "520", "530", "590", "540", "560", "570", "502", "582", "512", "522", "532", "592", "542", "572", "552", "553"],
-            "library": "51",
-            "plugins": "51"
+            "viewtypes": ["500", "501", "502", "503", "504", "510", "511", "512", "513", "514", "506", "507", "508", "509"],
+            "library": "501",
+            "plugins": "501"
         },
         "artists": {
             "rule": "Container.Content(artists)",
-            "viewtypes": ["50", "58", "51", "53", "59", "57", "500", "580", "510", "561", "530", "590", "540", "560", "570", "502", "582", "532", "592", "554", "551", "550", "552", "553"],
-            "library": "50",
-            "plugins": "50"
+            "viewtypes": ["500", "501", "503", "504", "510", "511", "513", "514", "520", "523", "526", "528", "506", "507", "508", "509"],
+            "library": "500",
+            "plugins": "500"
         },
         "albums": {
             "rule": "Container.Content(albums)",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "540", "560", "502", "582", "532", "592", "554", "551", "550", "552", "553"],
-            "library": "50",
-            "plugins": "50"
+            "viewtypes": ["500", "501", "503", "504", "510", "511", "513", "514", "520", "523", "526", "528", "506", "507", "508", "509"],
+            "library": "500",
+            "plugins": "500"
         },
         "songs": {
             "rule": "Container.Content(songs)",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "540", "560", "551", "550", "552", "553"],
-            "library": "552",
-            "plugins": "552"
+            "viewtypes": ["500", "503", "510", "513", "506", "507", "508", "509"],
+            "library": "508",
+            "plugins": "508"
         },
         "files": {
             "rule": "Container.Content(files)",
-            "viewtypes": ["50", "58", "51", "57", "500", "580", "560", "570", "552", "553"],
-            "library": "50",
-            "plugins": "50"
+            "viewtypes": ["500", "510", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "sources": {
             "rule": "Container.Content(sources)",
-            "viewtypes": ["50", "58", "51", "57", "500", "580", "560", "570", "552", "553"],
-            "library": "50",
-            "plugins": "50"
+            "viewtypes": ["500", "510", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "addons": {
             "rule": "Container.Content(addons)",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "540", "560", "552", "553"],
-            "library": "50",
-            "plugins": "50"
+            "viewtypes": ["500", "503", "510", "513", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "recordings": {
             "rule": "Container.Content(recordings)",
-            "viewtypes": ["51", "57", "510", "561", "570", "552", "553"],
-            "library": "51",
-            "plugins": "51"
+            "viewtypes": ["501", "511", "506"],
+            "library": "501",
+            "plugins": "501"
         },
-
         "games": {
             "rule": "Container.Content(games)",
-            "viewtypes": ["50", "58", "51", "52", "53", "59", "54", "57", "500", "580", "510", "561", "520", "530", "590", "540", "560", "570", "551", "550", "552", "557", "558", "553"],
-            "library": "51",
-            "plugins": "51"
+            "viewtypes": ["500", "501", "502", "503", "504", "510", "511", "512", "513", "514", "506", "507", "508", "509"],
+            "library": "501",
+            "plugins": "501"
         },
         "none-games": {
             "rule": "Container.Content() + Window.IsVisible(MyGames.xml)",
-            "viewtypes": ["50", "58", "51", "52", "53", "59", "54", "57", "500", "580", "510", "561", "520", "530", "590", "540", "560", "570", "551", "550", "552", "557", "558", "553"],
-            "library": "51",
-            "plugins": "51"
+            "viewtypes": ["500", "501", "502", "503", "504", "510", "511", "512", "513", "514", "506", "507", "508", "509"],
+            "library": "501",
+            "plugins": "501"
         },
         "none-recordings": {
             "rule": "Container.Content() + Window.IsVisible(MyPVRRecordings.xml)",
-            "viewtypes": ["51", "57", "510", "561", "570", "552", "553"],
-            "library": "51",
-            "plugins": "51"
+            "viewtypes": ["501", "511", "506"],
+            "library": "501",
+            "plugins": "501"
         },
         "none-timers": {
             "rule": "Container.Content() + Window.IsVisible(MyPVRTimers.xml)",
-            "viewtypes": ["51", "57", "510", "561", "570", "552", "553"],
-            "library": "51",
-            "plugins": "51"
+            "viewtypes": ["501", "511", "506"],
+            "library": "501",
+            "plugins": "501"
         },
         "none-search": {
             "rule": "Container.Content() + Window.IsVisible(MyPVRSearch.xml)",
-            "viewtypes": ["51", "57", "510", "561", "570", "552", "553"],
-            "library": "51",
-            "plugins": "51"
+            "viewtypes": ["501", "511", "506"],
+            "library": "501",
+            "plugins": "501"
         },
         "none-providers": {
             "rule": "Container.Content() + String.IsEqual(Container.Property(param.info),watch_providers)",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "560", "512", "522", "532", "592", "542", "572", "552", "553"],
-            "library": "50",
-            "plugins": "50"
+            "viewtypes": ["500", "503", "510", "513", "521", "524", "526", "528", "506"],
+            "library": "521",
+            "plugins": "521"
         },
         "none-calendar": {
             "rule": "Container.Content() + [String.IsEqual(Container.Property(param.info),dir_calendar_library) | String.IsEqual(Container.Property(param.info),dir_calendar_trakt)]",
-            "viewtypes": ["51", "52", "53", "59", "57", "510", "561", "520", "530", "590", "540", "560", "512", "522", "532", "592", "554", "542", "572", "551", "550", "552", "557", "558", "553"],
-            "library": "50",
-            "plugins": "50"
+            "viewtypes": ["500", "503", "510", "513", "521", "524", "526", "528", "506"],
+            "library": "500",
+            "plugins": "500"
         },
         "none": {
             "rule": "Container.Content() + !Window.IsVisible(MyGames.xml) + !Window.IsVisible(MyPVRRecordings.xml) + !Window.IsVisible(MyPVRTimers.xml) + !Window.IsVisible(MyPVRSearch.xml) + !String.IsEqual(Container.Property(param.info),watch_providers) + ![String.IsEqual(Container.Property(param.info),dir_calendar_library) | String.IsEqual(Container.Property(param.info),dir_calendar_trakt)]",
-            "viewtypes": ["50", "58", "53", "59", "500", "580", "530", "590", "560", "552", "553"],
-            "library": "50",
-            "plugins": "50"
+            "viewtypes": ["500", "510", "506"],
+            "library": "500",
+            "plugins": "500"
         }
 
     }

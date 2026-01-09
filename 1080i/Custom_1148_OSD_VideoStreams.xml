@@ -15,7 +15,8 @@
 
             <!-- Settings -->
             <control type="group">
-                <include>OSD_Dialog_Background_Glass</include>
+                <visible>!Window.IsVisible(DialogSettings.xml)</visible>
+                <include>OSD_Part_Background_Blur</include>
                 <include content="Animation_SlideIn_Dialog">
                     <param name="posy">48</param>
                 </include>
@@ -81,13 +82,10 @@
                             <height>1</height>
                             <texture colordiffuse="main_fg_12">common/white.png</texture>
                         </control>
-                        <include content="Dialog_Menu_Button">
+                        <control type="button" id="7800">
                             <left>-40</left>
                             <right>-40</right>
-                            <param name="id">7800</param>
-                            <param name="groupid">7890</param>
-                            <param name="control">button</param>
-                            <param name="icon" />
+                            <texturenofocus />
                             <onup>6805</onup>
                             <ondown>6008</ondown>
                             <height>160</height>
@@ -97,7 +95,7 @@
                             <onright condition="Player.TempoEnabled">PlayerControl(TempoUp)</onright>
                             <onright condition="!Player.TempoEnabled + !Player.Forwarding32x">PlayerControl(Forward)</onright>
                             <onleft condition="!Player.TempoEnabled + !Player.Rewinding32x">PlayerControl(Rewind)</onleft>
-                        </include>
+                        </control>
                         <control type="group">
                             <visible>!Control.HasFocus(7800)</visible>
                             <include content="OSD_TempoControl">

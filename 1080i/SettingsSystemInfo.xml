@@ -140,14 +140,6 @@
                                                 <texturebg colordiffuse="dialog_bg_12" border="12,0,12,0">progress/progress-nib.png</texturebg>
                                                 <midtexture colordiffuse="$VAR[ColorHighlight]" border="12,0,12,0">progress/progress-nib.png</midtexture>
                                             </control>
-                                            <control type="progress">
-                                                <info>system.memory(used)</info>
-                                                <texturebg colordiffuse="00ffffff" border="12,0,12,0">progress/progress-bg.png</texturebg>
-                                                <midtexture colordiffuse="$VAR[ColorGradient]" border="12,0,12,0" diffuse="progress/diffuse.png">progress/progress-bg.png</midtexture>
-                                                <include content="Defs_Progress_Colorfade">
-                                                    <param name="id">9201</param>
-                                                </include>
-                                            </control>
                                         </control>
                                     </control>
                                 </control>
@@ -168,14 +160,6 @@
                                                 <info>System.CPUUsage</info>
                                                 <texturebg colordiffuse="dialog_bg_12" border="12,0,12,0">progress/progress-nib.png</texturebg>
                                                 <midtexture colordiffuse="$VAR[ColorHighlight]" border="12,0,12,0">progress/progress-nib.png</midtexture>
-                                            </control>
-                                            <control type="progress">
-                                                <info>System.CPUUsage</info>
-                                                <texturebg colordiffuse="00ffffff" border="12,0,12,0">progress/progress-bg.png</texturebg>
-                                                <midtexture colordiffuse="$VAR[ColorGradient]" border="12,0,12,0" diffuse="progress/diffuse.png">progress/progress-bg.png</midtexture>
-                                                <include content="Defs_Progress_Colorfade">
-                                                    <param name="id">9202</param>
-                                                </include>
                                             </control>
                                         </control>
                                     </control>
@@ -234,15 +218,15 @@
                         </control>
                     </control>
                     <control type="scrollbar" id="61">
-                        <centerright>-20</centerright>
+                        <centerright>0</centerright>
                         <bottom>20</bottom>
                         <top>20</top>
                         <width>scrollbar_w</width>
                         <orientation>vertical</orientation>
-                        <texturesliderbackground colordiffuse="main_fg_12" border="4">scrollbar/scrollv_line.png</texturesliderbackground>
-                        <texturesliderbar colordiffuse="main_logo" border="4">scrollbar/scrollv.png</texturesliderbar>
-                        <showonepage>false</showonepage>
+                        <texturesliderbackground />
+                        <texturesliderbar colordiffuse="main_logo" border="4">scrollbar/scrollv_line.png</texturesliderbar>
                         <include>Texture_Scrollbar_V</include>
+                        <showonepage>false</showonepage>
                         <onleft>3</onleft>
                         <visible>Control.IsVisible(30)</visible>
                     </control>

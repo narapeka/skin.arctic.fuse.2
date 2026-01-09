@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <include>Animation_OSD_Fullscreen_Change</include>
     <onload>ClearProperty(OSDRelaunchFullscreen,Home)</onload>
     <controls>
         <include>OSD_Background_Dim</include>

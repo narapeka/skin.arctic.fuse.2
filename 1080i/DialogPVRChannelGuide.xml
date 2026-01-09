@@ -7,12 +7,7 @@
     <onload>SetProperty(ChannelIcon,$ESCINFO[Player.Icon])</onload>
     <controls>
 
-        <include condition="Window.IsMedia">Defs_Background_Loader</include>
-
         <control type="group">
-            <include content="View_Bumper" condition="Window.IsMedia">
-                <param name="groupid">50</param>
-            </include>
 
             <control type="group">
                 <include condition="!Window.IsMedia">Animation_OSD_Dialog_WindowChange</include>
@@ -76,8 +71,7 @@
                     <include>Info_Panel_Dimensions</include>
                     <include content="Info_Panel" condition="Window.IsMedia">
                         <param name="container">Container(11).</param>
-                        <param name="titlelabel">$VAR[Label_Title_C11]</param>
-                        <param name="plotlabel">$VAR[Label_Plot_C11]</param>
+                        <param name="affix">_C11</param>
                     </include>
                 </control>
                 <control type="group">
@@ -95,6 +89,6 @@
                 </control>
             </control>
         </control>
-        <include condition="Window.IsMedia">View_Dialog_Plot</include>
+        <include condition="Window.IsMedia">DialogPlotFake</include>
     </controls>
 </window>

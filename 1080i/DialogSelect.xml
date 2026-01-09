@@ -2,13 +2,11 @@
 <window>
 
     <defaultcontrol>3</defaultcontrol>
-    <onunload>ClearProperty(DialogSelectType,Home)</onunload>
-    <onload>SetProperty(TMDbHelper.ContextMenu,True)</onload>
     <controls>
 
-        <include condition="!Window.IsActive(selectvideoversion) + !String.IsEmpty(Window(Home).Property(SkinViewtypes.DialogIsActive))">DialogSelect_Viewtypes</include>
+        <include condition="!Window.IsActive(selectvideoversion) + !String.IsEmpty(Window(Home).Property(SkinViewtypes.DialogIsActive))">DialogSelect_Viewtype</include>
         <include condition="!Window.IsActive(selectvideoversion) + String.IsEmpty(Window(Home).Property(SkinViewtypes.DialogIsActive))">DialogSelect_Standard</include>
-        <include condition="Window.IsActive(selectvideoversion)">DialogVideoVersions_DialogSelect</include>
+        <include condition="Window.IsActive(selectvideoversion)">DialogSelect_Versions</include>
 
         <!-- Hidden Buttons -->
         <include content="Object_Hidden_Button">

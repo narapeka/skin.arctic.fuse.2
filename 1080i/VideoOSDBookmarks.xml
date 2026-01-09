@@ -61,7 +61,7 @@
                     <top>-290</top>
                     <itemgap>0</itemgap>
                     <orientation>horizontal</orientation>
-                    <left>30</left>
+                    <left>10</left>
 
                     <onup>Close</onup>
 

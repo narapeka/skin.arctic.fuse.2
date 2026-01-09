@@ -27,21 +27,14 @@
             <onfocus>ClearProperty(Background.DialogInfo.HideArtwork,Home)</onfocus>
         </control>
 
-        <include>Defs_Background_Loader</include>
-
         <control type="group">
             <include>DialogInfo_Main_Group</include>
             <control type="group">
                 <include>DialogInfo_Body_Group</include>
                 <control type="group">
-                    <include content="DialogInfo_Info_Group" condition="!Skin.String(Info.Layout,Flix)">
+                    <include content="DialogInfo_Info_Group">
                         <param name="extended_include">DialogInfo_MusicDetails</param>
                         <param name="plotwidth">90%</param>
-                    </include>
-                    <include content="DialogInfo_Info_Group" condition="Skin.String(Info.Layout,Flix)">
-                        <param name="indent">view_pad</param>
-                        <param name="extended_include">DialogInfo_MusicDetails</param>
-                        <param name="plotwidth">info_plot_w</param>
                     </include>
                 </control>
             </control>
@@ -69,9 +62,6 @@
                 <include>Widget_End_Bumper</include>
             </control>
         </control>
-
-        <include>DialogInfo_Furniture</include>
-        <include>DialogInfo_PlotBox</include>
 
         <include content="Object_Hidden_Button">
             <param name="id">6</param>

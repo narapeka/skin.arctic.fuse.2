@@ -2,22 +2,22 @@
     <rules name="widget_prev_id">
         <rule>
             <condition>{item_widget_parent}!=</condition>
-            <value>$MATH[{grouplist_item_x} * 1000 + 600 + {enum_x} - 1 - {item_widget_parent}]</value>
+            <value>$MATH[501 + {item_x} - 1 - {item_widget_parent}]</value>
         </rule>
         <rule>
             <condition>True</condition>
-            <value>$MATH[{grouplist_item_x} * 1000 + 600 + {enum_x} - 1]</value>
+            <value>$MATH[501 + {item_x} - 1]</value>
         </rule>
     </rules>
     <value name="widget_busy_isupdating">True</value>
-    <value name="widget_id">$MATH[{grouplist_item_x} * 1000 + 600 + {enum_x}]</value>
-    <value name="widget_group_id">$MATH[{grouplist_item_x} * 1000 + 700 + {enum_x}]</value>
-    <value name="widget_positioning_id">$MATH[{grouplist_item_x} * 1000 + 800 + {enum_x}]</value>
-    <value name="widget_next_id">$MATH[{grouplist_item_x} * 1000 + 600 + {enum_x} + 1]</value>
-    <value name="widget_nextnext_id">$MATH[{grouplist_item_x} * 1000 + 600 + {enum_x} + 2]</value>
-    <value name="widget_nextnextnext_id">$MATH[{grouplist_item_x} * 1000 + 600 + {enum_x} + 3]</value>
+    <value name="widget_id">$MATH[501 + {item_x}]</value>
+    <value name="widget_group_id">$MATH[701 + {item_x}]</value>
+    <value name="widget_next_id">$MATH[501 + {item_x} + 1]</value>
+    <value name="widget_nextnext_id">$MATH[501 + {item_x} + 2]</value>
+    <value name="widget_nextnextnext_id">$MATH[501 + {item_x} + 3]</value>
     <value name="widget_widgetfade_include">true</value>
     <value name="widget_widgetfade_disable">false</value>
+    <value name="widget_guid">{item_guid}</value>
     <rules name="widget_label">
         <rule>
             <condition>{item_path}==Stacked_Folder</condition>
@@ -172,10 +172,6 @@
     </rules>
     <rules name="widget_include">
         <rule>
-            <condition>{item_path}==Weather</condition>
-            <value>List_Weather_Row</value>
-        </rule>
-        <rule>
             <condition>{item_widget_style}==Landscape</condition>
             <value>List_Landscape_Row</value>
         </rule>
@@ -192,64 +188,8 @@
             <value>List_Circle_Row</value>
         </rule>
         <rule>
-            <condition>{item_widget_style}==Card</condition>
-            <value>List_Card_Row</value>
-        </rule>
-        <rule>
             <condition>{item_widget_style}==Board</condition>
             <value>List_Board_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Placard</condition>
-            <value>List_Placard_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Quad</condition>
-            <value>List_Quad_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Disc</condition>
-            <value>List_Disc_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Corflute</condition>
-            <value>List_Corflute_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Overview</condition>
-            <value>List_Overview_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Signpost</condition>
-            <value>List_Signpost_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Banner</condition>
-            <value>List_Banner_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Apps</condition>
-            <value>List_Apps_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Icon</condition>
-            <value>List_Icon_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Halo</condition>
-            <value>List_Halo_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Post</condition>
-            <value>List_Post_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==View</condition>
-            <value>List_View_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Text</condition>
-            <value>List_Text_Row</value>
         </rule>
         <rule>
             <condition>{parent_item_widget_style}==Landscape</condition>
@@ -268,64 +208,8 @@
             <value>List_Circle_Row</value>
         </rule>
         <rule>
-            <condition>{parent_item_widget_style}==Card</condition>
-            <value>List_Card_Row</value>
-        </rule>
-        <rule>
             <condition>{parent_item_widget_style}==Board</condition>
             <value>List_Board_Row</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Placard</condition>
-            <value>List_Placard_Row</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Quad</condition>
-            <value>List_Quad_Row</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Disc</condition>
-            <value>List_Disc_Row</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Corflute</condition>
-            <value>List_Corflute_Row</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Overview</condition>
-            <value>List_Overview_Row</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Signpost</condition>
-            <value>List_Signpost_Row</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Banner</condition>
-            <value>List_Banner_Row</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Apps</condition>
-            <value>List_Apps_Row</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Icon</condition>
-            <value>List_Icon_Row</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Halo</condition>
-            <value>List_Halo_Row</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Post</condition>
-            <value>List_Post_Row</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==View</condition>
-            <value>List_View_Row</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Text</condition>
-            <value>List_Text_Row</value>
         </rule>
         <rule>
             <condition>True</condition>
@@ -344,16 +228,7 @@
             <condition>{item_path}==Custom_Submenu</condition>
             <value><![CDATA[
                 <onclick condition="String.IsEmpty(ListItem.Property(target))">$INFO[ListItem.FolderPath]</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Property(target)) + String.IsEmpty(ListItem.Property(path_opendialog))">ActivateWindow($INFO[ListItem.Property(target)],$INFO[ListItem.FolderPath],return)</onclick>
-
-                <onclick condition="!String.IsEmpty(ListItem.Property(target)) + !String.IsEmpty(ListItem.Property(path_opendialog)) + String.IsEmpty(ListItem.Property(path_opendialog_expanded)) + String.IsEmpty(ListItem.Property(path_opendialog_plotbox))">ClearProperty(CustomDialog1162.Expanded,Home)</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Property(target)) + !String.IsEmpty(ListItem.Property(path_opendialog)) + !String.IsEmpty(ListItem.Property(path_opendialog_expanded)) + String.IsEmpty(ListItem.Property(path_opendialog_plotbox))">SetProperty(CustomDialog1162.Expanded,artwork,Home)</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Property(target)) + !String.IsEmpty(ListItem.Property(path_opendialog)) + !String.IsEmpty(ListItem.Property(path_opendialog_expanded)) + !String.IsEmpty(ListItem.Property(path_opendialog_plotbox))">SetProperty(CustomDialog1162.Expanded,plotbox,Home)</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Property(target)) + !String.IsEmpty(ListItem.Property(path_opendialog))">SetProperty(Target,$INFO[ListItem.Property(target)],1162)</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Property(target)) + !String.IsEmpty(ListItem.Property(path_opendialog))">SetProperty(Path,$INFO[ListItem.FolderPath],1162)</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Property(target)) + !String.IsEmpty(ListItem.Property(path_opendialog))">SetProperty(Header,$INFO[ListItem.Label],1162)</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Property(target)) + !String.IsEmpty(ListItem.Property(path_opendialog))">SetProperty(Icon,$INFO[ListItem.Icon],1162)</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Property(target)) + !String.IsEmpty(ListItem.Property(path_opendialog))">ActivateWindow(1162)</onclick>
+                <onclick condition="!String.IsEmpty(ListItem.Property(target))">ActivateWindow($INFO[ListItem.Property(target)],$INFO[ListItem.FolderPath],return)</onclick>
             ]]></value>
         </rule>
     </rules>
@@ -402,129 +277,8 @@
 
     <rules name="widgetconstants_affix">
         <rule>
-            <condition>Skin.HasSetting(Hub.{window_id}.EnableDetailedInformation) | !Skin.HasSetting(Hub.{window_id}.DisableSubmenu)</condition>
+            <condition>True</condition>
             <value>_detailed</value>
-        </rule>
-    </rules>
-
-    <rules name="widget_positioning">
-        <rule>
-            <condition>{item_widget_style}==Apps</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Icon</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Halo</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Post</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==View</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Text</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Apps</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Icon</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Halo</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Post</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==View</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Text</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>True</condition>
-            <value>False</value>
-        </rule>
-    </rules>
-
-    <rules name="widget_positioning_top">
-        <rule>
-            <condition>{item_widget_style}==Apps</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Icon</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Halo</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Post</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==View</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Text</condition>
-            <value>-160</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Apps</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Icon</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Halo</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Post</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==View</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{parent_item_widget_style}==Text</condition>
-            <value>-160</value>
-        </rule>
-        <rule>
-            <condition>True</condition>
-            <value>0</value>
-        </rule>
-    </rules>
-
-    <rules name="widget_positioning_check">
-        <rule>
-            <condition>Skin.HasSetting(Hub.{window_id}.EnableDetailedInformation) | !Skin.HasSetting(Hub.{window_id}.DisableSubmenu)</condition>
-            <value>[!String.IsEmpty(Container(480).ListItemAbsolute({enum_total_x}).Property(include)) + [!String.IsEmpty(Container(480).ListItemAbsolute({enum_total_x}).Property(visible)) | !String.IsEmpty(Container(480).ListItemAbsolute($MATH[{enum_total_x} + 1]).Property(visible)) | !String.IsEmpty(Container(480).ListItemAbsolute($MATH[{enum_total_x} + 2]).Property(visible))]]</value>
-        </rule>
-        <rule>
-            <condition>True</condition>
-            <value>True</value>
         </rule>
     </rules>
 </contents>

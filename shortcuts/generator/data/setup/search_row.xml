@@ -1,13 +1,12 @@
 <contents>
-    <value name="widget_id">$MATH[5000 + {item_x} + 1]</value>
-    <value name="widget_group_id">$MATH[5100 + {item_x} + 1]</value>
-    <value name="widget_positioning_id">$MATH[5200 + {item_x} + 1]</value>
-    <value name="widget_positioning_check">True</value>
+    <value name="widget_id">$MATH[500 + {item_x} + 2]</value>
+    <value name="widget_group_id">$MATH[700 + {item_x} + 2]</value>
     <value name="widget_label">{item_label}</value>
     <value name="widget_sortby">{item_widget_sortby}</value>
     <value name="widget_limit">{item_widget_limit}</value>
-    <value name="widget_visible">[String.IsEqual(Container(5099).ListItem.Property(guid),{item_guid}) | String.IsEmpty(Container(5099).ListITem.Property(guid))]</value>
-    <value name="widget_altvisible">[!String.IsEmpty(Control.GetLabel(9099).index(1)) + [[Control.HasFocus(9099) + System.IdleTime(1) + !System.IdleTime(2)] | !String.IsEmpty(Window(Home).Property(UpdateSearchRows))]]</value>
+    <value name="widget_visible">[String.IsEqual(Container(601).ListItem.Property(guid),{item_guid}) | String.IsEmpty(Container(601).ListItem.Property(guid))]</value>
+    <value name="widget_altvisible">[!String.IsEmpty(Control.GetLabel(300).index(1)) + [Control.HasFocus(300) | Control.HasFocus(305)] + System.IdleTime(1) + !System.IdleTime(2)]</value>
+    <value name="widget_guid">{item_guid}</value>
     <rules name="widget_sortorder">
         <rule>
             <condition>{item_widget_sortorder}==True</condition>
@@ -36,64 +35,8 @@
             <value>List_Circle_Row</value>
         </rule>
         <rule>
-            <condition>{item_widget_style}==Card</condition>
-            <value>List_Card_Row</value>
-        </rule>
-        <rule>
             <condition>{item_widget_style}==Board</condition>
             <value>List_Board_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Placard</condition>
-            <value>List_Placard_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Quad</condition>
-            <value>List_Quad_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Disc</condition>
-            <value>List_Disc_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Corflute</condition>
-            <value>List_Corflute_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Overview</condition>
-            <value>List_Overview_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Signpost</condition>
-            <value>List_Signpost_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Banner</condition>
-            <value>List_Banner_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Apps</condition>
-            <value>List_Apps_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Icon</condition>
-            <value>List_Icon_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Halo</condition>
-            <value>List_Halo_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Post</condition>
-            <value>List_Post_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==View</condition>
-            <value>List_View_Row</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Text</condition>
-            <value>List_Text_Row</value>
         </rule>
         <rule>
             <condition>True</condition>
@@ -108,67 +51,6 @@
         <rule>
             <condition>True</condition>
             <value>False</value>
-        </rule>
-    </rules>
-    <rules name="widget_positioning">
-        <rule>
-            <condition>{item_widget_style}==Apps</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Icon</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Halo</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Post</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==View</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Text</condition>
-            <value>True</value>
-        </rule>
-        <rule>
-            <condition>True</condition>
-            <value>False</value>
-        </rule>
-    </rules>
-
-    <rules name="widget_positioning_top">
-        <rule>
-            <condition>{item_widget_style}==Apps</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Icon</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Halo</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Post</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==View</condition>
-            <value>-80</value>
-        </rule>
-        <rule>
-            <condition>{item_widget_style}==Text</condition>
-            <value>-160</value>
-        </rule>
-        <rule>
-            <condition>True</condition>
-            <value>0</value>
         </rule>
     </rules>
 </contents>

@@ -62,11 +62,14 @@
                                 <control type="group">
                                     <left>40</left>
                                     <right>40</right>
-                                    <include content="Object_ListItem_Iconic">
-                                        <param name="icon">$VAR[Image_ProfileIcon]</param>
-                                        <param name="color">main_fg_70</param>
-                                        <param name="icon_check">[[!String.IsEqual(ListItem.Icon,DefaultUser.png) + !String.IsEmpty(ListItem.Icon)] + [String.StartsWith(ListItem.Icon,Default) | String.StartsWith(ListItem.Icon,special://skin/extras/icons/)]]</param>
-                                    </include>
+                                    <control type="group">
+                                        <left>80</left>
+                                        <include content="Object_ListItem_Iconic">
+                                            <param name="icon">$VAR[Image_ProfileIcon]</param>
+                                            <param name="color">main_fg_70</param>
+                                            <param name="icon_check">[[!String.IsEqual(ListItem.Icon,DefaultUser.png) + !String.IsEmpty(ListItem.Icon)] + [String.StartsWith(ListItem.Icon,Default) | String.StartsWith(ListItem.Icon,special://skin/extras/icons/)]]</param>
+                                        </include>
+                                    </control>
                                     <include content="Object_IsSelected_Checkmark">
                                         <param name="color_off">main_fg_30</param>
                                         <param name="color_on">main_fg_70</param>
@@ -81,11 +84,14 @@
                                 <control type="group">
                                     <left>40</left>
                                     <right>40</right>
-                                    <include content="Object_ListItem_Iconic">
-                                        <param name="color">$VAR[ColorSelected]</param>
-                                        <param name="icon">$VAR[Image_ProfileIcon]</param>
-                                        <param name="icon_check">[[!String.IsEqual(ListItem.Icon,DefaultUser.png) + !String.IsEmpty(ListItem.Icon)] + [String.StartsWith(ListItem.Icon,Default) | String.StartsWith(ListItem.Icon,special://skin/extras/icons/)]]</param>
-                                    </include>
+                                    <control type="group">
+                                        <left>80</left>
+                                        <include content="Object_ListItem_Iconic">
+                                            <param name="color">$VAR[ColorSelected]</param>
+                                            <param name="icon">$VAR[Image_ProfileIcon]</param>
+                                            <param name="icon_check">[[!String.IsEqual(ListItem.Icon,DefaultUser.png) + !String.IsEmpty(ListItem.Icon)] + [String.StartsWith(ListItem.Icon,Default) | String.StartsWith(ListItem.Icon,special://skin/extras/icons/)]]</param>
+                                        </include>
+                                    </control>
                                     <include content="Object_IsSelected_Checkmark_Focus">
                                         <param name="selected">String.IsEqual(ListItem.Label,System.ProfileName)</param>
                                     </include>

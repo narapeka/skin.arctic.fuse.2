@@ -5,11 +5,6 @@
     <onload>CancelAlarm(osd_timeout,true)</onload>
     <include>Animation_OSD_Dialog_WindowChange</include>
     <controls>
-
-        <include content="Defs_Background_Loader">
-            <param name="label">$VAR[Label_Title]</param>
-        </include>
-
         <control type="group">
             <visible>!Window.IsActive(pvrchannelguide)</visible>
             <visible>!Window.IsActive(pvrosdchannels)</visible>

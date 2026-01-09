@@ -4,6 +4,6 @@
     <defaultcontrol always="true">21</defaultcontrol>
 
     <controls>
-        <include>Keyboard_Numeric</include>
+        <include>DialogNumeric</include>
     </controls>
 </window>

@@ -3,10 +3,7 @@
 
     <defaultcontrol always="true">61</defaultcontrol>
     <onload>SetProperty(TMDbHelper.ContextMenu,True)</onload>
-
     <controls>
-
-        <include>Weather_Dialog</include>
-
+        <include>DialogWeather</include>
     </controls>
 </window>

@@ -7,15 +7,13 @@
     </include>
 
     <variable name="Color_DialogBorder">
-        <value condition="!Skin.HasSetting(Glass.EnableBorders) + !Skin.HasSetting(Glass.DarkPanels)">dialog_fg_06</value>
-        <value>dialog_fg_12</value>
+        <value>dialog_fg_06</value>
     </variable>
 
     <!-- ColorPicker -->
     <variable name="ColorPickerHex">
         <value condition="Control.HasFocus(3000)">$INFO[Container(3000).ListItem.Label]</value>
         <value condition="String.IsEqual(Window(Home).Property(ColorPicker_Type),Highlight)">$VAR[ColorHighlight]</value>
-        <value condition="String.IsEqual(Window(Home).Property(ColorPicker_Type),Gradient)">$VAR[ColorGradient]</value>
         <value condition="String.IsEqual(Window(Home).Property(ColorPicker_Type),Indicator)">$VAR[ColorWatchedProgress]</value>
         <value condition="String.IsEqual(Window(Home).Property(ColorPicker_Type),series_premiere)">$VAR[ColorBanner_series_premiere]</value>
         <value condition="String.IsEqual(Window(Home).Property(ColorPicker_Type),season_premiere)">$VAR[ColorBanner_season_premiere]</value>
@@ -29,13 +27,6 @@
     <variable name="ColorHighlight">
         <value condition="!String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
         <value>ffffffff</value>
-    </variable>
-
-    <!-- Gradient Color -->
-    <variable name="ColorGradient">
-        <value condition="Skin.HasSetting(DisableMonochromeHighlight) + !String.IsEmpty(Skin.String(gradientcolor.name))">$INFO[Skin.String(gradientcolor.name)]</value>
-        <value condition="Skin.HasSetting(DisableMonochromeHighlight)">ffffffff</value>
-        <value>$VAR[ColorHighlight]</value>
     </variable>
 
     <!-- Watched / Progress Color -->

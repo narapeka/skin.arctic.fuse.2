@@ -1,6 +1,6 @@
 # Kodi Media Center language file
-# Addon Name: Arctic Fuse
-# Addon Name: skin.arctic.fuse
+# Addon Name: Arctic Fuse 3
+# Addon Name: skin.arctic.fuse.3
 # Addon Provider: jurialmunkey
 msgid ""
 msgstr ""
@@ -25,38 +25,39 @@ msgctxt "#31001"
 msgid "In-Progress Episodes"
 msgstr ""
 
-#: /1080i/Includes_Shortcuts_Window.xml
+#: /1080i/Includes_Views_Combined.xml
 msgctxt "#31002"
-msgid "Hub window selector"
+msgid "Combined Square"
 msgstr ""
 
-#: /1080i/Custom_1115_Dialog_WindowShortcuts.xml
+#: /1080i/Includes_Views_Combined.xml
 msgctxt "#31003"
-msgid "Submenu list"
+msgid "Combined Landscape"
 msgstr ""
 
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
+#: /1080i/Includes_Views_Combined.xml
 msgctxt "#31004"
-msgid "Sets the current hub to be used as the default home window."
+msgid "Combined Poster"
 msgstr ""
 
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
+#: /1080i/Includes_Views_Combined.xml
 msgctxt "#31005"
-msgid "Choose global spotlight"
+msgid "Combined Circle"
 msgstr ""
 
+#: /1080i/Includes_Views_Combined.xml
 msgctxt "#31006"
-msgid "Location"
+msgid "Combined Board"
 msgstr ""
 
-#: /1080i/Includes_Shortcuts_Window.xml
+#: /1080i/Dialog_DialogSelect.xml
 msgctxt "#31007"
-msgid "Changes the header label shown at the top of the hub window."
+msgid "Row"
 msgstr ""
 
-#: /1080i/Includes_Shortcuts_Window.xml
+#: /1080i/Dialog_DialogSelect.xml
 msgctxt "#31008"
-msgid "Switches the hub between a classic widget-only layout and a complex layout of widget categories and spotlights."
+msgid "Wall"
 msgstr ""
 
 #: /1080i/Includes_Shortcuts_Window.xml
@@ -64,29 +65,29 @@ msgctxt "#31009"
 msgid "Widget Customisation"
 msgstr ""
 
-#: /1080i/Includes_Shortcuts_Window.xml
+#: /1080i/Includes_Hubs.xml
 msgctxt "#31010"
-msgid "Welcome to the Arctic Fuse widget customisation screen!"
+msgid "Program"
 msgstr ""
 
-#: /1080i/Includes_Shortcuts_Window.xml
+#: /1080i/Includes_Hubs.xml
 msgctxt "#31011"
-msgid "Edit menu"
+msgid "Picture"
 msgstr ""
 
-#: /1080i/Includes_Shortcuts_Window.xml
+#: /1080i/Includes_Hubs.xml
 msgctxt "#31012"
-msgid "Use the hub window selector to change which window is being customised."
+msgid "Recent"
 msgstr ""
 
-#: /1080i/Includes_Shortcuts_Window.xml
+#: /1080i/Includes_Views_PVR.xml
 msgctxt "#31013"
-msgid "Your changes are automatically saved."
+msgid "List Standard"
 msgstr ""
 
-#: /1080i/Includes_Shortcuts_Window.xml
+#: /1080i/Includes_Views_PVR.xml
 msgctxt "#31014"
-msgid "Prebuilt default widget sets are available from the \"Prebuilt\" icon."
+msgid "List Info"
 msgstr ""
 
 msgctxt "#31015"
@@ -97,28 +98,28 @@ msgctxt "#31016"
 msgid "Sort by"
 msgstr ""
 
-#: /1080i/Includes_Shortcuts_Window.xml
+#: /1080i/Includes_Views_PVR.xml
 msgctxt "#31017"
-msgid "Widget Groups"
+msgid "List Details"
 msgstr ""
 
 msgctxt "#31018"
 msgid "Recommendations"
 msgstr ""
 
-#: /shortcuts/842.DATA.xml
+#: /1080i/Includes_Views_PVR.xml
 msgctxt "#31019"
-msgid "Next Aired Trakt"
+msgid "List Planner"
 msgstr ""
 
-#: /shortcuts/842.DATA.xml
+#: /1080i/Includes_Views_PVR.xml
 msgctxt "#31020"
-msgid "Next Aired Library"
+msgid "List Outline"
 msgstr ""
 
-#: /1080i/Custom_1132_Window_Addons.xml
+#: /1080i/Includes_Views_Combined.xml
 msgctxt "#31021"
-msgid "Repositories"
+msgid "Combined Expanded"
 msgstr ""
 
 msgctxt "#31022"
@@ -143,11 +144,6 @@ msgctxt "#31026"
 msgid "Hub"
 msgstr ""
 
-#: /1080i/Includes_Shortcuts_Window.xml
-msgctxt "#31027"
-msgid "Edit the widgets used in the search window."
-msgstr ""
-
 msgctxt "#31028"
 msgid "Outline"
 msgstr ""
@@ -160,11 +156,6 @@ msgstr ""
 #: /1080i/Includes_Labels.xml
 msgctxt "#31030"
 msgid "Critics"
-msgstr ""
-
-#: /1080i/Includes_Shortcuts_Window.xml
-msgctxt "#31031"
-msgid "Edit the options and power menu."
 msgstr ""
 
 #: /1080i/DialogPVRChannelManager.xml
@@ -184,16 +175,6 @@ msgctxt "#31035"
 msgid "Crew member"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31036"
-msgid "Mouse-friendly widgets"
-msgstr ""
-
-#: /1080i/Includes_Shortcuts_Window.xml
-msgctxt "#31037"
-msgid "Complex"
-msgstr ""
-
 #: /1080i/Includes_Labels.xml
 msgctxt "#31038"
 msgid "Directing"
@@ -204,22 +185,9 @@ msgctxt "#31039"
 msgid "Writing"
 msgstr ""
 
-msgctxt "#31040"
-msgid "Use as widget"
-msgstr ""
-
 #: /1080i/Includes_Items.xml
 msgctxt "#31041"
 msgid "Similar"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31042"
-msgid "Clock"
-msgstr ""
-
-msgctxt "#31043"
-msgid "Flat (No Gradient)"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -240,15 +208,6 @@ msgstr ""
 #: /1080i/Custom_1154_Dialog_SearchDiscover_Sort.xml
 msgctxt "#31047"
 msgid "Popularity"
-msgstr ""
-
-#: /1080i/Includes_Search.xml
-msgctxt "#31048"
-msgid "Sort"
-msgstr ""
-
-msgctxt "#31049"
-msgid "Default Widgets"
 msgstr ""
 
 #: /1080i/Includes_Search.xml
@@ -284,21 +243,6 @@ msgstr ""
 
 msgctxt "#31057"
 msgid "Years Old"
-msgstr ""
-
-#: /1080i/Includes_Views_Wall.xml
-msgctxt "#31058"
-msgid "Wall Ring"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31059"
-msgid "Vertical"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31060"
-msgid "Horizontal"
 msgstr ""
 
 #: /shortcuts/template.xml
@@ -381,38 +325,8 @@ msgid "More Information"
 msgstr ""
 
 #: /1080i/Includes_Labels.xml
-msgctxt "#31078"
-msgid "The prebuilt icon provides options to install various different default widget and menu sets."
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31079"
-msgid "Using this option will override parts of your existing configuration."
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31080"
-msgid "Rebuilding forces Skin Variables to generate the skin XML files for your current configuration."
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31081"
-msgid "Rebuilding is required to make your changes visible in the skin."
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31082"
-msgid "Wall orientation"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
 msgctxt "#31083"
 msgid "Combined"
-msgstr ""
-
-#: /1080i/Includes_Shortcuts_Window.xml
-msgctxt "#31084"
-msgid "Categories using a submenu to select widgets will not use global widgets because submenu widgets disable the widget stack."
 msgstr ""
 
 msgctxt "#31085"
@@ -421,11 +335,6 @@ msgstr ""
 
 msgctxt "#31086"
 msgid "Customise options"
-msgstr ""
-
-#: /1080i/Includes_Shortcuts_Window.xml
-msgctxt "#31087"
-msgid "Global widgets are displayed for all categories at the end of the widget stack."
 msgstr ""
 
 #: /1080i/VideoOSDBookmarks.xml
@@ -442,19 +351,9 @@ msgctxt "#31090"
 msgid "In-Progress"
 msgstr ""
 
-#: /1080i/Includes_SkinSettings.xml
-msgctxt "#31091"
-msgid "Add a \"more items\" folder to widgets with item limits"
-msgstr ""
-
 #: /1080i/SkinSettings.xml /1080i/Includes_Shortcuts_Window.xml
 msgctxt "#31092"
 msgid "Detailed information"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31093"
-msgid "Border style"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -465,16 +364,6 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31095"
 msgid "Translations"
-msgstr ""
-
-#: /1080i/Includes_Shortcuts_Options.xml
-msgctxt "#31096"
-msgid "Use spotlight"
-msgstr ""
-
-#: /1080i/Includes_SkinSettings.xml
-msgctxt "#31097"
-msgid "Customise ratings"
 msgstr ""
 
 #: /1080i/SkinSettings.xml /1080i/Includes_Items.xml
@@ -489,7 +378,7 @@ msgstr ""
 
 #: /1080i/Includes_Views_Row.xml
 msgctxt "#31100"
-msgid "Board Row"
+msgid "Row Board"
 msgstr ""
 
 #: /1080i/Includes_Views_Wall.xml
@@ -497,58 +386,28 @@ msgctxt "#31101"
 msgid "Wall Board"
 msgstr ""
 
-#: /1080i/Includes_Labels.xml
-msgctxt "#31102"
-msgid "Prebuilt Configuration"
-msgstr ""
-
 msgctxt "#31103"
 msgid "Widgets"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31104"
-msgid "Rebuild XML"
 msgstr ""
 
 msgctxt "#31105"
 msgid "Spotlight"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31106"
-msgid "Viewmode"
-msgstr ""
-
-#: /1080i/Custom_1116_Dialog_Shortcuts.xml
-msgctxt "#31107"
-msgid "Combine widgets"
-msgstr ""
-
 msgctxt "#31108"
 msgid "Collections"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31109"
-msgid "Viewline"
-msgstr ""
-
-#: /1080i/Custom_1116_Dialog_Shortcuts.xml
-msgctxt "#31110"
-msgid "Use combined list"
-msgstr ""
-
 msgctxt "#31111"
-msgid "Poster Row"
+msgid "Row Poster"
 msgstr ""
 
 msgctxt "#31112"
-msgid "Landscape Row"
+msgid "Row Landscape"
 msgstr ""
 
 msgctxt "#31113"
-msgid "Square Row"
+msgid "Row Square"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -586,18 +445,9 @@ msgctxt "#31120"
 msgid "List Basic"
 msgstr ""
 
-msgctxt "#31121"
-msgid "Square List"
-msgstr ""
-
 #: /1080i/Includes_MediaFilter.xml
 msgctxt "#31122"
 msgid "Watchlist"
-msgstr ""
-
-#: /1080i/Includes_MediaFilter.xml
-msgctxt "#31123"
-msgid "On Deck"
 msgstr ""
 
 msgctxt "#31124"
@@ -606,16 +456,6 @@ msgstr ""
 
 msgctxt "#31125"
 msgid "Invert Text Colour"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31126"
-msgid "Options menu"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31127"
-msgid "Left footer"
 msgstr ""
 
 #: /1080i/Includes_MediaFilter.xml
@@ -635,15 +475,6 @@ msgctxt "#31131"
 msgid "Continue watching in"
 msgstr ""
 
-#: /1080i/Includes_MediaFilter.xml
-msgctxt "#31132"
-msgid "History"
-msgstr ""
-
-msgctxt "#31133"
-msgid "Set the type and add rules to create a smart playlist. These playlists are dynamic and include all media items from your database which apply to your chosen rules."
-msgstr ""
-
 #: /1080i/Includes_Labels.xml
 msgctxt "#31134"
 msgid "Playing"
@@ -652,11 +483,6 @@ msgstr ""
 #: /1080i/Includes_Views.xml
 msgctxt "#31135"
 msgid "Page"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31136"
-msgid "Slide"
 msgstr ""
 
 #: /1080i/SkinSettings.xml /1080i/Includes_Labels.xml
@@ -689,18 +515,8 @@ msgctxt "#31143"
 msgid "Classic"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31144"
-msgid "Initial focus"
-msgstr ""
-
 msgctxt "#31145"
 msgid "Initialising Skin"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31146"
-msgid "Profile image and logo"
 msgstr ""
 
 #: /1080i/Includes_Shortcuts_Window.xml
@@ -708,53 +524,13 @@ msgctxt "#31147"
 msgid "More"
 msgstr ""
 
-#: /1080i/Includes_DialogInfo.xml
-msgctxt "#31148"
-msgid "Explore"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31149"
-msgid "Edit spotlight"
-msgstr ""
-
 #: /1080i/Includes_Labels.xml
 msgctxt "#31150"
 msgid "Categories"
 msgstr ""
 
-#: /1080i/Includes_Items.xml
-msgctxt "#31151"
-msgid "Search and options"
-msgstr ""
-
-#: /1080i/DialogAddonSettings.xml
-msgctxt "#31152"
-msgid "Combined Square"
-msgstr ""
-
-#: /1080i/DialogAddonSettings.xml
-msgctxt "#31153"
-msgid "Combined Landscape"
-msgstr ""
-
 msgctxt "#31154"
 msgid "Misc options"
-msgstr ""
-
-#: /1080i/DialogAddonSettings.xml
-msgctxt "#31155"
-msgid "Combined Poster"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31156"
-msgid "Edit categories and widgets"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31157"
-msgid "Category items appear as a vertical menu at the left of the home screen."
 msgstr ""
 
 #: /1080i/Includes_Keyboard_Mini.xml
@@ -771,24 +547,9 @@ msgctxt "#31160"
 msgid "REC"
 msgstr ""
 
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31161"
-msgid "Edit the widgets shown in the hub."
-msgstr ""
-
 #: /1080i/Includes_Labels.xml
 msgctxt "#31162"
 msgid "Hide"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31163"
-msgid "Customise hubs"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31164"
-msgid "Global widgets are shown at the end of the widget stack for all categories in the hub."
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -826,11 +587,6 @@ msgctxt "#31171"
 msgid "On-screen keyboard size"
 msgstr ""
 
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31172"
-msgid "Global widgets are not shown for categories in combined widget mode."
-msgstr ""
-
 #: /1080i/SkinSettings.xml
 msgctxt "#31173"
 msgid "Scroll"
@@ -840,23 +596,8 @@ msgctxt "#31174"
 msgid "Navigation"
 msgstr ""
 
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31175"
-msgid "These widgets are in addition to any widgets for the specific category."
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31176"
-msgid "Home focus and navigation"
-msgstr ""
-
 msgctxt "#31177"
 msgid "Menus"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31178"
-msgid "Info line"
 msgstr ""
 
 #: /1080i/Includes_Search.xml
@@ -864,18 +605,9 @@ msgctxt "#31179"
 msgid "Keyword"
 msgstr ""
 
-msgctxt "#31180"
-msgid "Furniture"
-msgstr ""
-
 #: /1080i/Includes_DialogInfo.xml
 msgctxt "#31181"
 msgid "Scheduled"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31182"
-msgid "EPG and channels style"
 msgstr ""
 
 #: /1080i/Includes_Info.xml
@@ -906,26 +638,6 @@ msgstr ""
 
 msgctxt "#31189"
 msgid "Autoclose OSD after X seconds"
-msgstr ""
-
-#: /1080i/Includes_Info.xml
-msgctxt "#31190"
-msgid "time"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31191"
-msgid "Optional details"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31192"
-msgid "Ends at time"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31193"
-msgid "Expanding clock"
 msgstr ""
 
 #: /1080i/Includes_Info.xml
@@ -960,11 +672,6 @@ msgstr ""
 #: /1080i/Includes_Info.xml
 msgctxt "#31200"
 msgid "Added on"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31201"
-msgid "Use a label to differentiate this hub from others."
 msgstr ""
 
 msgctxt "#31202"
@@ -1045,11 +752,6 @@ msgstr ""
 #: /1080i/Includes_Labels.xml
 msgctxt "#31218"
 msgid "Mid-Season Finale"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31219"
-msgid "Left header"
 msgstr ""
 
 #: /1080i/Includes_Items.xml
@@ -1177,15 +879,6 @@ msgctxt "#31246"
 msgid "Autoscroll textboxes"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31247"
-msgid "Colour highlight"
-msgstr ""
-
-msgctxt "#31248"
-msgid "Building includes"
-msgstr ""
-
 msgctxt "#31249"
 msgid "Waiting for PVR"
 msgstr ""
@@ -1195,18 +888,8 @@ msgctxt "#31250"
 msgid "Highlight"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31251"
-msgid "Analog clock"
-msgstr ""
-
 msgctxt "#31252"
 msgid "Catch-up"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31253"
-msgid "Move between widget groups"
 msgstr ""
 
 #: /1080i/Includes_Labels.xml
@@ -1258,26 +941,6 @@ msgctxt "#31265"
 msgid "Budget"
 msgstr ""
 
-#: /1080i/Includes_Items.xml
-msgctxt "#31266"
-msgid "Menu expands to display labels"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31267"
-msgid "Quality"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31268"
-msgid "Fake"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31269"
-msgid "Real"
-msgstr ""
-
 msgctxt "#31270"
 msgid "Single image"
 msgstr ""
@@ -1291,11 +954,6 @@ msgctxt "#31272"
 msgid "Searching"
 msgstr ""
 
-#: /1080i/SkinSettings.xml /1080i/Includes_MediaFilter.xml
-msgctxt "#31273"
-msgid "Access scrollbar"
-msgstr ""
-
 #: /1080i/Includes_Items.xml
 msgctxt "#31274"
 msgid "Icon"
@@ -1306,28 +964,8 @@ msgctxt "#31275"
 msgid "Customise search"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31276"
-msgid "Widgets mode sets navigation to loop on left and right."
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31277"
-msgid "Ensure that your device has an alternative mode of accessing the menu and settings before selecting this option."
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31278"
-msgid "Switch the hub from a basic widgets-only layout to more advanced modes with additional features."
-msgstr ""
-
 msgctxt "#31279"
 msgid "Studio icons"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31280"
-msgid "Basic is a simple widgets-only mode."
 msgstr ""
 
 #: /1080i/Includes_Labels.xml
@@ -1426,10 +1064,6 @@ msgctxt "#31301"
 msgid "Crew"
 msgstr ""
 
-msgctxt "#31302"
-msgid "Management options"
-msgstr ""
-
 #: /1080i/SkinSettings.xml
 msgctxt "#31303"
 msgid "Customise fallback image folder"
@@ -1438,16 +1072,6 @@ msgstr ""
 #: /1080i/Includes_Search.xml
 msgctxt "#31304"
 msgid "lists"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31305"
-msgid "Detailed adds an information panel."
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31306"
-msgid "Advanced adds categories and spotlights."
 msgstr ""
 
 #: /1080i/Includes_DialogInfo.xml
@@ -1475,41 +1099,6 @@ msgctxt "#31311"
 msgid "Weekly"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31312"
-msgid "Spinner"
-msgstr ""
-
-#: /1080i/Custom_1116_Dialog_Shortcuts.xml
-msgctxt "#31313"
-msgid "Always visible"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31314"
-msgid "Advanced mode is only available in horizontal hub windows."
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31315"
-msgid "Hub windows other than classic home may not have access to the settings window in their default configuration."
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31316"
-msgid "Dark glass"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31317"
-msgid "Ribbon"
-msgstr ""
-
-#: /1080i/Includes_Views.xml
-msgctxt "#31318"
-msgid "Combined Circle"
-msgstr ""
-
 #: /1080i/Includes_MediaFilter.xml
 msgctxt "#31319"
 msgid "View"
@@ -1530,29 +1119,9 @@ msgctxt "#31322"
 msgid "Age"
 msgstr ""
 
-#: /1080i/Includes_Views.xml
-msgctxt "#31323"
-msgid "Combined Card"
-msgstr ""
-
 #: /1080i/SkinSettings.xml
 msgctxt "#31324"
 msgid "Content"
-msgstr ""
-
-#: /1080i/Includes_Views.xml
-msgctxt "#31325"
-msgid "Combined Board"
-msgstr ""
-
-#: /1080i/Includes_Views_Row.xml
-msgctxt "#31326"
-msgid "Quad Row"
-msgstr ""
-
-#: /1080i/Includes_Shortcuts_Options.xml
-msgctxt "#31327"
-msgid "Choose category spotlight"
 msgstr ""
 
 #: /1080i/Custom_1116_Dialog_Shortcuts.xml
@@ -1573,16 +1142,6 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31331"
 msgid "Background style"
-msgstr ""
-
-#: /1080i/Includes_Search_Filter.xml
-msgctxt "#31332"
-msgid "New search"
-msgstr ""
-
-#: /1080i/Includes_Lists.xml
-msgctxt "#31333"
-msgid "Quad"
 msgstr ""
 
 msgctxt "#31334"
@@ -1609,39 +1168,9 @@ msgctxt "#31338"
 msgid "Select + Right Stick"
 msgstr ""
 
-#: /1080i/Includes_Views_Wall.xml
-msgctxt "#31339"
-msgid "Wall Quad"
-msgstr ""
-
 #: /1080i/SkinSettings.xml
 msgctxt "#31340"
 msgid "Reset skin to defaults"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31341"
-msgid "Combined Quad"
-msgstr ""
-
-#: /1080i/Includes_Views_Row.xml
-msgctxt "#31342"
-msgid "Disc Row"
-msgstr ""
-
-#: /1080i/Includes_Views_Wall.xml
-msgctxt "#31343"
-msgid "Wall Disc"
-msgstr ""
-
-#: /1080i/Includes_Widgets.xml
-msgctxt "#31344"
-msgid "Combined Disc"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31345"
-msgid "Advanced mode applies a horizontal category layout."
 msgstr ""
 
 msgctxt "#31346"
@@ -1664,16 +1193,6 @@ msgstr ""
 
 msgctxt "#31350"
 msgid "Thanks"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31351"
-msgid "Kodi forces content to refresh on playback start and stop."
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31352"
-msgid "Autoplaying trailers will trigger frequent plugin reloading."
 msgstr ""
 
 #: /1080i/Includes_Labels.xml
@@ -1705,19 +1224,9 @@ msgctxt "#31358"
 msgid "Waiting for plugins"
 msgstr ""
 
-#: /shortcuts/generator/data/setup/powermainmenu_item.xml
+#: /shortcuts/generator/data/setup/powermenu_item.xml
 msgctxt "#31359"
 msgid "Switch user"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31360"
-msgid "No support is provided. Use at your own risk."
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31361"
-msgid "Do NOT report issues while this setting is enabled."
 msgstr ""
 
 #: /1080i/Includes_Items.xml
@@ -1743,11 +1252,6 @@ msgstr ""
 #: /1080i/Includes_Labels.xml
 msgctxt "#31366"
 msgid "Uncropped"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31367"
-msgid "This feature is experimental and may cause degraded system performance or other issues."
 msgstr ""
 
 #: /1080i/Includes_Search_View.xml
@@ -1857,16 +1361,6 @@ msgctxt "#31390"
 msgid "Release Year"
 msgstr ""
 
-#: /1080i/Includes_Labels.xml
-msgctxt "#31391"
-msgid "Minimal"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31392"
-msgid "Explore Widgets"
-msgstr ""
-
 #: /1080i/Includes_Items.xml Shorter label for use in info dialog buttons
 msgctxt "#31393"
 msgid "Trailer"
@@ -1875,11 +1369,6 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31394"
 msgid "Picture-in-picture video"
-msgstr ""
-
-#: /1080i/Custom_1180_Wizard.xml
-msgctxt "#31395"
-msgid "Choose prebuilt widget configuration"
 msgstr ""
 
 msgctxt "#31396"
@@ -1973,7 +1462,7 @@ msgstr ""
 
 #: /1080i/Includes_Views_Row.xml
 msgctxt "#31418"
-msgid "Circle Row"
+msgid "Row Circle"
 msgstr ""
 
 #: /1080i/Includes_Labels.xml
@@ -1984,15 +1473,6 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31420"
 msgid "Apps"
-msgstr ""
-
-msgctxt "#31421"
-msgid "Choose submenu list"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31422"
-msgid "Categories style"
 msgstr ""
 
 #: /1080i/Includes_Labels.xml
@@ -2008,11 +1488,6 @@ msgstr ""
 #: /1080i/Includes_Labels.xml
 msgctxt "#31425"
 msgid "Labels"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31426"
-msgid "Light dialogs"
 msgstr ""
 
 #: /1080i/Home.xml
@@ -2046,11 +1521,6 @@ msgid "Adaptive"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31433"
-msgid "Additional tags"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
 msgctxt "#31434"
 msgid "Video OSD"
 msgstr ""
@@ -2058,15 +1528,6 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31435"
 msgid "TMDbHelper lookups"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31436"
-msgid "Cycle background extrafanart"
-msgstr ""
-
-msgctxt "#31437"
-msgid "Choose spotlight"
 msgstr ""
 
 #: /1080i/Includes_Labels.xml
@@ -2094,39 +1555,14 @@ msgctxt "#31442"
 msgid "Parent"
 msgstr ""
 
-#: /1080i/Custom_1116_Dialog_Shortcuts.xml
-msgctxt "#31443"
-msgid "Open path in dialog"
-msgstr ""
-
 #: /1080i/Settings.xml
 msgctxt "#31444"
 msgid "Customisation"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31445"
-msgid "Replace search with discover"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31446"
-msgid "Bump"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31447"
-msgid "Kodi logo"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
 msgctxt "#31448"
 msgid "This category contains customisation options for"
-msgstr ""
-
-#: /1080i/Custom_1180_Wizard.xml
-msgctxt "#31449"
-msgid "Setup wizard"
 msgstr ""
 
 #: /1080i/Includes_Labels.xml
@@ -2142,21 +1578,6 @@ msgstr ""
 #: /1080i/Custom_1180_Wizard.xml
 msgctxt "#31452"
 msgid "Composite"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31453"
-msgid "Choose colour theme"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31454"
-msgid "Choose dialog style"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31455"
-msgid "Choose layout style"
 msgstr ""
 
 #: /1080i/Custom_1115_Dialog_WideSettings.xml
@@ -2194,24 +1615,9 @@ msgctxt "#31462"
 msgid "Wall Banner"
 msgstr ""
 
-#: /1080i/Includes_Views.xml
-msgctxt "#31463"
-msgid "Filter and view options"
-msgstr ""
-
-#: /1080i/Includes_Views.xml
-msgctxt "#31464"
-msgid "Filter and view options"
-msgstr ""
-
 #: /1080i/Custom_1161_Dialog_Weather.xml
 msgctxt "#31465"
 msgid "Rain chance"
-msgstr ""
-
-#: /1080i/Includes_SkinSettings.xml
-msgctxt "#31466"
-msgid "Blur background"
 msgstr ""
 
 #: /1080i/Includes_Items.xml
@@ -2249,16 +1655,6 @@ msgctxt "#31473"
 msgid "Radar"
 msgstr ""
 
-#: /1080i/Includes_Labels.xml
-msgctxt "#31474"
-msgid "Each menu item has its own widget group."
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31475"
-msgid "The spotlight is a special fullscreen widget designed to showcase one item at a time."
-msgstr ""
-
 #: /1080i/SkinSettings.xml
 msgctxt "#31476"
 msgid "This category contains acknowledgements, contributions, and thanks."
@@ -2282,11 +1678,6 @@ msgstr ""
 #: /1080i/Includes_Views_List.xml
 msgctxt "#31480"
 msgid "List Flixart"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31481"
-msgid "Play trailers automatically"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -2317,16 +1708,6 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31487"
 msgid "and"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31488"
-msgid "Category items appear as a horizontal menu at the top of the hub window."
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31489"
-msgid "Each category can define its own set of vertically stacked widgets OR use a submenu as a horizontal widget selector."
 msgstr ""
 
 #: /1080i/Includes_Labels.xml
@@ -2381,7 +1762,7 @@ msgstr ""
 
 #: /1080i/Includes_Search.xml
 msgctxt "#31500"
-msgid "There were no [LOWERCASE]$VAR[Label_SearchStyle][/LOWERCASE] results found for"
+msgid "There were no search results found"
 msgstr ""
 
 #: /1080i/Includes_Search.xml
@@ -2440,21 +1821,6 @@ msgid "Shortcut"
 msgstr ""
 
 #: /1080i/Includes_Labels.xml
-msgctxt "#31512"
-msgid "Classic mode"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31513"
-msgid "Side Menu Icons"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31514"
-msgid "Global Widgets"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
 msgctxt "#31515"
 msgid "Main Items"
 msgstr ""
@@ -2469,11 +1835,6 @@ msgctxt "#31517"
 msgid "Reverse order"
 msgstr ""
 
-#: /1080i/Custom_1115_Dialog_Shortcuts.xml
-msgctxt "#31518"
-msgid "Highlight type"
-msgstr ""
-
 #: /1080i/Includes_SkinSettings.xml
 msgctxt "#31519"
 msgid "Empty widget placeholder"
@@ -2482,11 +1843,6 @@ msgstr ""
 #: /1080i/Includes_Weather_Radar.xml
 msgctxt "#31520"
 msgid "Cloudiness"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts.xml
-msgctxt "#31521"
-msgid "Edit global widgets"
 msgstr ""
 
 #: /1080i/Includes_SkinSettings.xml
@@ -2539,19 +1895,9 @@ msgctxt "#31531"
 msgid "Carbon monoxide"
 msgstr ""
 
-#: /1080i/Includes_Weather.xml
-msgctxt "#31532"
-msgid "Charts"
-msgstr ""
-
 #: /1080i/Custom_1115_Dialog_Shortcuts.xml
 msgctxt "#31533"
 msgid "Add list"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts.xml
-msgctxt "#31534"
-msgid "Del list"
 msgstr ""
 
 #: /1080i/Custom_1115_Dialog_Shortcuts.xml
@@ -2610,23 +1956,8 @@ msgid "Premiering"
 msgstr ""
 
 #: /1080i/Includes_Labels.xml
-msgctxt "#31546"
-msgid "TBC"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
 msgctxt "#31547"
 msgid "Yesterday"
-msgstr ""
-
-#: /1080i/Includes_Items.xml
-msgctxt "#31548"
-msgid "Use detailed status"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31549"
-msgid "Choose which hub window to use as the home screen."
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -2634,19 +1965,9 @@ msgctxt "#31550"
 msgid "Change the visibility level of skin settings."
 msgstr ""
 
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31551"
-msgid "Use as home"
-msgstr ""
-
 #: /1080i/Includes_SkinSettings.xml
 msgctxt "#31552"
 msgid "Settings level"
-msgstr ""
-
-#: /1080i/Custom_1175_Dialog_Discover.xml
-msgctxt "#31553"
-msgid "Query"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -2669,34 +1990,14 @@ msgctxt "#31557"
 msgid "Wall Circle"
 msgstr ""
 
-#: /1080i/Includes_Actions.xml
-msgctxt "#31558"
-msgid "Signpost"
-msgstr ""
-
-#: /1080i/Includes_Views_List.xml
-msgctxt "#31559"
-msgid "List Details"
-msgstr ""
-
 #: /1080i/Includes_Items.xml
 msgctxt "#31560"
 msgid "Bright White"
 msgstr ""
 
-#: /1080i/Includes_Views_Wall.xml
-msgctxt "#31561"
-msgid "Wall Overview"
-msgstr ""
-
-#: /1080i/Includes_Views_Row.xml
-msgctxt "#31562"
-msgid "Overview Row"
-msgstr ""
-
 #: /1080i/Includes_Views_Row.xml
 msgctxt "#31563"
-msgid "Card Row"
+msgid "Row Card"
 msgstr ""
 
 #: /1080i/Includes_SkinSettings.xml
@@ -2749,29 +2050,9 @@ msgctxt "#31573"
 msgid "Delete list"
 msgstr ""
 
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31574"
-msgid "Unhide hubs"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_Shortcuts_Window.xml
-msgctxt "#31575"
-msgid "Click to toggle hub window customisation options."
-msgstr ""
-
 #: /1080i/Includes_SkinSettings.xml
 msgctxt "#31576"
 msgid "Seekbar delayed pause time"
-msgstr ""
-
-#: /1080i/Includes_SkinSettings.xml
-msgctxt "#31577"
-msgid "Expanded info on OSD controls"
-msgstr ""
-
-#: /1080i/Includes_SkinSettings.xml
-msgctxt "#31578"
-msgid "Expanded info landscape art"
 msgstr ""
 
 #: /1080i/Includes_ButtonMenu.xml
@@ -2789,19 +2070,9 @@ msgctxt "#31581"
 msgid "List Expanded"
 msgstr ""
 
-#: /1080i/Includes_Views_List.xml
-msgctxt "#31582"
-msgid "List Information"
-msgstr ""
-
 #: /1080i/Custom_1116_Dialog_Shortcuts.xml
 msgctxt "#31583"
 msgid "Prevent reload"
-msgstr ""
-
-#: /1080i/Custom_1116_Dialog_Shortcuts.xml
-msgctxt "#31584"
-msgid "Edit background"
 msgstr ""
 
 #: /1080i/Includes_Items.xml
@@ -2812,41 +2083,6 @@ msgstr ""
 #: /1080i/Includes_SkinSettings.xml
 msgctxt "#31586"
 msgid "Customise shortcuts"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#31587"
-msgid "Flip"
-msgstr ""
-
-#: /1080i/Includes_Info.xml
-msgctxt "#31588"
-msgid "Updating ratings"
-msgstr ""
-
-#: /1080i/Includes_DialogManage.xml
-msgctxt "#31589"
-msgid "Apply new settings"
-msgstr ""
-
-#: /1080i/Includes_DialogManage.xml
-msgctxt "#31590"
-msgid "Changes made to settings have not been applied."
-msgstr ""
-
-#: /1080i/Includes_DialogManage.xml
-msgctxt "#31591"
-msgid "Pressing back again closes the dialog without applying changes."
-msgstr ""
-
-#: /1080i/Includes_Dialogs.xml
-msgctxt "#31592"
-msgid "Options menu"
-msgstr ""
-
-#: /1080i/Includes_DialogManage.xml
-msgctxt "#31593"
-msgid "Apply your changes?"
 msgstr ""
 
 #: /1080i/Includes_OSD.xml
@@ -2867,4 +2103,39 @@ msgstr ""
 #: /1080i/Includes_Labels.xml
 msgctxt "#31597"
 msgid "Confirmation"
+msgstr ""
+
+#: /1080i/Dialogs_DialogGameControllers.xml
+msgctxt "#31598"
+msgid "Controllers"
+msgstr ""
+
+#: /1080i/Dialogs_DialogPVRGroupManager.xml
+msgctxt "#31599"
+msgid "Ungrouped"
+msgstr ""
+
+#: /1080i/Includes_Info.xml
+msgctxt "#31600"
+msgid "Ends at"
+msgstr ""
+
+#: /1080i/Custom_1115_Window_Shortcuts.xml
+msgctxt "#31601"
+msgid "Edit tray"
+msgstr ""
+
+#: /1080i/Dialog_DialogContextMenu.xml
+msgctxt "#31602"
+msgid "Add shortcut"
+msgstr ""
+
+#: /1080i/Includes_SkinSettings.xml
+msgctxt "#31604"
+msgid "Additional"
+msgstr ""
+
+#: /1080i/Includes_SkinSettings.xml
+msgctxt "#31605"
+msgid "Next aired"
 msgstr ""

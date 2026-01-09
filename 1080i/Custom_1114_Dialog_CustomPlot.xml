@@ -37,12 +37,10 @@
             <ondown>Control.Message(61,pagedown)</ondown>
         </include>
 
-        <include content="DialogInfo_CustomPlot" condition="![!String.IsEmpty(Window.Property(poster)) | !String.IsEmpty(Window.Property(icon))]">
-            <param name="size">Dimension_DialogHugeMenu</param>
+        <include content="DialogCustomPlot" condition="![!String.IsEmpty(Window.Property(poster)) | !String.IsEmpty(Window.Property(icon))]">
             <param name="include_artwork">false</param>
         </include>
-        <include content="DialogInfo_CustomPlot" condition="!String.IsEmpty(Window.Property(poster)) | !String.IsEmpty(Window.Property(icon))">
-            <param name="size">Dimension_DialogHugeMenu</param>
+        <include content="DialogCustomPlot" condition="!String.IsEmpty(Window.Property(poster)) | !String.IsEmpty(Window.Property(icon))">
             <param name="include_artwork">true</param>
         </include>
 

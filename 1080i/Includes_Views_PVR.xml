@@ -21,8 +21,8 @@
                 <onright>SetFocus(11)</onright>
                 <onright>Action(Right)</onright>
                 <onright>SetFocus(28)</onright>
-                <ondown>50</ondown>
-                <onup>50</onup>
+                <ondown>500</ondown>
+                <onup>500</onup>
                 <texturefocus />
                 <texturenofocus />
                 <font />
@@ -52,7 +52,6 @@
                 <param name="channelwidth">440</param>
                 <onup>$PARAM[id]</onup>
                 <ondown>$PARAM[id]</ondown>
-                <onback>9001</onback>
                 <viewtype label="$PARAM[viewtype_label]">list</viewtype>
                 <progresstexture border="40,0,40,0">$PARAM[progresstexture]</progresstexture>
                 <pagecontrol>8060</pagecontrol>
@@ -92,7 +91,6 @@
                 <param name="programs_left_text_slide">90</param>
                 <onup>$PARAM[id]</onup>
                 <ondown>$PARAM[id]</ondown>
-                <onback>9001</onback>
                 <viewtype label="$PARAM[viewtype_label]">list</viewtype>
                 <progresstexture border="160,40,60,40">$PARAM[progresstexture]</progresstexture>
                 <pagecontrol>8060</pagecontrol>
@@ -133,7 +131,7 @@
                         <include content="Dimension_Padding">
                             <param name="pad">20</param>
                         </include>
-                        <include content="Dialog_Outline_InnerBox">
+                        <include content="Part_Box_Outline">
                             <control type="image">
                                 <aspectratio scalediffuse="false">keep</aspectratio>
                                 <texture background="true" diffuse="diffuse/landscape_w356_h200.png">$VAR[Image_Landscape]</texture>
@@ -196,7 +194,7 @@
                 </include>
                 <control type="group">
                     <height>241</height>
-                    <include content="Dialog_Outline_InnerBox">
+                    <include content="Part_Box_Outline">
                         <control type="image">
                             <aspectratio scalediffuse="false" aligny="top">keep</aspectratio>
                             <texture background="true" diffuse="diffuse/landscape_w356_h200.png">$VAR[Image_Landscape]</texture>
@@ -229,19 +227,19 @@
             <include content="View_PVRGuide_Standard">
                 <param name="id">500</param>
                 <param name="progresstexture">pvr/progressline-full.png</param>
-                <param name="viewtype_label">$LOCALIZE[571]</param>
+                <param name="viewtype_label">$LOCALIZE[31013]</param>
             </include>
         </control>
         <control type="group">
             <visible>Control.IsVisible(501)</visible>
             <include>Dimension_PVR_FullGuide</include>
             <control type="group">
-                <right>dialog_panelgroup_w</right>
+                <right>pvr_panelgroup_w</right>
                 <include>View_PVR_ProgrammePanel</include>
                 <include content="View_PVRGuide_Standard">
                     <param name="id">501</param>
                     <param name="progresstexture">pvr/progressline-full.png</param>
-                    <param name="viewtype_label">$LOCALIZE[571]</param>
+                    <param name="viewtype_label">$LOCALIZE[31014]</param>
                     <param name="timeblocks">16</param>
                 </include>
             </control>
@@ -255,7 +253,7 @@
                 <include content="View_PVRGuide_Standard">
                     <param name="id">502</param>
                     <param name="progresstexture">pvr/progressline-half.png</param>
-                    <param name="viewtype_label">$LOCALIZE[571]</param>
+                    <param name="viewtype_label">$LOCALIZE[31480]</param>
                 </include>
             </control>
         </control>
@@ -269,7 +267,7 @@
                     <include content="View_PVRGuide_Standard">
                         <param name="id">503</param>
                         <param name="progresstexture">pvr/progressline-half.png</param>
-                        <param name="viewtype_label">$LOCALIZE[571]</param>
+                        <param name="viewtype_label">$LOCALIZE[31017]</param>
                         <param name="timeblocks">16</param>
                     </include>
                 </control>
@@ -287,14 +285,14 @@
             <include content="View_PVRGuide_Horizontal">
                 <param name="id">504</param>
                 <param name="progresstexture">pvr/progressline-horz.png</param>
-                <param name="viewtype_label">$LOCALIZE[571]</param>
+                <param name="viewtype_label">$LOCALIZE[31019]</param>
             </include>
         </control>
         <control type="group">
             <visible>Control.IsVisible(505)</visible>
             <include>Dimension_PVR_FullGuide</include>
             <control type="group">
-                <right>dialog_panelgroup_w</right>
+                <right>pvr_panelgroup_w</right>
                 <control type="group">
                     <top>120</top>
                     <left>-280</left>
@@ -303,7 +301,7 @@
                 <include content="View_PVRGuide_Horizontal">
                     <param name="id">505</param>
                     <param name="progresstexture">pvr/progressline-horz.png</param>
-                    <param name="viewtype_label">$LOCALIZE[571]</param>
+                    <param name="viewtype_label">$LOCALIZE[31020]</param>
                     <param name="channelwidth">300</param>
                 </include>
             </control>
@@ -323,12 +321,12 @@
                 <visible>!Control.IsVisible(52)</visible>
                 <visible>!Control.IsVisible(502)</visible>
                 <visible>!Control.IsVisible(503)</visible>
-                <include>View_Row_Header</include>
+                <include>Furniture_Header</include>
             </control>
             <control type="group">
                 <visible>Control.IsVisible(502) | Control.IsVisible(503)</visible>
                 <include content="Info_Viewline">
-                    <param name="label">[CAPITALIZE]$VAR[Label_Header_Main][/CAPITALIZE]</param>
+                    <param name="label">$VAR[Label_Header_Main]</param>
                 </include>
                 <control type="group">
                     <include>Info_Panel_Dimensions</include>
@@ -336,239 +334,21 @@
                 </control>
             </control>
         </control>
-        <include>Furniture_Bottom_Right</include>
+        <include>Furniture_Footer_Right</include>
     </include>
 
     <include name="View_PVR_Main">
+        <include content="Object_Hidden_Button">
+            <param name="id">67</param>
+            <onfocus>SetFocus(50)</onfocus>
+            <onfocus>ActivateWindow(1171)</onfocus>
+        </include>
         <control type="group">
             <visible>!Window.IsVisible(pvrchannelguide)</visible>
-            <include content="View_Bumper">
-                <param name="groupid">50</param>
-            </include>
             <include content="View_PVR_Full">
                 <param name="include">$PARAM[include]</param>
             </include>
-            <include>View_Dialog_Plot</include>
-            <control type="group">
-                <include>Animation_Group_Bumper</include>
-                <include>View_PVR_Menu</include>
-            </control>
         </control>
-    </include>
-
-    <include name="View_PVR_Menu">
-        <param name="itemgap">-40</param>
-        <param name="include_customwidth">true</param>
-        <param name="include_hintlabel">true</param>
-        <definition>
-
-            <control type="group">
-                <include>Dimension_Bottombar</include>
-                <control type="group">
-                    <include>Dimension_Furniture_Gutters</include>
-                    <include content="Object_Hidden_Button">
-                        <param name="id">610</param>
-                        <onup>50</onup>
-                        <ondown>SetFocus(8000)</ondown>
-                        <onfocus>SetFocus(8000)</onfocus>
-                    </include>
-
-                    <control type="grouplist" id="8000">
-                        <orientation>horizontal</orientation>
-                        <height>160</height>
-                        <centertop>50%</centertop>
-                        <align>center</align>
-                        <left>40</left>
-                        <right>60</right>
-                        <onup>50</onup>
-                        <ondown>SetProperty(List.ViewContainer,8000)</ondown>
-                        <ondown>SetFocus(330)</ondown>
-
-                        <visible allowhiddenfocus="true">$EXP[Exp_View_SortModeButtons_HasFocus]</visible>
-
-                        <!-- Group -->
-                        <include content="DialogInfo_Button">
-                            <param name="include_customwidth">true</param>
-                            <param name="include_hintlabel">true</param>
-                            <param name="itemgap">-40</param>
-                            <param name="vertical">false</param>
-                            <param name="width">300</param>
-                            <param name="slice">100</param>
-                            <param name="label_pad">-15</param>
-                            <param name="vertical">false</param>
-                            <param name="id">9001</param>
-                            <param name="groupid">9101</param>
-                            <param name="sliceid">9201</param>
-                            <param name="label">$LOCALIZE[19141]</param>
-                            <param name="icon">special://skin/extras/icons/object-group.png</param>
-                            <param name="visible">true</param>
-                            <onclick>SendClick(28)</onclick>
-                        </include>
-
-                        <!-- View -->
-                        <include content="DialogInfo_Button">
-                            <param name="include_customwidth">true</param>
-                            <param name="include_hintlabel">true</param>
-                            <param name="itemgap">-40</param>
-                            <param name="vertical">false</param>
-                            <param name="width">300</param>
-                            <param name="slice">100</param>
-                            <param name="label_pad">-15</param>
-                            <param name="vertical">false</param>
-                            <param name="id">9020</param>
-                            <param name="groupid">9120</param>
-                            <param name="sliceid">9220</param>
-                            <param name="label">$LOCALIZE[31319]</param>
-                            <param name="icon">special://skin/extras/icons/table.png</param>
-                            <param name="visible">true</param>
-                            <onclick>SendClick(2)</onclick>
-
-                            <!-- Reset Overlay onclick for View BEFORE the one needed (so that it switches onclick) -->
-                            <onclick condition="Window.IsVisible(MyPVRGuide.xml) + ![Control.IsVisible(501) | Control.IsVisible(502)]">SetProperty(Background.ShowOverlay,True,Home)</onclick>
-                            <onclick condition="Window.IsVisible(MyPVRGuide.xml) + [Control.IsVisible(501) | Control.IsVisible(502)]">ClearProperty(Background.ShowOverlay,Home)</onclick>
-
-                            <!-- Reset Overlay onclick for View BEFORE the one needed (so that it switches onclick) -->
-                            <onclick condition="Window.IsVisible(MyPVRChannels.xml) + !Control.IsVisible(51)">SetProperty(Background.ShowOverlay,True,Home)</onclick>
-                            <onclick condition="Window.IsVisible(MyPVRChannels.xml) + Control.IsVisible(51)">ClearProperty(Background.ShowOverlay,Home)</onclick>
-                        </include>
-
-                        <!-- Sort -->
-                        <include content="DialogInfo_Button">
-                            <param name="include_customwidth">true</param>
-                            <param name="include_hintlabel">true</param>
-                            <param name="itemgap">-40</param>
-                            <param name="vertical">false</param>
-                            <param name="width">300</param>
-                            <param name="slice">100</param>
-                            <param name="label_pad">-15</param>
-                            <param name="vertical">false</param>
-                            <param name="id">9002</param>
-                            <param name="groupid">9102</param>
-                            <param name="sliceid">9202</param>
-                            <param name="label">$VAR[Label_SortMethod]</param>
-                            <param name="icon">special://skin/extras/icons/list-ul.png</param>
-                            <param name="visible">true</param>
-                            <onclick>SendClick(3)</onclick>
-                        </include>
-
-                        <!-- Order -->
-                        <include content="DialogInfo_Button">
-                            <param name="include_customwidth">true</param>
-                            <param name="include_hintlabel">true</param>
-                            <param name="itemgap">-40</param>
-                            <param name="vertical">false</param>
-                            <param name="width">300</param>
-                            <param name="slice">100</param>
-                            <param name="label_pad">-15</param>
-                            <param name="vertical">false</param>
-                            <param name="id">9003</param>
-                            <param name="groupid">9103</param>
-                            <param name="sliceid">9203</param>
-                            <param name="label">$LOCALIZE[31015]</param>
-                            <param name="icon">$VAR[Image_SortDirection]</param>
-                            <param name="visible">true</param>
-                            <onclick>SendClick(4)</onclick>
-                        </include>
-
-                        <!-- Guide -->
-                        <include content="DialogInfo_Button">
-                            <param name="include_customwidth">true</param>
-                            <param name="include_hintlabel">true</param>
-                            <param name="itemgap">-40</param>
-                            <param name="vertical">false</param>
-                            <param name="width">300</param>
-                            <param name="slice">100</param>
-                            <param name="label_pad">-15</param>
-                            <param name="vertical">false</param>
-                            <param name="id">9009</param>
-                            <param name="groupid">9109</param>
-                            <param name="sliceid">9209</param>
-                            <param name="label">$LOCALIZE[19069]</param>
-                            <param name="icon">special://skin/extras/icons/table-list.png</param>
-                            <param name="visible">!Window.IsVisible(tvguide)</param>
-                            <onclick>ActivateWindow(tvguide)</onclick>
-                        </include>
-
-                        <!-- Channels -->
-                        <include content="DialogInfo_Button">
-                            <param name="include_customwidth">true</param>
-                            <param name="include_hintlabel">true</param>
-                            <param name="itemgap">-40</param>
-                            <param name="vertical">false</param>
-                            <param name="width">300</param>
-                            <param name="slice">100</param>
-                            <param name="label_pad">-15</param>
-                            <param name="vertical">false</param>
-                            <param name="id">9008</param>
-                            <param name="groupid">9108</param>
-                            <param name="sliceid">9208</param>
-                            <param name="label">$LOCALIZE[14301]</param>
-                            <param name="icon">special://skin/extras/icons/livetv.png</param>
-                            <param name="visible">!Window.IsVisible(tvchannels)</param>
-                            <onclick>ActivateWindow(tvchannels)</onclick>
-                        </include>
-
-                        <!-- Recordings -->
-                        <include content="DialogInfo_Button">
-                            <param name="include_customwidth">true</param>
-                            <param name="include_hintlabel">true</param>
-                            <param name="itemgap">-40</param>
-                            <param name="vertical">false</param>
-                            <param name="width">300</param>
-                            <param name="slice">100</param>
-                            <param name="label_pad">-15</param>
-                            <param name="vertical">false</param>
-                            <param name="id">9007</param>
-                            <param name="groupid">9107</param>
-                            <param name="sliceid">9207</param>
-                            <param name="label">$LOCALIZE[19017]</param>
-                            <param name="icon">special://skin/extras/icons/hard-drive.png</param>
-                            <param name="visible">!Window.IsVisible(tvrecordings)</param>
-                            <onclick>ActivateWindow(tvrecordings)</onclick>
-                        </include>
-
-                        <!-- Timers -->
-                        <include content="DialogInfo_Button">
-                            <param name="include_customwidth">true</param>
-                            <param name="include_hintlabel">true</param>
-                            <param name="itemgap">-40</param>
-                            <param name="vertical">false</param>
-                            <param name="width">300</param>
-                            <param name="slice">100</param>
-                            <param name="label_pad">-15</param>
-                            <param name="vertical">false</param>
-                            <param name="id">9004</param>
-                            <param name="groupid">9104</param>
-                            <param name="sliceid">9204</param>
-                            <param name="label">$LOCALIZE[19040]</param>
-                            <param name="icon">special://skin/extras/icons/timer.png</param>
-                            <param name="visible">!Window.IsVisible(tvtimers)</param>
-                            <onclick>ActivateWindow(tvtimers)</onclick>
-                        </include>
-
-                        <!-- Search -->
-                        <include content="DialogInfo_Button">
-                            <param name="include_customwidth">true</param>
-                            <param name="include_hintlabel">true</param>
-                            <param name="itemgap">-40</param>
-                            <param name="vertical">false</param>
-                            <param name="width">300</param>
-                            <param name="slice">100</param>
-                            <param name="label_pad">-15</param>
-                            <param name="vertical">false</param>
-                            <param name="id">9005</param>
-                            <param name="groupid">9105</param>
-                            <param name="sliceid">9205</param>
-                            <param name="label">$LOCALIZE[137]</param>
-                            <param name="icon">special://skin/extras/icons/search.png</param>
-                            <param name="visible">!Window.IsVisible(tvsearch)</param>
-                            <onclick>ActivateWindow(tvsearch)</onclick>
-                        </include>
-                    </control>
-                </control>
-            </control>
-        </definition>
-
     </include>
 
     <!-- CHANNELS -->
@@ -634,15 +414,15 @@
             </control>
 
             <control type="fixedlist" id="$PARAM[id]">
-                <onback>9001</onback>
-                <include content="Action_View_Movement_OnLeft"><param name="id">$PARAM[id]</param></include>
-                <onright>332</onright>
                 <top>60</top>
                 <bottom>99</bottom>
                 <left>-40</left>
                 <orientation>vertical</orientation>
                 <focusposition>$PARAM[focusposition]</focusposition>
                 <movement>$PARAM[movement]</movement>
+
+                <onright>ActivateWindow(1171)</onright>
+
                 <viewtype label="$PARAM[viewtype_label]">list</viewtype>
                 <onfocus>SetProperty(Background.ShowOverlay,True,Home)</onfocus>
 
@@ -676,25 +456,25 @@
 
     <include name="View_PVRChannels">
         <control type="group">
-            <visible>Control.IsVisible(50)</visible>
+            <visible>Control.IsVisible(500)</visible>
             <include>Dimension_PVR_FullGuide</include>
             <include>View_PVR_ProgrammePanel</include>
             <include content="View_PVRChannels_Standard">
-                <param name="id">50</param>
-                <param name="viewtype_label">$LOCALIZE[571]</param>
+                <param name="id">500</param>
+                <param name="viewtype_label">$LOCALIZE[31013]</param>
                 <param name="focusposition">4</param>
                 <param name="movement">4</param>
             </include>
         </control>
         <control type="group">
-            <visible>Control.IsVisible(51)</visible>
+            <visible>Control.IsVisible(501)</visible>
             <include>Dimension_PVR_FullGuide</include>
             <control type="group">
-                <right>dialog_panelgroup_w</right>
+                <right>pvr_panelgroup_w</right>
                 <include>View_PVR_ProgrammePanel</include>
                 <include content="View_PVRChannels_Standard">
-                    <param name="id">51</param>
-                    <param name="viewtype_label">$LOCALIZE[571]</param>
+                    <param name="id">501</param>
+                    <param name="viewtype_label">$LOCALIZE[31014]</param>
                     <param name="focusposition">4</param>
                     <param name="movement">4</param>
                 </include>
@@ -702,12 +482,12 @@
             <include>View_PVR_InformationPanel</include>
         </control>
         <control type="group">
-            <visible>Control.IsVisible(52)</visible>
+            <visible>Control.IsVisible(502)</visible>
             <include content="Info_Viewline">
-                <param name="label">[CAPITALIZE]$VAR[Label_Header_Main][/CAPITALIZE]</param>
+                <param name="label">$VAR[Label_Header_Main]</param>
             </include>
             <include content="View_Row_Include">
-                <param name="id">52</param>
+                <param name="id">502</param>
                 <param name="include">List_Landscape_Row</param>
                 <param name="viewtype_label">$LOCALIZE[31112]</param>
             </include>

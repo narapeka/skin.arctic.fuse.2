@@ -7,11 +7,6 @@
     <onload>Skin.SetString(VideoOSD.PersonCredits.CastCrew,cast)</onload>
     <include>Animation_OSD_Dialog_WindowChange</include>
     <controls>
-
-        <include content="Defs_Background_Loader">
-            <param name="label">$VAR[Label_Title]</param>
-        </include>
-
         <control type="group">
             <include>OSD_Info_Dimensions</include>
 
@@ -49,11 +44,6 @@
                     <param name="id">6501</param>
                 </include>
 
-                <!-- <onfocus condition="Player.Paused + !String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">PlayerControl(Play)</onfocus>
-                <onfocus condition="Player.Paused + !String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
-
-                <onclick>SetProperty(OSDExtendedInfo,1,Home)</onclick>
-                <onclick condition="!Player.Paused">Pause</onclick> -->
                 <onclick>Action(Info)</onclick>
             </include>
         </control>
