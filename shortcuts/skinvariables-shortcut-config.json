@@ -916,12 +916,6 @@
             "link": "true"
         },
         {
-            "name": "Discover",
-            "path": "ActivateWindow(1105)",
-            "icon": "special://skin/extras/icons/binoculars.png",
-            "link": "true"
-        },
-        {
             "name": "Movies Hub",
             "path": "ActivateWindow(1101)",
             "icon": "special://skin/extras/icons/film.png",

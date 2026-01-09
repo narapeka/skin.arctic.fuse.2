@@ -51,7 +51,6 @@
     </variable>
 
     <variable name="Action_ActivateSearchDiscover">
-        <value condition="Skin.HasSetting(SideMenu.SwapSearchForDiscover)">ActivateWindow(1105)</value>
         <value>ActivateWindow(1185)</value>
     </variable>
 

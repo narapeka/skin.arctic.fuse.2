@@ -147,15 +147,6 @@
 
             <selected>!Skin.HasSetting(SideMenu.DisableSearchAndOptions)</selected>
         </include>
-        <include content="Settings_Button" description="Replace search with discover">
-            <param name="dialog">true</param>
-            <param name="id">8006</param>
-            <param name="control">radiobutton</param>
-            <label>$LOCALIZE[31445]</label>
-            <onclick>Skin.ToggleSetting(SideMenu.SwapSearchForDiscover)</onclick>
-            <selected>Skin.HasSetting(SideMenu.SwapSearchForDiscover)</selected>
-            <visible>!Skin.HasSetting(SideMenu.DisableSearchAndOptions)</visible>
-        </include>
         <include content="Settings_Button" description="Profile">
             <param name="dialog">true</param>
             <param name="id">8007</param>

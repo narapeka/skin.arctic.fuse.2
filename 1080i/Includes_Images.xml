@@ -42,7 +42,6 @@
     </variable>
 
     <variable name="Image_SearchDiscover">
-        <value condition="Skin.HasSetting(SideMenu.SwapSearchForDiscover)">special://skin/extras/icons/binoculars.png</value>
         <value>special://skin/extras/icons/search.png</value>
     </variable>
 

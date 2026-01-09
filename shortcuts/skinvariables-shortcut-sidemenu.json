@@ -1,28 +1,5 @@
 [
     {
-        "label": "Discover",
-        "icon": "special://skin/extras/icons/binoculars.png",
-        "path": "ActivateWindow(1105)",
-        "target": "",
-        "widgets": [
-            {
-                "label": "$LOCALIZE[31398]",
-                "path": "special://skin/extras/playlists/NewMovies.xsp",
-                "widget_style": "Landscape",
-                "target": "videos",
-                "guid": "guid-f5d496d2"
-            },
-            {
-                "label": "$LOCALIZE[31400]",
-                "path": "special://skin/extras/playlists/NewEpisodes.xsp",
-                "widget_style": "Landscape",
-                "target": "videos",
-                "guid": "guid-64e9b01c"
-            }
-        ],
-        "guid": "guid-19ada9cd"
-    },
-    {
         "label": "$LOCALIZE[20342]",
         "icon": "special://skin/extras/icons/film.png",
         "path": "ActivateWindow(videos,videodb://movies/titles,return)",
